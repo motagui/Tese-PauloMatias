@@ -598,6 +598,26 @@ Neste trabalho
 são investigadas propriedades do tipo Ramsey, anti-Ramsey
 e size-Ramsey de grafos aleatórios e determinísticos em diferentes versões. 
 %e problemas, o ponto em comum dos temas apresentados é a coloração de arestas. 
+\section{Preliminares}
+
+Ressaltamos uma definição importante que é objeto de investigação no grafo aleatório no Capítulo \ref{cap:anti}.
+Uma função $\hat{p}: \mathbb{N} \rightarrow [0,1]$ é chamada de \textit{função limiar} para uma propriedade
+$\cP$ no $G(n,p)$ se 
+\[
+  \lim_{n\to\infty}\mathbb{P}\left(G(n,p) \in \cP\right)
+  =
+  \begin{cases}0&\text{se }p \ll \hat p, \\
+    1&\text{se }p \gg \hat p.
+  \end{cases}
+\]
+Os limites na definição acima de função limiar são chamados de $0$-\emph{afirmação} e $1$-\emph{afirmação}, respectivamente. 
+Uma vez que os limiares são determinados por ordem de magnitude, vamos nos referir aos limiares $\hat{p}$ como \emph{o limiar} da propriedade $\cP$.
+
+grafos balanceados
+
+
+
+\section{Organização do texto}
 
 Iniciamos no Capítulo \ref{cap:triangles} com  um resultado de padrões em coloração de arestas do grafo completo. 
 Especificamente, dado um natural $n$, calculamos a menor 
@@ -861,27 +881,17 @@ De casos iniciais, temos que $f_2^3(2, K_3) = 6$ (PROVA), $f_2^3(3,K_3) \in \{8,
 
 \chapter{Um problema do tipo anti-Ramsey}\label{cap:anti}
 
-Dada uma coloração das arestas de um grafo $G$, dizemos que uma cópia de um grafo $H$ em $G$ é \emph{rainbow} se não existem duas arestas de $H$ com a mesma cor.
+Dados grafos $G$ e $H$ e uma coloração de arestas de $G$, dizemos que uma cópia de $H$ em $G$ é \emph{rainbow} se não existem duas arestas de $H$ com a mesma cor.
 %
 Dados grafos~$G$ e~$H$, estamos interessados na seguinte propriedade denotada por ${G\rbarrow H}$: para toda coloração \textit{própria} das arestas de~$G$ (com uma quantidade arbitrária de cores),
 existe uma cópia rainbow de~$H$ em~$G$, i.e., um subgrafo de $G$ isomorfo a $H$ com todas as arestas de cores distintas.
 
-Ressaltamos uma definição importante que é objeto de investigação no grafo aleatório nesta seção.
-Uma função $\hat{p}: \mathbb{N} \rightarrow [0,1]$ é chamada de \textit{função limiar} para uma propriedade
-$\cP$ no $G(n,p)$ se 
-\[
-  \lim_{n\to\infty}\mathbb{P}\left(G(n,p) \in \cP\right)
-  =
-  \begin{cases}0&\text{se }p \ll \hat p, \\
-    1&\text{se }p \gg \hat p.
-  \end{cases}
-\]
-Os limites na definição acima de função limiar são chamados de $0$-\emph{statement} e $1$-\emph{statement}, respectivamente. 
-Uma vez que os limiares são determinados por ordem de magnitude, vamos nos referir aos limiares $\hat{p}$ como \emph{o limiar} da propriedade $\cP$.
-A propriedade anti-Ramsey ${G\rbarrow H}$ é monótona em grafos aleatórios, logo, admite uma função limiar \cite{BoTh87}, que nós denotamos por $\hat{p}_H$. 
+
+A propriedade anti-Ramsey ${G\rbarrow H}$ é monótona, isto é, se ${G\rbarrow H}$, então vale ${F\rbarrow H}$, para todo subgrafo $F$ de $G$. Tal monotonicidade em 
+grafos aleatórios implica que essa propriedade admite uma função limiar \cite{BoTh87}, que nós denotamos por $\hat{p}_H$. 
 
 
-Antes de discutirmos os resultados conhecidos da propriedade anti-Ramsey, precisamos considerar diferentes densidades de um grafo. 
+Antes de discutirmos os resultados conhecidos desta propriedade anti-Ramsey, precisamos considerar diferentes densidades de um grafo. 
 A \emph{$2$-densidade máxima} de um grafo $H$, denotada por~$m_2(H)$, é definida como 
 \begin{equation*}
   m_2(H)=\max\left\{\frac{|E(J)|-1}{|V(J)|-2}\colon J\subset H,\;|V(J)|\geq3\right\},
@@ -896,7 +906,7 @@ onde assumimos~$|V(H)|\geq3$, e
 
 \section{Resultados existentes}
 
-Em~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte resultado: a propriedade anti-Ramsey $G(n,p)\rbarrow H$ vale assintoticamente quase certamente sempre que $p\gg n^{-1/m_2(H)}$ para todo grafo fixo~$H$. Em outras palavras, garante-se em termos da $2$-densidade máxima de um grafo $H$ um limitante superior para a função limiar $\hat{p}_H$, como está enunciado a seguir.
+No trabalho~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte resultado: a propriedade anti-Ramsey $G(n,p)\rbarrow H$ vale assintoticamente quase certamente sempre que $p\gg n^{-1/m_2(H)}$ para todo grafo fixo~$H$. Em outras palavras, garante-se em termos da $2$-densidade máxima de um grafo $H$ um limitante superior para a função limiar $\hat{p}_H$, como está enunciado a seguir.
 
 \begin{teorema}[Kohayakawa, Konstadinidis e Mota~\cite{KoKoMo12}]
     \label{teo:conditional}
@@ -904,8 +914,8 @@ Em~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte resultado: 
          Em particular, $\hat{p}_H \leq n^{-1/m_2(H)}$.
   \end{teorema}
     
-Dado o Teorema \ref{teo:conditional} e sabendo que a $2$-densidade máxima tem um papel fundamental em Teoria de Ramsey, é natural perguntar se $n^{-1/m_2(H)}$ é função limiar para a propriedade $G(n,p)\rbarrow H$ para qualquer grafo $H$.
-No entanto, em \cite{KoKoMo16+}, o mesmo grupo de pesquisadores obteve uma resposta negativa para essa pergunta, eles exibiram uma família infinita de grafos cuja função limiar é inferior a $n^{-1/m_2(H)}$.
+Dado o Teorema \ref{teo:conditional} e sabendo que a $2$-densidade máxima tem um papel fundamental em Teoria de Ramsey, é natural perguntar se $n^{-1/m_2(H)}$ é função limiar para a propriedade $G(n,p)\rbarrow H$ para qualquer grafo $H$, o que exige provar o limitante inferior do limiar como $\hat{p}_H \geq n^{-1/m_2(H)}$.
+No entanto, em outro trabalho \cite{KoKoMo16+}, o mesmo grupo de pesquisadores obteve uma resposta negativa para essa pergunta, eles exibiram uma família infinita de grafos cuja função limiar é inferior a $n^{-1/m_2(H)}$.
 Porém a 2-densidade máxima se relaciona, de fato, à função limiar para alguns grafos $H$, como foi provado por Nenadov,
 Person, Škorić e Steger~\cite{NePeSkSt14}.
 
@@ -918,7 +928,6 @@ Person, Škorić e Steger~\cite{NePeSkSt14}.
   Em particular, $\hat{p}_H \geq n^{-1/m_2(H)}$.
 \end{teorema}
 
-%% Comentamos a seguir o trabalho que fecha o limiar da classe de ciclos a partir de $C_4$, e em seguida o trabalho que trata de grafos completos a partir de $K_4$.
 
 O Teorema \ref{teo:nen} foi estendido para ciclos (\cite{barros2021anti}) e grafos completos (\cite{kohayakawa2019anti}) com mais de 5 vértices.
 
@@ -932,7 +941,7 @@ Além disso, $\hat{p}_{C_4} = n^{-3/4}$
 e $\hat{p}_{K_4} = n^{-7/15}$.
 \end{teorema}
 
-    O resultado sobre ciclos do Teorema \ref{teo:cyclecomplete} segue do seguinte lema:
+    O resultado sobre ciclos do Teorema \ref{teo:cyclecomplete} é consequência do seguinte lema:
     
 \begin{lema}\label{lema:rbciclos}\cite{barros2021anti}
          Sejam $\ell \geq 5$ um inteiro e $G$ um grafo tais que
@@ -940,12 +949,12 @@ e $\hat{p}_{K_4} = n^{-7/15}$.
          Então, $G \not\xrightarrow[]{rb} C_\ell$.
 \end{lema}
     
-A essência da prova do Lema \ref{lema:rbciclos} está em usar uma estratégia de coloração própria nas arestas dos ciclos $C_\ell$ contidos no grafo $G$, de modo que qualquer ciclo $C_\ell$ tenha duas arestas coloridas com a mesma cor.
+A essência da prova do Lema \ref{lema:rbciclos} está em usar uma estratégia de coloração própria nas arestas dos ciclos $C_\ell$ contidos no grafo $G$, de modo que toda cópia de ciclo $C_\ell$ tenha duas arestas coloridas com a mesma cor.
 %
-Para isso, os autores definem o que chamam de componente de ciclos dentro de $G$ como uma sequência crescente de subgrafos $(H_1, \ldots, H_t)$ em $G$, em que a cada subgrafo existe um $C_\ell$ em $H_{i+1}$ que não está em $H_i$, para $1 \leq i < t$, com alguma interseção não-nula com $H_i$.
+Para isso, os autores definem o que chamam de componente de ciclos dentro de $G$ como uma sequência crescente de subgrafos $(H_1, \ldots, H_t)$ em $G$, em que a cada subgrafo existe um $C_\ell$ em $H_{i}$ que não está em $H_{i-1}$, para $1 < i \leq t$, com alguma interseção não-nula com $H_{i-1}$.
 %
-Observam que tal sequência impõe certas configurações restritas de como os novos ciclos aparecem entre os subgrafos, assim trabalhando na combinação dessas configurações detalham alguns casos de como colorir arestas dessa sequência de subgrafos para evitar $C_\ell$ rainbow.
-     Parte das ideias desse artigo são retomadas nas demonstrações descritas na próxima seção.
+Eles observaram que tal sequência, com argumentos de densidade, impõe certas configurações restritas de como os novos ciclos aparecem entre os subgrafos, assim ao verificarem a ocorrência dessas configurações detalham alguns casos de como colorir arestas dessa sequência de subgrafos para evitar $C_\ell$ rainbow.
+     Parte das ideias desse artigo são retomadas nas demonstrações descritas nas próximas seções.
  
  
    Para provar que o limiar de grafos completos do Teorema \ref{teo:cyclecomplete} de que $G(n,p) \rbarrow K_\ell$, com $\ell \geq 5$ seja igual a $\hat{p}_{K_\ell} = n^{-1/m_2(K_\ell)} = n^{- 2/(\ell+1)}$, os autores provaram o seguinte lema.
@@ -966,7 +975,7 @@ Observam que tal sequência impõe certas configurações restritas de como os n
  
 \section{Limiar para grafos bipartidos completos}
 
-    Nesta seção começamos a discussão que prova para grafos bipartidos completos um resultado semelhante ao que foi comentado anteriormente sobre ciclos e grafos completos, a saber, a propriedade anti-Ramsey de grafos bipartidos em grafos aleatórios.
+    Nesta seção começamos a discussão da prova para grafos bipartidos completos um resultado semelhante ao que foi comentado anteriormente sobre ciclos e grafos completos, a saber, a propriedade anti-Ramsey de grafos bipartidos completos em grafos aleatórios.
     Ou seja, dados os inteiros $\ell,r \geq 3$, pretendemos verificar que o limiar para a propriedade $G(n,p) \xrightarrow[]{rb} \K$ é dado por $n^{-1/m_2(\K)}$.
 
     Note que como toda coloração própria de arestas de uma estrela $K_{1,r}$ é obrigatoriamente rainbow, então
@@ -995,7 +1004,7 @@ Observam que tal sequência impõe certas configurações restritas de como os n
      \end{proof}
     
     Agora, como  o limiar para
-    $K_{2,3r-2}\subset G(n,p)$ é $n^{-1/m(K_{2,3r-2})}$ e
+    $K_{2,3r-2}\subset G(n,p)$ é $n^{-1/m(K_{2,3r-2})}$ e sabendo das densidades que
     $m(K_{2,3r-2}) = (6r-4)/3r < (\ell r - 1)/(\ell+r-2) =
     m_2(K_{\ell,r})$, 
     temos que $K_{2,3r-2}$ força um limite superior menor do que
@@ -1005,7 +1014,7 @@ Observam que tal sequência impõe certas configurações restritas de como os n
     \]
 
     Nosso principal resultado (Teorema \ref{teo:mainrb}) mostra que, diferentemente do limiar de $K_{2,r}$,
-    o limiar $\hat{p}_{\K}$ quando $\ell,r \geq 3$ é de fato da ordem 
+    o limiar $\hat{p}_{\K}$, para $\ell,r \geq 3$ inteiros, é de fato da ordem 
     $n^{-1/m_2(\K)} = n^{-(\ell+r-2)/(\ell r-1)}$.
     A partir do Teorema \ref{teo:conditional}, temos o limite superior $\hat{p}_H \leq n^{-1/m_2(H)}$ para todo grafo $H$, e com isso, para determinarmos o limiar de $\hat{p}_{\K}$ é suficiente mostrar que 
     $\hat{p}_{\K}\geq n^{-(\ell+r-2)/(\ell r - 1)}$.
@@ -1034,16 +1043,19 @@ Observam que tal sequência impõe certas configurações restritas de como os n
      A fim de provarmos o Teorema~\ref{lemma:main}, dado um grafo $G$ tal que
      $m(G) < m_2(\K)$, 
      precisamos obter uma coloração própria de arestas de $G$ sem cópias rainbow de~$\K$. 
-     Para isto, precisamos analisar as interseções de arestas das cópias de grafos bipartidos completos, dado que colorir tais arestas de maneira a evitar $\K$ rainbow pode exigir uma coloração engenhosa. 
+     Para isto, precisamos analisar como se dão as interseções de arestas entre cópias de grafos bipartidos completos, dado que colorir tais arestas para evitarmos $\K$ rainbow pode exigir uma coloração engenhosa. 
      
      Começamos com a seguinte proposição cuja demonstração é obtida
      pela aplicação do chamado \textit{argumento de densidade}, este argumento será muito utilizado nas provas desta seção.
     %xxxxx Como estamos interessados em grafos $G$ tais que  $m(G) < m_2(\K) = (\ell r - 1)/(\ell+r-2)$,  we state a simple observation that will be helpful when analyzing subgraphs of $G$.  
     Dado um grafo $G$, vamos denotar uma cópia de um grafo bipartido completo em $G$ com partes $A$ e $B$ por $G[A,B]$.
-    
+    Ao longo do texto, comumente escrevemos $3\leq \ell \leq r$ para ressaltarmos que o bipartido $\K$ pode possuir partes com tamanhos distintos. 
+    A proposição a seguir descreve uma condição algébrica sobre o bipartido $K_{a,b}$ formado entre duas cópias de $\K$ em $G$ cujos conjuntos de vértices de suas partes não se interceptam.
+
+    %% caso a=b=0 a desigualdade continua valendo normalmente
     \begin{proposicao}
         \label{lemma:inter_a} 
-    Sejam $r\geq \ell\geq 3$ inteiros, $G$ um grafo, $G[A_1,B_1]$ e $G[A_2,B_2]$ cópias de $K_{\ell,r}$ em $G$. 
+    Sejam $3\leq \ell \leq r$ inteiros, $G$ um grafo, $G[A_1,B_1]$ e $G[A_2,B_2]$ cópias de $K_{\ell,r}$ em $G$. 
     Se $m(G) < m_2(\K)$ e
     $A_i \cap B_j = \emptyset$ 
     para $1\leq i,j\leq 2$, então o grafo bipartido completo
@@ -1056,7 +1068,7 @@ Observam que tal sequência impõe certas configurações restritas de como os n
       \end{proposicao}
     \begin{proof}
     Sejam $H_1:=G[A_1,B_1]$ e ${H_2:=G[A_2,B_2]}$.
-    Da mesma forma, seja $H_2:= G[a,b]$, onde $a = A_1\cap
+    Da mesma forma, seja $H := G[a,b]$, onde $a = A_1\cap
     A_2$ e $b = B_1\cap B_2$.  
     Uma vez que 
     $v(H_1 \cup H_2) = (\ell + r) +
@@ -1074,47 +1086,52 @@ Observam que tal sequência impõe certas configurações restritas de como os n
     
     Faremos frequente aplicação, direta ou indiretamente, da Proposição~\ref{lemma:inter_a} em nossas provas.
      
-     Vamos seguir uma estratégia próxima à encontrada em \cite{barros2021anti}, da propriedade anti-Ramsey de ciclos, que analisou interseções de arestas entre ciclos no grafo alvo de coloração e com densidade limitada.
+     Vamos seguir uma estratégia próxima à encontrada no trabalho que estudou  a mesma propriedade anti-Ramsey em ciclos \cite{barros2021anti}, o qual analisou interseções de arestas entre ciclos no grafo alvo de coloração sob densidades limitadas.
      Dado um grafo $G$, seja $H = (H_1, \ldots, H_t)$ uma sequência crescente de subgrafos de $G$ tal que
     $H_1$ é uma cópia de $\K$ e, para cada $1 < i \leq t$, temos $H_{i-1} \subseteq H_i$ e existe alguma cópia de $\K$ em $H_{i}$ com interseção de arestas não-nula com $H_{i-1}$. 
     Ou seja, existe um $K \cong \K$ em $H_{i}$ tal que $K \not\subset H_{i-1}$ e $E(K) \cap E(H_{i-1}) \neq\varnothing$.
      Observe que a inclusão de uma cópia de $\K$ em $H_{i-1}$ pode até formar outras cópias de $\K$ em $H_{i}$ não presentes em $H_{i-1}$, sendo este um detalhe importante quando nos voltarmos para a coloração de $G$.
      
-     Se a sequência $H$ for maximal, isto é, não pode mais ser estendida em $G$, ela será chamada de $\K$-componente.
-     Queremos realizar uma coloração própria parcial da sequência $(H_1, \ldots, H_t)$ em que é possível evitar $\K$ rainbow. 
-     Será suficiente fornecer uma coloração para uma $\K$-componente arbitrária de $G$. %%%%EXPLICAR?
+     Se a sequência $H$ for maximal, isto é, não pode mais ser estendida em $G$ quanto a cópias de $\K$, ela será chamada de $\K$-\emph{componente}.
+     Queremos realizar uma coloração própria parcial da sequência $(H_1, \ldots, H_t)$ que evite cópias  rainbow de $\K$. 
+     Será suficiente fornecer uma coloração para uma $\K$-componente arbitrária de $G$, dado que $G$ pode ser visto como um conjunto de $\K$-componentes disjuntas.
  
  Na Proposição \ref{lemma:inter_a}, dado um grafo $G$ com
- $m(G) < m_2(\K)$, nós descrevemos os tamanhos dos subgrafos obtidos nas cópias $G[A_1,B_1]$ e $G[A_2,B_2]$ de $K_{\ell,r}$ em $G$ sob a condição $(A_1\cup A_2)\cap(B_1\cup B_2) = \emptyset$.
- A próxima proposição lida com o caso em que $A_1\cup A_2$ intersecta a $B_1\cup B_2$, sua prova segue a mesma ideia da Proposition \ref{lemma:inter_a} com um argumento de densidade similar à desigualdade \ref{eq:pairs-ab}, porém apresenta uma solução única para esta, o que força uma configuração específica de intersecções de arestas.
+ $m(G) < m_2(\K)$, nós descrevemos um bipartido como interseção que depende dos subgrafos obtidos nas cópias $G[A_1,B_1]$ e $G[A_2,B_2]$ de $K_{\ell,r}$ em $G$ sob a condição de $(A_1\cup A_2)\cap(B_1\cup B_2) = \emptyset$. %%%%%% reescrever parag
+ A próxima proposição lida com o caso em que $A_1\cup A_2$ intersecta a $B_1\cup B_2$, e sua prova segue a mesma ideia da Proposition \ref{lemma:inter_a} com um argumento de densidade similar à desigualdade \ref{eq:pairs-ab}, porém apresenta uma solução única para esta, o que força uma configuração específica de intersecções de arestas.
 
-
+%%% existe simetria entre l e r aqui? provavel que nao importe
     \begin{proposicao}\label{aff:casoP1}
        Sejam $3\leq \ell \leq r$ inteiros, 
-      $G$ um grafo, e $K_1 \cong G[A, B]$ uma cópia de $\K$ em $G$.
+      $G$ um grafo, e $K \cong G[A, B]$ uma cópia de $\K$ em $G$.
       Se $m(G) < m_2(\K)$ e existe em $G$ uma outra cópia
-        $K_2 \cong \K $ que intercecta arestas de $K_1$ tal que 
-        $(E_G[A] \cup E_G[B]) \cap K_2 \neq \varnothing$, 
-        então $K_2$ contém uma cópia de $K_{\ell-1,r-2}$ disjunta de $K_1$.
+        $K' \cong \K $ que intercecta arestas de $K$ tal que 
+        $(E_G[A] \cup E_G[B]) \cap K' \neq \varnothing$, 
+        então $K'$ contém uma cópia de $K_{\ell-1,r-2}$ disjunta de $K$.
     \end{proposicao}
      \begin{proof}
          Seja $K$ uma cópia de $\K$ em $G$ com partes $A$ e $B$, queremos verificar se existe em $G$ o subgrafo $K'$ também cópia de $\K$ com partes $X$ e $Y$, onde pelo menos $A \cap X \neq \varnothing$ e $A \cap Y \neq \varnothing$.
          
          Sejam $X' = X\setminus A$,  $B' = B\cap Y$, $A' = A \cap Y$ e $Y' = Y \setminus (B\cup A')$, 
          onde
-         $X'$ tem $x$ vértices, $A'$ tem $a$ vértices, $B'$ tem $b$ vértices e $Y'$ tem $y$ vértices.
+         $X'$ tem $x$ vértices, $A'$ tem $a$ vértices, $B'$ tem $b$ vértices e $Y'$ tem $y$ vértices (ver Figura \ref{fig:interP1}).
+
+
+  \begin{figure}[htb] \centering \includegraphics[]{images/interP1.pdf}
+   \caption{Interseção de arestas entre cópias de $\K$, $G[A,B]$ e $G[X,Y]$, usando arestas dentro da partição.}
+   \label{fig:interP1}
+ \end{figure}
          
-         É evidente que $a \geq 1$, $b \geq 1$, e também que $a + b+y = r$ e $a + (\ell-x) \leq \ell$ são condições da construção. 
-         Reunindo essas informações com a densidade a seguir 
+         É evidente que $a \geq 1$, $b \geq 1$, e também que $a + b+y = r$ e $a + (\ell-x) \leq \ell$ são restrições da construção. 
+         Reunindo essas informações e calculando a densidade como na Proposição \ref{lemma:inter_a}, temos que 
          
          \[
-            m(K \cup K') = \frac{\ell r + xr + (\ell-x)(a+y)}{\ell+r+x+y}
-            < \frac{\ell r - 1}{r+\ell-2},
+            m(K \cup K') = \frac{\ell r + xr + (\ell-x)(b+y)}{\ell+r+x+y}
+            < \frac{\ell r - 1}{\ell+r-2},
          \]
-         obtemos que a única solução é $b=1$, $x = \ell-1$, $a=1$ e $y=r-2$. 
+         de onde obtemos que a única solução inteira nessas condições é $b=1$, $x = \ell-1$, $a=1$ e $y=r-2$. 
          De $X'$ e $Y'$ obtemos $K_{\ell-1, r-2}$ em $K'$ vértice disjunto de $K$.
          Uma parametrização semelhante usando arestas internas de ambos os conjuntos $A$ e $B$ não gera soluções.       
-         %% \text{\color{red} verificar grafico e completude}
      \end{proof}
      
      Uma informação útil sobre a configuração dada na Proposição \ref{aff:casoP1} 
@@ -1122,9 +1139,9 @@ Observam que tal sequência impõe certas configurações restritas de como os n
      % Logo, seria 
      é que tal configuração é densa o suficiente para ser uma $\K$-componente isolada do grafo $G$, pois não permite intersecções com mais grafos bipartidos completos. Com isso, obter uma coloração própria desta componente de modo a evitar cópias rainbow de $\K$ é trivial e podemos nos voltar para outras interseções.
      
-     Nós podemos nos focar na intersecção entre duas cópias de $\K$ em $G$ que é da forma $K_{a,b}$ para alguns inteiros $a$ e $b$ (Proposição \ref{lemma:inter_a}). 
+     Agora, podemos nos voltar para a intersecção entre duas cópias de $\K$ em $G$ que é da forma $K_{a,b}$ para alguns inteiros $a$ e $b$ (vide Proposição \ref{lemma:inter_a}). 
 	 O grafo $G$ pode conter uma intersecção de múltiplas cópias de
-    $\K$, dado que este caso seria um subgrafo de $K_{\ell+x,r+y}$ onde $x$ ou $y$ são inteiros positivos, e, como veremos, esta intersecção múltipla pode afetar a maneira como colorimos a $\K$-componente de $G$. 
+    $\K$, dado que este caso seria um subgrafo de $K_{\ell+x,r+y}$ onde $x$ ou $y$ são inteiros positivos, e, como veremos, esta intersecção múltipla pode afetar a maneira como colorimos a $\K$-componente de $G$. %%%% explicar
     
     Notamos que uma sequência de $\K$ que se interceptam em arestas possui menor densidade se as intersecções entre cada par de $\K$ da sequência forem da forma $K_{1,1}$. 
      Dada esta informação, computamos o limite inferior para a densidade de uma sequência de $\K$ em $G$, e obtivemos restrições sobre a estrutura das intersecções de arestas na $\K$-componente de $G$, como é apresentado no seguinte fato.
@@ -1191,6 +1208,7 @@ Observam que tal sequência impõe certas configurações restritas de como os n
     quando $H_i = H_{i-1} \cup K$ e satisfaz as condições acima. 
 	De maneira geral, dizemos que $K$ é do \textit{tipo A} se $K$ é da configuração $(A_{jk})_{pq}$, analogamente,
 		$K$ é do \textit{tipo B} se $K$ é de uma configuração $(B_{sw})$.
+    As configurações de $\K$-componentes isoladas que são descritas pela Proposição \ref{aff:casoP1} serão denominadas do \textit{tipo C}.
   
   \begin{figure}[htb] \centering \includegraphics[]{configAB_KLL.pdf}
    \caption{Configurações $(A_{jk})_{pq}$ e $(B_{sw})$ de um $\K$ contido em $H_i$, mas não em $H_{i-1}$.}
@@ -1204,10 +1222,12 @@ Observam que tal sequência impõe certas configurações restritas de como os n
     Então,  vale para cada $2\leq i \leq t$: 
     se $K = [X, Y]$ é uma cópia de $\K$ em
     $H_i$ e não em $H_{i-1}$, 
-    então $K$ é do tipo A ou B.   
+    então $K$ é do tipo A, B ou C.   
     \end{lema}
 \begin{proof}
-        Vamos provar o resultado para todos valores possíveis de $v_i$, i.e., $0\leq v_i \leq \ell+r-2$ juntamente do número de novos $\K$ adicionados a $H_i$.
+        O caso mais simples é o bipartido $K$ formar uma configuração do tipo C que é uma $\K$-componente isolada.
+        
+        Vamos provar o resultado sobre os tipos A e B para todos valores possíveis de $v_i$, i.e., $0\leq v_i \leq \ell+r-2$ juntamente do número de novos $\K$ adicionados a $H_i$.
        
     Primeiro, construímos conjuntos auxiliares que descrevem as intersecções de arestas de grafos bipartidos em $G$.   
     Dados os inteiros positivos $\ell$ e $r$, denote por
@@ -1295,7 +1315,7 @@ configuração~\hyperref[configB]{$(B_{2,0})$}.
     \]
 	Isto implica sob as condições de $3 \leq \ell < r$ que 
 	$e_i \leq (2\ell r -\ell-r)/(\ell+r-2) < \ell+r-2$, 
-	tal quantidade $e_i$ é insuficiente para inverter dois vértices da partição no subgraph que resulte em outro $\K$.
+	tal quantidade $e_i$ é insuficiente para inverter dois vértices da partição no subgrafo que resulte em outro $\K$.
     Com isso, vamos analisar intersecções em $H_{i-1}$ com mais de $\K$.
     
     Para as intersecções possíveis entre dois bipartidos completos $K'$ e $K''$, descritas na Proposição \ref{lemma:inter_a}, realizamos a  análise da seguinte desigualdade de densidades:
