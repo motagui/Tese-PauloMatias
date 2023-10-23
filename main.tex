@@ -69,6 +69,7 @@
 
 
 \newcommand{\K}{K_{\ell,r}} %%add by Paulo
+\newcommand{\Slr}{\mathcal{S}_{\ell,r}} %%% add by Paulo
 
 \newcommand\cca{{\mathcal{A}}}
 \newcommand\ccc{{\mathcal{C}}}
@@ -1137,38 +1138,45 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
      Uma informação útil sobre a configuração dada na Proposição \ref{aff:casoP1} 
      % é de que ela limita a existência de uma interseção do tipo $K_{1,1}$ com outro $\K$. 
      % Logo, seria 
-     é que tal configuração é densa o suficiente para ser uma $\K$-componente isolada do grafo $G$, pois não permite intersecções com mais grafos bipartidos completos. Com isso, obter uma coloração própria desta componente de modo a evitar cópias rainbow de $\K$ é trivial e podemos nos voltar para outras interseções.
+     é que tal configuração é densa o suficiente para ser uma $\K$-componente isolada do grafo $G$ se forem consideradas interseções semelhantes, sendo também restritiva, como veremos, para outros tipos de interseção. 
+     Com isso, a coloração própria desta componente que evita cópias rainbow de $\K$ será trivial e poderemos nos voltar para outras interseções de arestas.
      
      Agora, podemos nos voltar para a intersecção entre duas cópias de $\K$ em $G$ que é da forma $K_{a,b}$ para alguns inteiros $a$ e $b$ (vide Proposição \ref{lemma:inter_a}). 
 	 O grafo $G$ pode conter uma intersecção de múltiplas cópias de
-    $\K$, dado que este caso seria um subgrafo de $K_{\ell+x,r+y}$ onde $x$ ou $y$ são inteiros positivos, e, como veremos, esta intersecção múltipla pode afetar a maneira como colorimos a $\K$-componente de $G$. %%%% explicar
+    $\K$, e neste caso cada cópia de $\K$ seria um subgrafo de $K_{\ell+x,r+y}$ onde $x$ ou $y$ são inteiros não-negativos, e, como veremos, esta intersecção múltipla pode afetar a maneira como colorimos a $\K$-componente de $G$. %%%% explicar
     
-    Notamos que uma sequência de $\K$ que se interceptam em arestas possui menor densidade se as intersecções entre cada par de $\K$ da sequência forem da forma $K_{1,1}$. 
+    Notamos que uma sequência de cópias de $\K$ que se interceptam em arestas possui menor densidade se as intersecções entre cada par de $\K$ da sequência forem da forma $K_{1,1}$. 
      Dada esta informação, computamos o limite inferior para a densidade de uma sequência de $\K$ em $G$, e obtivemos restrições sobre a estrutura das intersecções de arestas na $\K$-componente de $G$, como é apresentado no seguinte fato.
      
       \begin{fato}\label{fato:ciclos}
         Sejam $3\leq \ell \leq r$ inteiros e seja $G$ um grafo tal que $m(G) < m_2(\K)$.  
         Dada uma $\K$-componente $(H_1, \ldots, H_t)$ de $G$, 
-        então o grafo bipartido $K \cong K_{\ell+s, r+w}$ contido em $H_i$, mas não em $H_{i-1}$ é tal que 
-        $E_G(K) \cap E_G(H_j) = \varnothing$
-        para todo $1 \leq j < i-1$ e algum valor de $0\leq s < \ell$, $0\leq w < r$ .  
+        então o grafo bipartido $K \cong \K$ contido em $H_i$, mas não em $H_{i-1}$ é tal que ou $E_G(K) \cap E_G(H_j) = \varnothing$
+        para todo $1 \leq j < i-1$, ou  $K \subseteq K_{\ell+s, r+w}$
+        para algum valor de $0\leq s < \ell$, $0\leq w < r$ .  
   \end{fato}
 \begin{proof}
-        As interseções entre grafos bipartidos completos de $G$ da forma $K_{1,1}$ são as que permitem mais arestas, pois apresentam menor densidade. 
+        As interseções de arestas entre somente duas cópias de $\K$ em $G$ da forma $K_{1,1}$ são as que apresentam menor densidade, e com isso, permitiriam o acréscimo de mais arestas considerando qualquer sequência de subgrafos $(H_1, \ldots, H_t)$ que seja uma $\K$-componente. 
+        
+        Sem perda de generalidade, restringimos $G$ a sua maior $\K$-componente.       
          Seja $\mathcal{I}(G)$ o grafo de interseção cujo conjunto de vértices é o conjunto de cópias de $\K$ em $G$ e cujas arestas correspondem a pares $\{K, K'\}$ tais que $K \neq K'$ e $E_G(K) \cap E_G(K') \neq \varnothing$.
          
-        Suponha que existe um $s$-ciclo no grafo de interseção $\mathcal{I}(G)$ -- o que representa uma cadeia de $\K$'s em $G$ --  considerando só interseções da forma $K_{1,1}$.
+        Suponha que existe um $s$-ciclo no grafo de interseção $\mathcal{I}(G)$ -- o que representa uma cadeia de cópias de $\K$ em $G$ --  considerando só interseções da forma $K_{1,1}$.
         Teríamos em termos de densidade em $G$ dessa cadeia de interseções que
         \[
             \frac{s\ell r - s}{s(\ell+r) - 2s} =  \frac{\ell r - 1}{\ell+r - 2}
             \not < m_2(\K). 
         \]
         Logo, o grafo de interseção não contém ciclos considerando interseções de úm único $\K$ entre cada subgrafo da $\K$-componente.
-       Tratar os múltiplos $\K$ que podem ser gerados por intersecções como um único vértice de $\mathcal{I}(G)$ torna tal grafo acíclico pelo mesmo argumento.
+        
+       Poderíamos tratar o caso de múltiplos $\K$ gerados por uma única intersecão como um único vértice de $\mathcal{I}(G)$, o que torna acíclico este último grafo pelo mesmo argumento. 
+       Logo, qualquer cópia de $\K$  numa sequência $(H_1, \ldots, H_t)$ ou acaba de ser formada num determinado $H_i$ ou está contida em um $K_{\ell+s, r+w}$.
 \end{proof}
 
+Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em $H_i$ dentro da sequência $(H_1, \ldots, H_t)$ sendo tal que ou ele não intersecta arestas de termos anteriores a $H_{i-1}$ ou ele está contido em uma intersecção múltipla da forma de $K_{\ell+s, r+w}$. 
+
       Nós usaremos as consequências da Proposição \ref{lemma:inter_a} e, com a análise de densidade de múltiplas intersecções entre grafos bipartidos $\K$ na sequência de subgrafos $(H_1, \ldots, H_t)$, obtemos um resultado que caracteriza a confuguração estrutural da cópia de $\K$ que aparece entre $H_{i-1}$ e $H_i$.
-     Antes, definimos os parâmetros $e_j$ e $v_j$, para cada $1 \leq j \leq i$:
+     Antes, definimos os parâmetros $e_j$ e $v_j$, para cada $1 < j \leq t$:
      \begin{itemize}
          \item $e_j$ é o número de arestas em $E(H_{j}) \setminus E(H_{j-1})$;
          \item $v_j$ é o número de vértices em $V(H_{j}) \setminus V(H_{j-1})$. 
@@ -1208,7 +1216,7 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
     quando $H_i = H_{i-1} \cup K$ e satisfaz as condições acima. 
 	De maneira geral, dizemos que $K$ é do \textit{tipo A} se $K$ é da configuração $(A_{jk})_{pq}$, analogamente,
 		$K$ é do \textit{tipo B} se $K$ é de uma configuração $(B_{sw})$.
-    As configurações de $\K$-componentes isoladas que são descritas pela Proposição \ref{aff:casoP1} serão denominadas do \textit{tipo C}.
+    As configurações de $\K$-componentes que são descritas pela Proposição \ref{aff:casoP1} serão denominadas do \textit{tipo C}.
   
   \begin{figure}[htb] \centering \includegraphics[]{configAB_KLL.pdf}
    \caption{Configurações $(A_{jk})_{pq}$ e $(B_{sw})$ de um $\K$ contido em $H_i$, mas não em $H_{i-1}$.}
@@ -1225,26 +1233,33 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
     então $K$ é do tipo A, B ou C.   
     \end{lema}
 \begin{proof}
-        O caso mais simples é o bipartido $K$ formar uma configuração do tipo C que é uma $\K$-componente isolada.
-        
-        Vamos provar o resultado sobre os tipos A e B para todos valores possíveis de $v_i$, i.e., $0\leq v_i \leq \ell+r-2$ juntamente do número de novos $\K$ adicionados a $H_i$.
+        Dados $3\leq \ell \leq r$ inteiros,
+        sejam $G$ um grafo tal que $m(G) < m_2(\K)$ e
+        $H = (H_1, \ldots, H_t)$ uma $\K$-componente de $G$.
+        Vamos provar o resultado sobre os tipos de configuração que uma cópia $K$ de $\K$ apresenta para formar um $H_i$ arbitrário para todo número de vértices $v_i$, i.e., para qualquer $0\leq v_i \leq \ell+r-2$. %% juntamente do número de novos $\K$ adicionados a $H_i$.
+
+     O caso mais simples é o bipartido $K$ formar uma configuração do tipo C que só ocorre se $v_i =(\ell-1)+(r-2) = \ell+r-3$ e se $K$ seguir a interseção apresentada pela Proposição \ref{aff:casoP1}.        
        
-    Primeiro, construímos conjuntos auxiliares que descrevem as intersecções de arestas de grafos bipartidos em $G$.   
+    Para avaliar os tipos A e B, primeiro construímos conjuntos auxiliares que descrevem as intersecções de arestas de grafos bipartidos em $G$.   
     Dados os inteiros positivos $\ell$ e $r$, denote por
-    $\mathcal{S}_{\ell,r}$ o conjunto de pares $\{a,b\}$ tal que a Proposition~\ref{eq:pairs-ab} vale.  
-    Definimos os conjuntos $\mathcal{S} = \left\{\{1,1\},\{1,2\},\{1,3\},\{2,2\}\right\}$ e
-    \begin{equation*} 
-    	\mathcal{S}_\ell =
+    $\mathcal{S}_{\ell,r}$ o conjunto de pares $\{a,b\}$ tal que a desigualdade~\ref{eq:pairs-ab} vale.  
+    Para descrever $\Slr$, antes definimos os seguintes conjuntos de pares inteiros
+    \begin{align*} 
+        \mathcal{S} &:= \left\{\{1,1\},\{1,2\},\{1,3\},\{2,2\}\right\},
+    \\
+    	\mathcal{S}_\ell &:=
     \left\{\mathcal{S},\{\ell-1,\ell-1\},\{\ell-2,\ell\},\{\ell-1,\ell\}\right\}.
-    \end{equation*} 
-    
-    É fácil verificar da Proposição~\ref{lemma:inter_a} que os valores possíveis para $\mathcal{S}_{\ell,r}$ são apresentados a seguir.
-     Para tanto, definimos os conjuntos de inteiros consecutivos 
-     $\beta_1:=\{\lceil (\ell^2r - 4\ell r +
-    \ell+2r)/((\ell-1)^2)\rceil,\dots, r-1\}$ 
-    e
-    $\beta_2:=\{\lceil
-    (-\ell^2r +5\ell r - \ell-2r-1)/(r-\ell^2+3\ell-3)\rceil,\ldots, r\}$.
+    \end{align*} 
+        
+    Também definimos os conjuntos de inteiros consecutivos 
+    \begin{align*}
+        \beta_1 &:=
+        \left\{\left\lceil \frac{\ell^2r - 4\ell r + \ell+2r}{\ell-1)^2}\right\rceil,\dots, r-1\right\}   
+        \\
+        \beta_2 &:=
+        \left\{\left\lceil \frac{-\ell^2r +5\ell r - \ell-2r-1}{r-\ell^2+3\ell-3}\right\rceil,\ldots, r\right\}.
+    \end{align*} 
+    Uma verificação algébrica da Proposição~\ref{lemma:inter_a} nos dá os valores de $\mathcal{S}_{\ell,r}$ e estes são apresentados a seguir:
     
       \begin{itemize}
       \item [(i)] se $r=\ell = 3$ ou $r=\ell \geq 7$, então
@@ -1266,84 +1281,93 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
 
      \begin{figure}[htb] \centering 
       \includegraphics[]{Kll-inter.pdf}
-       \caption{Grafos bipartidos completos $K_{a,b}$ obtidos na interseção seguindo os pares $(a,b) \in\mathcal{S}_\ell$.}
+       \caption{Grafos bipartidos completos $K_{a,b}$ obtidos na interseção seguindo os pares $\{a,b\} \in\mathcal{S}_\ell$.}
        \label{fig:configKLL}
      \end{figure}
-     
+
+    Agora, prosseguimos dividindo os casos por $v_i$ e se $K$ forma mais de uma cópia de $\K$ em $H_i$. 
+    Os valores que $v_i$ pode assumir depende diretamente dos conjuntos $\Slr$, pois $K$ forma interseções de arestas com quantidades delimitadas por $\Slr$.
+    
     \medskip \textbf{Caso 1.}
-	Se $3 \leq v_i \leq \ell+r-2$ e somente uma cópia de $\K$ é adicionada para formar $H_i$.
+	Se $3 \leq v_i \leq \ell+r-2$ e somente uma cópia de $\K$ é formada entre $H_{i-1}$ e $H_i$.
    
     Seja $v_i= \ell+r-a-b$, onde $a,b$ são inteiros positivos.  
-    Os $v_i$ vértices de $K \cong \K= [X,Y]$ formam o bipartido $K_{\ell-a,r-b}$ em $H_i$; a $\K$-componente é
-    composta pelas intersecções de arestas de $K$ com $H_{i-1}$ formando $K_{j,k}$,
-    onde $\{j,k\} \in \mathcal{S}$ (Proposição \ref{lemma:inter_a}).  
+    Os $v_i$ vértices dessa única cópia $K \cong \K= [X,Y]$ formam um bipartido $K_{\ell-a,r-b}$ em $H_i$; a $\K$-componente é composta pelas intersecções de arestas de $K$ com $H_{i-1}$, 
+    o que pela Proposição \ref{lemma:inter_a},  forma $K_{j,k}$,
+    onde $\{j,k\} \in \mathcal{S}$.  
    
-   Completamos a partição $[X,Y]$ tomando outros $p,q$ vértices em $H_{i-1}$ tais que um $K_{p,q}$ é gerado satisfazendo às condições de  $j+p = a$ e $k+q = b$. 
+   Completamos a partição $[X,Y]$ tomando outros $p,q$ vértices em $H_{i-1}$ tais que um bipartido $K_{p,q}$ é obtido satisfazendo às condições de  $j+p = a$ e $k+q = b$. 
    
    Suponha que já haviam arestas em $K_{p,q}$  para algum $H_j$ na sequência de subgrafos com $j < i-1$.
    Logo, o novo $K$ adicionado teria interseção de arestas com algum outro bipartido completo $K'$, além do bipartido $K''$ que contém $K_{jk}$ em $H_{i-1}$.
-   Assim, considerando o subgrafo $H_{i}$, teríamos que existe um caminho entre $K'$ e $K''$, e então $K$ 
-   tem interseção com algum $H_j$ com $j<i-1$, o que contradiz o Fato \ref{fato:ciclos}.
+   Assim, considerando o subgrafo $H_{i}$,
+   %teríamos que existe um caminho entre $K'$ e $K''$, e 
+   temos que $K$ 
+   intersecta arestas de algum $H_j$ para $j<i-1$, o que contradiz o Fato \ref{fato:ciclos}.
   
-     Então, as arestas de $K_{p,q}$ são adicionadas por $H_i$ na $\K$-componente e, nós obtemos a configuração~\hyperref[configA]{$(A_{jk})_{pq}$}. 
-    Esta configuração forma um único $\K$ com $H_i$,  agora consideramos casos onde mais de um $\K$ aparece em $H_i$.
+     Com isso, as arestas de $K_{p,q}$ são adicionadas por $H_i$ na $\K$-componente e, nós obtemos a configuração~\hyperref[configA]{$(A_{jk})_{pq}$} tornando $K$ do tipo A.  
+    Esta configuração formou um único $\K$ com $H_i$,  agora consideramos casos onde mais de uma cópia de $\K$ aparece em $H_i$.
 
     Sejam $b_1, b_2$ inteiros positivos tais que $b_1 \in \beta_1$ ou $b_2 \in \beta_2$.
     
      \medskip \textbf{Caso 2.} 
     Se $v_i \in [1, \max\{r - b_1, r+1-b_2\}]$ e existem múltiplas cópias de $\K$ entre $H_{i-1}$ e $H_i$.
-	
-   Seja $Z$ o conjunto com estes $v_i$ vértices, 
-   se existe exatamente uma aresta em $Z$, digamos $uv$, então temos que
-    $Z_1 = \{u\}$ e $v \in Z_2$ e, com isso,
+
+ 
+   Seja $Z=Z_1\cup Z_2$ o conjunto com estes $v_i$ vértices de modo que 
+   $K_{sw}=[Z_1,Z_2]$ é formado em $H_i$, onde $K \subset K_{\ell+s, r+w}$. 
+   Se existe exatamente uma aresta em $Z$, digamos $uv$, então temos que
+    $Z_1 = \{u\}$ e $v \in Z_2$ e, com isso, a configuração
     ~\hyperref[configB]{$(B_{1,w})$} é possível, onde $w = r-b_2$.
         
         Outro subcaso ocorre se não há arestas em $Z$, assim $Z_1 =
     \varnothing$ e obtemos a configuração~\hyperref[configB]{$(B_{0,w})$}, 
-    onde $z = w = r-b_1$.
+    onde $w = r-b_1$.
     
     Um caso excepcional ocorre quando $\ell = r$ e permite a
-configuração~\hyperref[configB]{$(B_{2,0})$}.
+configuração~\hyperref[configB]{$(B_{2,0})$}. 
+    
+    Neste caso, o bipartido $K$ é do tipo B.
    
  \medskip \textbf{Caso 3.} 
-	  Se $v_i = 0$ e existem múltiplas cópias de $\K$ entre $H_{i-1}$ e $H_i$. 
+	  Se $v_i = 0$ e existem uma ou mais cópias de $\K$ entre $H_{i-1}$ e $H_i$. 
 	  
-	 Tem-se que toda nova aresta de $H_i$ se liga a vértices pré-existentes de $H_{i-1}$. 
-      Se considerarmos somente a adição de arestas em um único $\K$ de $H_{i-1}$, veremos que não é possível criar outro bipartido $K$, pois pelo argumento de densidade temos que
+	 Neste caso temos que toda nova aresta de $H_i$ se liga a vértices pré-existentes de $H_{i-1}$. 
+      Se considerarmos somente a adição de arestas em uma única cópia de $\K$ em $H_{i-1}$, veremos que não é possível criar outro bipartido $K$, pois pelo argumento de densidade temos que
     \[ 
-		\frac{\ell r + e_i}{\ell+r} < \frac{\ell r-1}{r+\ell-2}.
+		\frac{\ell r + e_i}{\ell+r} < \frac{\ell r-1}{r+\ell-2},
     \]
-	Isto implica sob as condições de $3 \leq \ell < r$ que 
+	e isto implica sob as condições de $3 \leq \ell \leq r$ que 
 	$e_i \leq (2\ell r -\ell-r)/(\ell+r-2) < \ell+r-2$, 
-	tal quantidade $e_i$ é insuficiente para inverter dois vértices da partição no subgrafo que resulte em outro $\K$.
-    Com isso, vamos analisar intersecções em $H_{i-1}$ com mais de $\K$.
+	tal quantidade $e_i$ é insuficiente para inverter dois vértices da partição no subgrafo que resulte em um novo $\K$.
+    Com isso, para $v_i=0$, resta-nos analisar intersecções de mais de uma cópia de $\K$ em $H_{i-1}$ para formar $K$.
     
-    Para as intersecções possíveis entre dois bipartidos completos $K'$ e $K''$, descritas na Proposição \ref{lemma:inter_a}, realizamos a  análise da seguinte desigualdade de densidades:
+    Para as intersecções possíveis entre dois bipartidos completos $K'$ e $K''$, descritas na Proposição \ref{lemma:inter_a} que formam um $K_{a,b}$, com $\{a,b\} \in \Slr$, realizamos a  análise da seguinte desigualdade de densidades:
 
-    \[
-		\frac{2\ell r - e(K'\cap K'') + e_i}{2\ell+2r - v(K' \cap K'')} < \frac{\ell r- 1}{\ell+r-2}.
-    \]
-    
-     Em particular, vemos que $K_{1,3}$, $K_{2,2}$ são intersecções justas, isto é, são subgrafos de $H_{i-1}$ cujo argumento de densidade requer $e_i=0$, i.e., não permitem acréscimo de arestas;
+    \begin{equation}\label{eq:inter}
+        \frac{2\ell r - e(K'\cap K'') + e_i}{2\ell+2r - v(K' \cap K'')} < \frac{\ell r- 1}{\ell+r-2}.
+    \end{equation}
+	    
+     Em particular, vemos que as intersecções $K_{1,3}$, $K_{2,2}$ são  justas, isto é, são subgrafos de $H_{i-1}$ cujo argumento de densidade em (\ref{eq:inter}) requer $e_i=0$, i.e., não permitem acréscimo de arestas;
     e para $K_{\ell-2,r}$ temos $e_i < \ell$ que também não forma outro $\K$.
     %
-     Já se a intersecção for $K_{1,1}$, para todos os valores de $\ell$ e $r$ temos que $e_i = \ell-1$, disso para gerar um novo $\K$ de $H_{i}$, basta escolher um vértice de fora da interseção e adicionar a ele $e_i$ arestas para formar $K_{\ell+1,r}$, logo, de configuração~\hyperref[configB]{$(B_{1,0})$}; analogamente, temos para $\ell \in
-        \{r-1, r\}$ com $e_i = r-1$ a configuração
+     Já se a intersecção for $K_{1,1}$, para todos os valores de $\ell$ e $r$ temos que $e_i = \ell-1$, e com isso podemos gerar um novo $\K$ de $H_{i}$, basta escolher um vértice de fora da interseção e adicionar a ele $e_i$ arestas de modo que forme $K_{\ell+1,r}$, logo, de configuração~\hyperref[configB]{$(B_{1,0})$}; analogamente, temos se $\ell \in
+        \{r-1, r\}$ para $e_i = r-1$, a configuração possível é
         ~\hyperref[configB]{$(B_{0,1})$}.
     %
-    A interseção $K_{\ell-1, r-1}$ temos uma única solução $e_i=1$, e podemos dela obter $K_{\ell+1, r}$ ou $K_{\ell,r+1}$, logo, de configurações ~\hyperref[configB]{$(B_{1,0})$}
-    e ~\hyperref[configB]{$(B_{0,1})$}, respectivamente.. 
+    Para a interseção $K_{\ell-1, r-1}$ temos uma única solução $e_i=1$, e podemos dela obter $K_{\ell+1, r}$ ou $K_{\ell,r+1}$, logo, de configurações ~\hyperref[configB]{$(B_{1,0})$}
+    e ~\hyperref[configB]{$(B_{0,1})$}, respectivamente.
     %
      A intersecção $K_{1,2}$ admite $e_i = \ell-1$, se $r > \ell^2 - 3\ell+3$ e isso permite a configuração~\hyperref[configB]{$(B_{1,0})$}.
     %
-    As outras intersecções mais gerais, a saber $K_{\ell-1, r-b}$, $K_{\ell,b_1}$ e $K_{\ell-1, b_2}$, precisam dos limites de $e_i < r$ e $e_i < \ell$, respectivamente; no entanto,
-	para gerar outro $\K$ em $H_i$ nesses casos precisaríamos adicionar pelo menos
-	$r$ e $\ell-1$ arestas, respectivamente, a um vértice. 
+    As outras intersecções da forma $K_{\ell, r-b_1}$ e $K_{\ell-1,b_2}$ -- as quais $\Slr$ provém de $\beta_1$ ou de $\beta_2$--,  de (\ref{eq:inter}) seguem as restrições $e_i < r$ e $e_i < \ell$, respectivamente; no entanto,
+	para com elas obter outro $\K$ em $H_i$ precisaríamos adicionar pelo menos
+	$r$ e $\ell-1$ arestas, respectivamente, a um vértice. Logo, não formam cópia de $\K$. 
 	%para fazer que um vértice esteja em outra partição fora a inicial.
     
-   Agora, examinamos o caso em que o acréscimo de arestas entre dois $\K$ disjuntos de $H_{i-1}$, digamos que $K'$ e $K''$, forma um outro bipartido $K\cong\K$.
-    Como $K'$ e $K''$ estão na mesma $\K$-componente, existe uma sequência de bipartidos $\K$ que se interceptam nessa componente cuja interseção ocorre com $H_j$ para algum $j<i-1$.
-    Mas pelo Fato \ref{fato:ciclos}, isso não pode ocorrer, logo, arestas novas entre dois $\K$ disjuntos de $H_{i-1}$ não pode formar um novo bipartido $K$.
+   Agora, examinamos o subcaso em que o acréscimo de arestas se dá entre duas cópias disjuntas de $\K$ em $H_{i-1}$, digamos que $K'$ e $K''$, para formar um outro bipartido $K\cong\K$.
+    Como $K'$ e $K''$ estão na mesma $\K$-componente e são disjuntos, $K'$ ou $K''$ deve estar contido em um subgrafo $H_j$ da sequência dessa componente para algum $j<i-1$.
+    Com isso, teríamos que $K$ em $H_i$ intercepta arestas de $H_j$, o que contraria o Fato \ref{fato:ciclos}, logo, arestas novas entre duas cópias disjuntas de $\K$ em $H_{i-1}$ não podem formar um novo bipartido $K$.
 
 \end{proof}
   
@@ -1352,10 +1376,9 @@ configuração~\hyperref[configB]{$(B_{2,0})$}.
 \section{Limiar em $n^{-1/m_2(K_{\ell,r})}$}
 \label{sec:mainres}
 
-Nesta seção provamos o Teorema~\ref{lemma:main}, ele segue 
-de uma coloração de arestas de $G$ sem cópias rainbow de~$\K$ que mostramos como obter dado que $m(G) < m_2(\K)$.
-O resultado principal (semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbcomplete}) segue de verificar que as configurações do tipo B, i.e., que geram múltiplos $\K$ entre cada subgrafo de uma $\K$-componente, são menos presentes por conta da densidade elevada que possuem, e, aparecem no máximo duas vezes seguidas. 
-  Isso torna possível fazer uma coloração própria parcial  que evita $\K$ rainbow, o que nos permite concluir nosso resultado principal.
+Nesta seção provamos o Teorema~\ref{lemma:main}, ele segue da construção de uma coloração de arestas de $G$ sem cópias rainbow de~$\K$ que exibimos dado que $m(G) < m_2(\K)$.
+O resultado principal, semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbcomplete}, foca em verificar que as configurações do tipo B, i.e., que geram múltiplos $\K$ entre cada subgrafo de uma $\K$-componente, são menos presentes por conta da densidade elevada que possuem, e, aparecem no máximo duas vezes seguidas. 
+  Isso torna possível fazer uma coloração própria parcial  que evita cópias de $\K$ rainbow, o que nos permite concluir nosso resultado principal.
   
     \begin{proof}[Demonstração do Teorema~\ref{lemma:main}]
       Sejam $7 \leq \ell \leq r$ inteiros e $G$ um grafo tal que $m(G) < (\ell r - 1)/(\ell+r-2)$.
@@ -1363,20 +1386,23 @@ O resultado principal (semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbco
         Tome um bipartido $\K = [X,Y]$ arbitrário em $G$ para ser $H_1$ e atribua uma cor distinta $c_j$ para $\ell-3$ arestas paralelas entre $X$ e $Y$, a cada $\ell-3$ vértices de $Y$ em $H_1$, onde
         $1 \leq j \leq \lfloor \frac{r}{\ell-3}\rfloor$.
 
-        Seja $H = H_t$, com $t \geq 2$, uma $\K$-componente de $G$ obtida por uma sequência de subgrafos $(H_1, \ldots, H_t)$ construída por bipartidos completos.
+        Seja $H = H_t$, com $t \geq 2$, uma $\K$-componente de $G$ obtida por uma sequência de subgrafos $(H_1, \ldots, H_t)$ construída pela interseção de bipartidos completos.
 
          Vamos considerar as configurações dadas pelo Lema \ref{lema:config} que ocorrem nesta sequência $(H_1, \ldots, H_t)$.
          %
          Para cada $1 < i \leq t$, podem aparecer bipartidos $\K$ em $H_{i}$ que não estão em $H_{i-1}$.
-         Atribuíremos cores para as arestas de $E(H_{i})$ %%, a menos de um subcaso. 
+         Atribuíremos cores para as arestas de $E(H_{i})$.
 
-        Se $H_i$ é do tipo A, ou seja, tem configuração~\hyperref[configA]{$(A_{jk})_{pq}$}, onde $j < \ell$ e $k < r$, %%xxxxx if $\ell \geq 7$, 
-        tal caso adiciona um único $\K = [X,Y]$ em $H_i$.
-        
-      Se $\{j,k\} \in \mathcal{S}$, então existem pelo menos $\ell-3$ novos vértices de $[X,Y]$ em $H_i$ (por conta de $\mathcal{S}$) que podem ter arestas coloridas com o mesmo processo usado em $H_1$.        
+         \medskip \textbf{Caso A.} Se $H_i$ é do tipo A, ou seja, apresenta configuração~\hyperref[configA]{$(A_{jk})_{pq}$}, onde $j < \ell$ e $k < r$.
+         
+         %%xxxxx if $\ell \geq 7$, 
+        Neste caso adiciona um único $\K = [X,Y]$ em $H_i$.        
+      Se $\{j,k\} \in \mathcal{S}$, então existem pelo menos $\ell-3$ novos vértices de $[X,Y]$ em $H_i$ (por conta dos pares em $\mathcal{S}$) que podem ter arestas coloridas com o mesmo processo usado em $H_1$.        
       Se $j = \ell-1$ e $k=b_2 < r$, então podemos atribuir novas cores a cada $\ell-3$ vértices de $Y$ incidentes em $X$.
 
-      Para as configurações do tipo B, ~\hyperref[configB]{$(B_{sw})$}, vamos reutilizar alguma cor presente em $H_{i-1}$, pois estas configurações geram múltiplos $\K$ quando formam $K_{\ell+s,r+w}$.        
+        \medskip \textbf{Caso B.} Se $H_i$ é do tipo B, ~\hyperref[configB]{$(B_{sw})$}.
+        
+        Aqui, vamos reutilizar alguma cor presente em $H_{i-1}$, pois estas configurações geram múltiplos $\K$ quando formam $K_{\ell+s,r+w}$.        
       Considere a configuração ~\hyperref[configB]{$(B_{0,w})$} com $w > 0$, então existem dois novos vértices de
       %%%%$Z$ $u$ and $v$ of
       $H_i$ em $K \cong K_{\ell,r+w} =[U, V \cup Z]$, 
@@ -1386,29 +1412,29 @@ O resultado principal (semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbco
      vértices de $Z$.
       É evidente que não é possível tomar $r$ vértices de $V \cup Z$ sem repetir uma aresta colorida com pontas em $U$.
       Assim, os grafos bipartidos formados em $H_i$ não são rainbow para $(B_{0,w})$.  
-	  No caso de $(B_{0,2})$, chame de $u$ e $v$ os dois vértices novos de $H_i$, vamos reutilizar uma cor $c$ de $H_{i-1}$ nas arestas de $u$ e $v$ que incidem no $\K$ de interseção com $K_{\ell,\ell+2}$.  
-        A coloração é análoga para a configuração $(B_{1,w})$.
+	  No caso de ~\hyperref[configB]{$(B_{0,2})$}, chame de $u$ e $v$ os dois vértices novos de $H_i$, vamos reutilizar uma cor $c$ de $H_{i-1}$ nas arestas de $u$ e $v$ que incidem no $\K$ de interseção com $K_{\ell,\ell+2}$.  
+        A coloração é análoga para a configuração ~\hyperref[configB]{$(B_{1,w})$}.
 
         Quando $\ell = r$, a configuração~\hyperref[configB]{$(B_{2,0})$} representa um 
         $K_{\ell, \ell+2} = [X, Y \cup Z]$, onde $Z = \{u,v\}$, e $[X,Y]$ já possui $\ell-3$ arestas coloridas com uma certa cor $c$. 
         Então é suficiente repetir a mesma cor $c$ em duas arestas entre $u,v$ e dois vértices de $X$ que não receberam a cor $c$ ainda.
         
-       A configuração~\hyperref[configB]{$(B_{1,0})$} vista no Lema \ref{lemma:config} possui três casos que a geram: 
+       A configuração~\hyperref[configB]{$(B_{1,0})$} vista no Lema \ref{lema:config} possui três subcasos que a geram: 
        as intersecções da forma $K_{1,1}$, $K_{1,2}$ e $K_{\ell-1,r-1}$, respectivamente. 
-       Nos primeiros dois casos,existe um vértice, digamos $v$,
+       Nos primeiros dois subcasos, existe um vértice, digamos $v$,
         fora da interseção de $K \cong K_{\ell,r+1}$ em que podemos reusar uma
         cor $c$ (pois cada cor é usada em no máximo $\ell-3$ arestas paralelas) atribuindo a cor $c$ a uma aresta incidente em $v$.
                 
-        No terceiro caso, temos o acréscimo de uma única aresta e isto pode nos forçar a colorir alguma aresta já presente em $H_{i-1}$, então precisamos verificar que existem arestas não coloridas em $H_{i-1}$. 
+        No terceiro subcaso, temos o acréscimo de uma única aresta e isto pode nos forçar a colorir alguma aresta já presente em $H_{i-1}$, então precisamos verificar que existem arestas não coloridas em $H_{i-1}$. 
         Dito isso, o subgrafo $K \cong K_{\ell,r+1}$ tem uma aresta, digamos $vw$, adicionada em $H_i$, e pelo menos $\ell-3$ arestas pré-coloridas na cor $c$;
         se tais arestas não contém $v$ e nem $w$, então colorimos $vw$ com $c$, caso contrário, atribuímos uma cor nova $c'$ a $vw$ e para outra aresta paralela a $vw$ que ainda não fora pintada em $K$.  
         Uma coloração análoga é dada para a configuração~\hyperref[configB]{$(B_{0,1})$}.
         
         Para concluir, precisamos verificar que o método de coloração dado anteriormente é válido.
-        Iremos ver que duas configurações $(B_{sw})$ não ocorrem de maneira sucessiva na sequência de subgrafos  de $G$, o que concentraria arestas nos mesmos vértices. %%, exceto se forem dois $(B_z)_1$ que equivalem a $(B_z)_2$ quando $z \in \{1,2\}$.  
-        O caso $(B_{2,0})$ não pode ser sucessivo no mesmo subconjunto de vértices, pois geraria densidades proibitivas com relação a $m_2(\K)$.
+        Iremos ver que duas configurações ~\hyperref[configB]{$(B_{sw})$} não ocorrem de maneira sucessiva na sequência de subgrafos  de $G$, o que concentraria arestas nos mesmos vértices. %%, exceto se forem dois $(B_z)_1$ que equivalem a $(B_z)_2$ quando $z \in \{1,2\}$.  
+        O caso ~\hyperref[configB]{$(B_{2,0})$} não pode ser sucessivo no mesmo subconjunto de vértices, pois geraria densidades proibitivas com relação a $m_2(\K)$.
         %% de subgrafos tais como $K_{\ell+2,\ell+2}, K_{\ell, \ell+4}, K_{\ell+1,\ell+1}$.
-        Para $K \cong K_{\ell,r+1}$ advindo de um $(B_{1,0})$, com interseção $K_{1,1}$, teríamos que 
+        Para $K \cong K_{\ell,r+1}$ advindo de um ~\hyperref[configB]{$(B_{1,0})$}, com interseção $K_{1,1}$, teríamos que 
         
         \[
             \frac{2\ell r+\ell-2+e_i}{2\ell+2r-2} < \frac{\ell
@@ -1419,11 +1445,13 @@ r-1}{r+\ell-2},
          Podemos colorir seguindo a mesma ideia se a configuração anterior for ~\hyperref[configB]{$(B_{1,0})$}, pois nesta intersecção possui duas cópias de $\K$ já coloridas com pelo menos cores.
         %
         Enquanto que a configuração~\hyperref[configB]{$(B_{1,0})$}
- das intersecçõess $K_{1,2}$ e $K_{\ell-1,r-1}$ não podem formar outro $\K$.  
+ das intersecçõess $K_{1,2}$ e $K_{\ell-1,r-1}$ não podem formar outra cópia de $\K$.  
 
  
         Com isso, as configurações que exigiriam colorir arestas pré-existentes em $H_{i-1}$ não podem se suceder na sequência.
         Enquanto que nas outras configurações apenas colorimos arestas contidas exclusivamente em $H_{i}$.
+
+        \medskip \textbf{Caso C.} Se $H_i$ é do tipo C.
      \end{proof}
  
   
