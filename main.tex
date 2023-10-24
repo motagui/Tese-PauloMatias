@@ -1254,12 +1254,12 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
     Também definimos os conjuntos de inteiros consecutivos 
     \begin{align*}
         \beta_1 &:=
-        \left\{\left\lceil \frac{\ell^2r - 4\ell r + \ell+2r}{\ell-1)^2}\right\rceil,\dots, r-1\right\}   
+        \left\{\left\lceil \frac{\ell^2r - 4\ell r + \ell+2r}{(\ell-1)^2}\right\rceil,\dots, r-1\right\}   
         \\
         \beta_2 &:=
         \left\{\left\lceil \frac{-\ell^2r +5\ell r - \ell-2r-1}{r-\ell^2+3\ell-3}\right\rceil,\ldots, r\right\}.
     \end{align*} 
-    Uma verificação algébrica da Proposição~\ref{lemma:inter_a} nos dá os valores de $\mathcal{S}_{\ell,r}$ e estes são apresentados a seguir:
+    Uma verificação algébrica da Proposição~\ref{lemma:inter_a} nos dá os valores de $\mathcal{S}_{\ell,r}$ e estes são apresentados a seguir (mais conjuntos para casos menores $3 \leq \ell < 7$ são descritos no Apêndice \ref{cap:app}):
     
       \begin{itemize}
       \item [(i)] se $r=\ell = 3$ ou $r=\ell \geq 7$, então
@@ -1272,7 +1272,7 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
     \mathcal{S}_\ell \cup\big\{\{2,3\},\{3,3\},\{4,5\}\big\}$;
       \item[(v)] if $7 \leq \ell < r \text{ e } r > \ell^2-3\ell+3$,
     então $\mathcal{S}_{\ell,r} = \mathcal{S} \cup \{\{a,b\}: a=\ell\text{
-    and }b\in \beta_1\}$;
+    e }b\in \beta_1\}$;
        \item[(vi)] se $7 \leq \ell < r \text{ e } r \leq
     \ell^2-3\ell+3$, então $\mathcal{S}_{\ell,r} = \mathcal{S} \cup
     \{\{a,b\}: a=\ell\text{ e }b\in \beta_1;\text{ ou }a=\ell-1\text{
@@ -1400,7 +1400,7 @@ O resultado principal, semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbco
       Se $\{j,k\} \in \mathcal{S}$, então existem pelo menos $\ell-3$ novos vértices de $[X,Y]$ em $H_i$ (por conta dos pares em $\mathcal{S}$) que podem ter arestas coloridas com o mesmo processo usado em $H_1$.        
       Se $j = \ell-1$ e $k=b_2 < r$, então podemos atribuir novas cores a cada $\ell-3$ vértices de $Y$ incidentes em $X$.
 
-        \medskip \textbf{Caso B.} Se $H_i$ é do tipo B, ~\hyperref[configB]{$(B_{sw})$}.
+        \medskip \textbf{Caso B.} Se $H_i$ é do tipo B, ou seja, apresenta configuração ~\hyperref[configB]{$(B_{sw})$}.
         
         Aqui, vamos reutilizar alguma cor presente em $H_{i-1}$, pois estas configurações geram múltiplos $\K$ quando formam $K_{\ell+s,r+w}$.        
       Considere a configuração ~\hyperref[configB]{$(B_{0,w})$} com $w > 0$, então existem dois novos vértices de
@@ -1480,35 +1480,98 @@ Assim, a partir do que estudamos e do que se sabe de ciclos e grafos completos, 
 Devido aos progressos já obtidos, estimamos que 
 
 
+\appendix
+\chapter{Casos Pequenos}\label{cap:app}
+
+Neste apêndice apresentamos os conjuntos de $\Slr$ 
+que são soluções de pares $\{a,b\}$ para a desigualdade~(\ref{eq:pairs-ab})
+da Proposição~\ref{lemma:inter_a} para os casos pequenos, i.e., quando $3 \leq \ell < 7$, 
+que, em vista do Lema~\ref{lema:config}, completa o cenário de grafos bipartidos completos com mais de seis vértices.
+%
+Além disso, se $\ell \ll r$, as intersecções possíveis são semelhantes ao que encontramos na prova do Lema~\ref{lema:config} e as provas sobre suas respectivas configurações são análogas.  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{equation*}%[label=\rmlabel]
+    \begin{aligned}
+        \mathcal{S}_{\ell, r}
+            &:=
+    \begin{cases}
+        \mathcal{S}_{3,3} \cup \{\{2,4\}, \{3,3\}\}, 
+        & \text{se } \ell=3 \text{ e } r=4   \\ 
+        %
+        \mathcal{S}_{3,4} \cup \{\{2,5\}, \{3,4\}\}, 
+        & \text{se } \ell=3 \text{ e } r=5    \\ 
+        %
+        \mathcal{S}_{3,5} \cup \{\{2,6\}, \{3,5\}\}, 
+        & \text{se } \ell=3 \text{ e } r=6    \\ 
+        %
+         \mathcal{S}_{3,6} \cup \{\{3,6\}\}, 
+        & \text{se } \ell=3 \text{ e } r=7    \\ 
+        %
+        %
+        \mathcal{S}_{3,5} \cup \{\{3,\beta\}: 4 \leq \beta \leq r-1\}, & \text{se } \ell =3 \text{ e } 8\leq r \leq 10 \\
+        %%
+         \mathcal{S}_{4,4} \cup \{\{3,5\}, \{4,4\}\}, 
+        & \text{se } \ell=4 \text{ e } r=5      \\ 
+        %
+         \mathcal{S}_{4,5} \cup \{\{3,6\}, \{4,5\}\}, 
+        & \text{se } \ell=4 \text{ e } r=6      \\ 
+        %%
+         \mathcal{S} \cup \{\{3,\alpha\}: 3\leq\alpha\leq7\}\cup \{\{4,\beta\}: 4\leq \beta\leq r-1\}, 
+        & \text{se } \ell=4 \text{ e } r\in\{7,8\}      \\ 
+        %
+        %
+        \mathcal{S}_{4,7} \setminus\{\{3,7\}\}, 
+        & \text{se } \ell=4 \text{ e } r=9      \\ 
+        %
+        %
+         \mathcal{S}_{4,9} \setminus\{\{3,6\}\}, 
+        & \text{se } \ell=4 \text{ e } r=10      \\ 
+        %
+        %
+         \mathcal{S}_{4,9} \setminus\{\{3,5\}\}, 
+        & \text{se } \ell=4 \text{ e } r=11      \\ 
+        %
+        %
+         \mathcal{S} \cup \{\{3,3\}\} \cup \{\{4,\beta\}: 4\leq \beta\leq r-1\}, 
+        & \text{se } \ell=4 \text{ e } 12\leq r\leq 15     \\ 
+        %
+        %
+         \mathcal{S}_{5,5} \cup \{\{4,6\}, \{5,5\}\}, 
+        & \text{se } \ell=5 \text{ e } r=6     \\
+        %%
+         \mathcal{S}_{3,3} \cup \{\{3,3\}\}\cup I_2(\ell,r), 
+        & \text{se } \ell=5 \text{ e } r=7    \\
+        %%
+         \mathcal{S}_{3,3} \cup I_2(\ell,r), 
+        & \text{se } \ell=5 \text{ e } 8\leq r\leq 10    \\
+        %%
+         \mathcal{S}_{3,3} \cup I_1(\ell,r), 
+        & \text{se } \ell=5 \text{ e } r\in \{11,12\}    \\
+        %%
+        \mathcal{S}_{3,4} \cup \{\{3,\beta\}: 4 \leq \beta \leq r-1\}, & \text{se } \ell =3 \text{ e } r \geq 11 \\
+        %%
+        \mathcal{S}_{3,3} \cup I_1(\ell,r),  & \text{se } \ell =4 \text{ e } r \geq 16  \\
+        %
+        %
+         \mathcal{S}_{3,3} \cup I_2(\ell,r),  & \text{se } \ell=6 \text{ e } r \in\{7,8\}  \\
+         %%
+        \mathcal{S} \cup I_2(\ell,r),  & \text{se } \ell=6 \text{ e }  9\leq r \leq 12 \\
+         %%
+        \mathcal{S} \cup I_1(\ell,r),  & \text{se } \ell \in\{5,6\} \text{ e } r \geq 13         
+        \end{cases}
+    \end{aligned}  
+\end{equation*}
+onde usamos os seguintes conjuntos:
+\begin{equation*}
+    \begin{aligned}
+        I_1(\ell,r) &:= \{\{a,b\}: a=\ell\text{
+    e }b\in \beta_1\}
+        \\
+        I_2(\ell,r) &:= \{\{a,b\}: a=\ell\text{ e }b\in \beta_1;\text{ ou }a=\ell-1\text{
+    e }b\in \beta_2\}
+    \end{aligned}
+\end{equation*}
 
 % ---------------------------------------------------------------------------- %
 % Bibliografia
