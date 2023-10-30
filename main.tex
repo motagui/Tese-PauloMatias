@@ -1244,21 +1244,21 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
     Dados os inteiros positivos $\ell$ e $r$, denote por
     $\mathcal{S}_{\ell,r}$ o conjunto de pares $\{a,b\}$ tal que a desigualdade~\ref{eq:pairs-ab} vale.  
     Para descrever $\Slr$, antes definimos os seguintes conjuntos de pares inteiros
-    \begin{align*} 
+    \begin{align}\label{eq:conjS} 
         \mathcal{S} &:= \left\{\{1,1\},\{1,2\},\{1,3\},\{2,2\}\right\},
     \\
     	\mathcal{S}_\ell &:=
     \left\{\mathcal{S},\{\ell-1,\ell-1\},\{\ell-2,\ell\},\{\ell-1,\ell\}\right\}.
-    \end{align*} 
+    \end{align} 
         
     Também definimos os conjuntos de inteiros consecutivos 
-    \begin{align*}
+    \begin{align}\label{eq:conjBeta}
         \beta_1 &:=
         \left\{\left\lceil \frac{\ell^2r - 4\ell r + \ell+2r}{(\ell-1)^2}\right\rceil,\dots, r-1\right\}   
         \\
         \beta_2 &:=
         \left\{\left\lceil \frac{-\ell^2r +5\ell r - \ell-2r-1}{r-\ell^2+3\ell-3}\right\rceil,\ldots, r\right\}.
-    \end{align*} 
+    \end{align} 
     Uma verificação algébrica da Proposição~\ref{lemma:inter_a} nos dá os valores de $\mathcal{S}_{\ell,r}$ e estes são apresentados a seguir (mais conjuntos para casos menores $3 \leq \ell < 7$ são descritos no Apêndice \ref{cap:app}):
     
       \begin{itemize}
@@ -1294,16 +1294,16 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
     Seja $v_i= \ell+r-a-b$, onde $a,b$ são inteiros positivos.  
     Os $v_i$ vértices dessa única cópia $K \cong \K= [X,Y]$ formam um bipartido $K_{\ell-a,r-b}$ em $H_i$; a $\K$-componente é composta pelas intersecções de arestas de $K$ com $H_{i-1}$, 
     o que pela Proposição \ref{lemma:inter_a},  forma $K_{j,k}$,
-    onde $\{j,k\} \in \mathcal{S}$.  
+    onde $\{j,k\} \in \{\{x,y\} \in \Slr: x < \ell \text{ e } y < r\}$, pois se $j=\ell$ ou $k=r$ teríamos mais de uma cópia de $\K$ formada.  
    
-   Completamos a partição $[X,Y]$ tomando outros $p,q$ vértices em $H_{i-1}$ tais que um bipartido $K_{p,q}$ é obtido satisfazendo às condições de  $j+p = a$ e $k+q = b$. 
+   Além disso, completamos a partição $[X,Y]$ tomando outros $p,q$ vértices em $H_{i-1}$ tais que um bipartido $K_{p,q}$ é obtido satisfazendo às condições de  $j+p = a$ e $k+q = b$. 
    
-   Suponha que já haviam arestas em $K_{p,q}$  para algum $H_j$ na sequência de subgrafos com $j < i-1$.
+   Suponha que já haviam arestas em $K_{p,q}$  para algum $H_{i'}$ na sequência de subgrafos com $i' < i-1$.
    Logo, o novo $K$ adicionado teria interseção de arestas com algum outro bipartido completo $K'$, além do bipartido $K''$ que contém $K_{jk}$ em $H_{i-1}$.
    Assim, considerando o subgrafo $H_{i}$,
    %teríamos que existe um caminho entre $K'$ e $K''$, e 
    temos que $K$ 
-   intersecta arestas de algum $H_j$ para $j<i-1$, o que contradiz o Fato \ref{fato:ciclos}.
+   intersecta arestas de algum $H_{i'}$ para $i'<i-1$, o que contradiz o Fato \ref{fato:ciclos}.
   
      Com isso, as arestas de $K_{p,q}$ são adicionadas por $H_i$ na $\K$-componente e, nós obtemos a configuração~\hyperref[configA]{$(A_{jk})_{pq}$} tornando $K$ do tipo A.  
     Esta configuração formou um único $\K$ com $H_i$,  agora consideramos casos onde mais de uma cópia de $\K$ aparece em $H_i$.
@@ -1366,8 +1366,8 @@ configuração~\hyperref[configB]{$(B_{2,0})$}.
 	%para fazer que um vértice esteja em outra partição fora a inicial.
     
    Agora, examinamos o subcaso em que o acréscimo de arestas se dá entre duas cópias disjuntas de $\K$ em $H_{i-1}$, digamos que $K'$ e $K''$, para formar um outro bipartido $K\cong\K$.
-    Como $K'$ e $K''$ estão na mesma $\K$-componente e são disjuntos, $K'$ ou $K''$ deve estar contido em um subgrafo $H_j$ da sequência dessa componente para algum $j<i-1$.
-    Com isso, teríamos que $K$ em $H_i$ intercepta arestas de $H_j$, o que contraria o Fato \ref{fato:ciclos}, logo, arestas novas entre duas cópias disjuntas de $\K$ em $H_{i-1}$ não podem formar um novo bipartido $K$.
+    Como $K'$ e $K''$ estão na mesma $\K$-componente e são disjuntos, $K'$ ou $K''$ deve estar contido em um subgrafo $H_{i'}$ da sequência dessa componente para algum $i'<i-1$.
+    Com isso, teríamos que $K$ em $H_i$ intercepta arestas de $H_{i'}$, o que contraria o Fato \ref{fato:ciclos}, logo, arestas novas entre duas cópias disjuntas de $\K$ em $H_{i-1}$ não podem formar um novo bipartido $K$.
 
 \end{proof}
   
@@ -1390,29 +1390,35 @@ O resultado principal, semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbco
 
          Vamos considerar as configurações dadas pelo Lema \ref{lema:config} que ocorrem nesta sequência $(H_1, \ldots, H_t)$.
          %
-         Para cada $1 < i \leq t$, podem aparecer bipartidos $\K$ em $H_{i}$ que não estão em $H_{i-1}$.
-         Atribuíremos cores para as arestas de $E(H_{i})$.
+         Para cada $1 < i \leq t$, existe pelo menos um bipartido $\K$ em $H_{i}$ que não está em $H_{i-1}$.
+         Nosso objetivo é atribuir cores para as arestas de $E(H_{i})$ evitando cópias rainbow de $\K$.
 
          \medskip \textbf{Caso A.} Se $H_i$ é do tipo A, ou seja, apresenta configuração~\hyperref[configA]{$(A_{jk})_{pq}$}, onde $j < \ell$ e $k < r$.
          
          %%xxxxx if $\ell \geq 7$, 
-        Neste caso adiciona um único $\K = [X,Y]$ em $H_i$.        
-      Se $\{j,k\} \in \mathcal{S}$, então existem pelo menos $\ell-3$ novos vértices de $[X,Y]$ em $H_i$ (por conta dos pares em $\mathcal{S}$) que podem ter arestas coloridas com o mesmo processo usado em $H_1$.        
-      Se $j = \ell-1$ e $k=b_2 < r$, então podemos atribuir novas cores a cada $\ell-3$ vértices de $Y$ incidentes em $X$.
+        Neste caso é adicionado um único $\K = [X,Y]$ em $H_i$.      
 
-        \medskip \textbf{Caso B.} Se $H_i$ é do tipo B, ou seja, apresenta configuração ~\hyperref[configB]{$(B_{sw})$}.
+        Como $\{j,k\} \in \{\{x,y\} \in \Slr: x < \ell \text{ e } y < r\}$, então existem em $H_i$ pelo menos dois vértices, digamos que $u\in X$ e $v\in Y$, com arestas novas de modo que 
+        %%%% a cada par $(u,v)$, 
+        usamos $\ell-3$ cores para as arestas de $u$ para vértices de $Y\setminus\{v\}$ e as repetimos de $v$ para $X\setminus\{u\}$; é possível fixar $u \in X$ e realizar esse processo de coloração exaustivamente para os vértices de $Y$.
+        Tais arestas são paralelas.
         
-        Aqui, vamos reutilizar alguma cor presente em $H_{i-1}$, pois estas configurações geram múltiplos $\K$ quando formam $K_{\ell+s,r+w}$.        
-      Considere a configuração ~\hyperref[configB]{$(B_{0,w})$} com $w > 0$, então existem dois novos vértices de
-      %%%%$Z$ $u$ and $v$ of
-      $H_i$ em $K \cong K_{\ell,r+w} =[U, V \cup Z]$, 
+        %% em $X$  (por conta dos pares em $\mathcal{S}$, vide (\ref{eq:conjS})) que podem ser coloridas com o mesmo processo usado em $H_1$.        
+        %% Se $j = \ell-1$ e $k=r-1$, então podemos atribuir novas cores a cada $\ell-3$ vértices de $Y$ incidentes em $X$.
+
+        \medskip \textbf{Caso B.} Se $H_i$ é do tipo B, ou seja, apresenta configuração~\hyperref[configB]{$(B_{sw})$}.
+        
+        Aqui, vamos reutilizar alguma cor presente em $H_{i-1}$, pois esta configuração gera múltiplos $\K$ quando forma $K_{\ell+s,r+w}$ que intersectam cópias de $\K$ com arestas já coloridas em passos anteriores.
+        
+      Considere a configuração~\hyperref[configB]{$(B_{0,w})$} em
+      $H_i$ com $w > 0$, então existem $w$ novos vértices de um conjunto $Z$ tal que o bipartido adicionado é $K \cong K_{\ell,r+w} =[X, Y \cup Z]$, 
       onde $1 \leq w \leq r$.  
-      Repetimos o processo de coloração atribuindo uma nova cor a cada $\ell-3$ 
-%%% non-adjacent edges with endpoints are between $X$ and $Z$. 
-     vértices de $Z$.
-      É evidente que não é possível tomar $r$ vértices de $V \cup Z$ sem repetir uma aresta colorida com pontas em $U$.
-      Assim, os grafos bipartidos formados em $H_i$ não são rainbow para $(B_{0,w})$.  
-	  No caso de ~\hyperref[configB]{$(B_{0,2})$}, chame de $u$ e $v$ os dois vértices novos de $H_i$, vamos reutilizar uma cor $c$ de $H_{i-1}$ nas arestas de $u$ e $v$ que incidem no $\K$ de interseção com $K_{\ell,\ell+2}$.  
+      Repetimos o processo de coloração atribuindo uma nova cor a cada $\ell-3$ arestas 
+      não-adjacentes com pontas entre $X$ e $Z$. 
+      É evidente que não é possível tomar $r$ vértices de $Y \cup Z$ sem repetir uma aresta colorida com pontas em $X$.
+      Assim, os grafos bipartidos formados em $H_i$ não são rainbow para~\hyperref[configB]{$(B_{0,w})$}.  
+      
+	  No caso de ~\hyperref[configB]{$(B_{0,2})$}, chame de $u$ e $v$ os dois vértices novos de $H_i$, vamos reutilizar uma cor $c$ de $H_{i-1}$ nas arestas de $u$ e $v$ que incidem no $\K$ de interseção com $K_{\ell,r+2}$.  
         A coloração é análoga para a configuração ~\hyperref[configB]{$(B_{1,w})$}.
 
         Quando $\ell = r$, a configuração~\hyperref[configB]{$(B_{2,0})$} representa um 
@@ -1431,7 +1437,7 @@ O resultado principal, semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbco
         Uma coloração análoga é dada para a configuração~\hyperref[configB]{$(B_{0,1})$}.
         
         Para concluir, precisamos verificar que o método de coloração dado anteriormente é válido.
-        Iremos ver que duas configurações ~\hyperref[configB]{$(B_{sw})$} não ocorrem de maneira sucessiva na sequência de subgrafos  de $G$, o que concentraria arestas nos mesmos vértices. %%, exceto se forem dois $(B_z)_1$ que equivalem a $(B_z)_2$ quando $z \in \{1,2\}$.  
+        Veremos que duas configurações ~\hyperref[configB]{$(B_{sw})$} não ocorrem de maneira sucessiva na sequência de subgrafos  de $G$, pois isso concentraria arestas nos mesmos vértices afetando sua densidade. %%, exceto se forem dois $(B_z)_1$ que equivalem a $(B_z)_2$ quando $z \in \{1,2\}$.  
         O caso ~\hyperref[configB]{$(B_{2,0})$} não pode ser sucessivo no mesmo subconjunto de vértices, pois geraria densidades proibitivas com relação a $m_2(\K)$.
         %% de subgrafos tais como $K_{\ell+2,\ell+2}, K_{\ell, \ell+4}, K_{\ell+1,\ell+1}$.
         Para $K \cong K_{\ell,r+1}$ advindo de um ~\hyperref[configB]{$(B_{1,0})$}, com interseção $K_{1,1}$, teríamos que 
@@ -1442,7 +1448,7 @@ r-1}{r+\ell-2},
         \]
         e isto permite $e_i = \ell-1$ para $r > 2\ell^2-5\ell+4$,
         que gera um novo $\K$ de configuração~\hyperref[configB]{$(B_{1,0})$} pela inversão de um vértice da bipartição.
-         Podemos colorir seguindo a mesma ideia se a configuração anterior for ~\hyperref[configB]{$(B_{1,0})$}, pois nesta intersecção possui duas cópias de $\K$ já coloridas com pelo menos cores.
+         Podemos colorir seguindo a mesma ideia se a configuração anterior for ~\hyperref[configB]{$(B_{1,0})$}, pois nesta intersecção possui duas cópias de $\K$ já coloridas com pelo menos duas cores.
         %
         Enquanto que a configuração~\hyperref[configB]{$(B_{1,0})$}
  das intersecçõess $K_{1,2}$ e $K_{\ell-1,r-1}$ não podem formar outra cópia de $\K$.  
@@ -1451,7 +1457,10 @@ r-1}{r+\ell-2},
         Com isso, as configurações que exigiriam colorir arestas pré-existentes em $H_{i-1}$ não podem se suceder na sequência.
         Enquanto que nas outras configurações apenas colorimos arestas contidas exclusivamente em $H_{i}$.
 
-        \medskip \textbf{Caso C.} Se $H_i$ é do tipo C.
+        \medskip \textbf{Caso C.} Se $H_i$ é do tipo C. Ou seja, apresenta a configuração dada na Proposição~\ref{aff:casoP1}.
+
+        Como o bipartido adicionado em $H_i$ contém um $K_{\ell-1,r-2}=[X,Y]$, podemos utilizar uma coloração de arestas semelhante ao caso A.
+        
      \end{proof}
  
   
