@@ -18,6 +18,8 @@
 \usepackage[pdftex]{graphicx}           % usamos arquivos pdf/png como figuras
 \usepackage{setspace}                   % espaçamento flexível
 \usepackage{indentfirst}                % indentação do primeiro parágrafo
+\usepackage{subcaption}
+
 \usepackage{makeidx}                    % índice remissivo
 \usepackage[nottoc]{tocbibind}          % acrescentamos a bibliografia/indice/conteudo no Table of Contents
 \usepackage{courier}                    % usa o Adobe Courier no lugar de Computer Modern Typewriter
@@ -374,34 +376,30 @@ framexrightmargin=15pt
 % orifício de 10,7cm de largura x 6,0cm de altura que há na capa fornecida pela SPG.
 \thispagestyle{empty}
 \begin{center}
-    \vspace*{2.3cm}
-    \textbf{\Large{Título misterioso do trabalho a ser apresentado à \\
-    CPG para a tese}}\\
+    \vspace*{2cm}
+    \textbf{\Large{Padrões de coloração de arestas e propriedades anti-Ramsey }}\\
     
-    \vspace*{1.2cm}
-    \Large{Paulo Matias da Silva Junior}
-    
+    \vspace*{1.1cm}
+    \Large{Paulo Matias da Silva Junior}    
     \vskip 2cm
     \textsc{
-    Tese apresentada\\[-0.25cm] 
-    ao\\[-0.25cm]
-    Centro de Matemática, Cognição e Computação\\[-0.25cm]
-    da\\[-0.25cm]
-    Universidade Federal do ABC\\[-0.25cm]
-    para\\[-0.25cm]
-    obtenção do título\\[-0.25cm]
-    de\\[-0.25cm]
+    Tese apresentada\\[-0.3cm] 
+    ao\\[-0.3cm]
+    Centro de Matemática, Cognição e Computação\\[-0.3cm]
+    da\\[-0.3cm]
+    Universidade Federal do ABC\\[-0.3cm]
+    para\\[-0.3cm]
+    obtenção do título\\[-0.3cm]
+    de\\[-0.3cm]
     Doutor em Ciência da Computação}
     
-    \vskip 1.5cm
+    \vskip 1.3cm
     Programa: Ciência da Computação\\
     Orientador: Prof. Dr. Guilherme Mota
-
    	\vskip 1cm
     \normalsize{Durante o desenvolvimento deste trabalho o autor recebeu auxílio
-    financeiro da FAPESP}
-    
-    \vskip 0.5cm
+    financeiro da FAPESP}    
+    \vskip 0.4cm
     \normalsize{Santo André, novembro de 2023}
 \end{center}
 
@@ -420,8 +418,7 @@ framexrightmargin=15pt
 \thispagestyle{empty}
     \begin{center}
         \vspace*{2.3 cm}
-        \textbf{\Large{Título misterioso do trabalho a ser apresentado à \\
-        CPG para a tese}}\\
+        \textbf{\Large{Padrões de coloração de arestas e propriedades anti-Ramsey }}\\
         \vspace*{2 cm}
     \end{center}
 
@@ -452,8 +449,7 @@ framexrightmargin=15pt
 \thispagestyle{empty}
     \begin{center}
         \vspace*{2.3 cm}
-        \textbf{\Large{Título misterioso do trabalho a ser apresentado à \\
-        CPG para a tese}}\\
+        \textbf{\Large{Padrões de coloração de arestas e propriedades anti-Ramsey }}\\
         \vspace*{2 cm}
     \end{center}
 
@@ -462,7 +458,7 @@ framexrightmargin=15pt
     \begin{flushright}
 	Esta versão da dissertação/tese contém as correções e alterações sugeridas\\
 	pela Comissão Julgadora durante a defesa da versão original do trabalho,\\
-	realizada em dd/mm/2023.
+	realizada em dd/12/2023.
     %Uma cópia da versão original está disponível no\\ Instituto de Matemática e Estatística da Universidade de São Paulo.
 
     \vskip 2cm
@@ -487,66 +483,38 @@ framexrightmargin=15pt
 % ---------------------------------------------------------------------------- %
 % Agradecimentos:
 % Se o candidato não quer fazer agradecimentos, deve simplesmente eliminar esta página 
-\chapter*{Agradecimentos}
-Texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto. Texto opcional.
+%% \chapter*{Agradecimentos}
+%Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto. Texto opcional.
 
 
 % ---------------------------------------------------------------------------- %
 % Resumo
 \chapter*{Resumo}
 
-\noindent MATIAS, P. \textbf{Título misterioso do trabalho em português}. 
-2010. 120 f.
-Tese (Doutorado) - Centro de Matemática, Cognição e Computação,
-Universidade Federal do ABC, Santo André, 2023.
+ Este é o texto tem como foco o estudo de propriedades anti-Ramsey de grafos aleatórios e determinísticos.
+ Primeiro,
+consideramos o problema proposto por Conlon e Tyomkyn, de determinar o menor número de cores necessárias para se colorir propriamente as arestas do grafo completo $K_n$,
+de modo que nenhum par de triângulos vértices-disjuntos de $K_n$ tenha a mesma tripla de cores. 
+Esta quantidade de cores era desconhecida para $n$ par e conseguimos computá-la para alguns casos pequenos e também para uma família infinita de valores de $n$.
+
+Consideramos também o seguinte problema do tipo anti-Ramsey: dados grafos $G$ e $H$, denotamos por $G \rbarrow H$ a propriedade em que toda coloração própria de $E(G)$ apresenta uma cópia rainbow de $H$ em $G$.
+Provamos que o valor da função limiar para $G(n,p) \rbarrow K_{\ell,r}$ é dado por $n^{(\ell+r-2)/(\ell r-1)}$, para grafos bipartidos completos $\K$ com $\ell,r \geq 3$. Provamos também que o limiar é assintoticamente menor que este valor se $\ell=2$ e $r\geq 2$.
 \\
 
-Elemento obrigatório, constituído de uma sequência de frases concisas e
-objetivas, em forma de texto.  Deve apresentar os objetivos, métodos empregados,
-resultados e conclusões.  O resumo deve ser redigido em parágrafo único, conter
-no máximo 500 palavras e ser seguido dos termos representativos do conteúdo do
-trabalho (palavras-chave). 
-Texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto.
-Texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto.
-\\
-
-\noindent \textbf{Palavras-chave:} anti-Ramsey, coloração, palavra-chave3.
+\noindent \textbf{Palavras-chave:} anti-Ramsey, coloração própria, função limiar, bipartidos.
 
 % ---------------------------------------------------------------------------- %
 % Abstract
-\chapter*{Abstract}
-\noindent MATIAS, P. \textbf{Mysterious title in English}. 
-2010. 120 f.
-Tese (Doutorado) - Centro de Matemática, Cognição e Computação,
-Universidade Federal do ABC, Santo André, 2023.
-\\
+% \chapter*{Abstract}
+%\noindent MATIAS, P. \textbf{Mysterious title in English}. 2010. 120 f.
+% Tese (Doutorado) - Centro de Matemática, Cognição e Computação,Universidade Federal do ABC, Santo André, 2023.\\
 
+% Elemento obrigatório, elaborado com as mesmas características do resumo em língua portuguesa. De acordo com o Regimento da Pós- Graduação da USP (Artigo 99), deve ser redigido em inglês para fins de divulgação. 
+% Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text. Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text.
 
-Elemento obrigatório, elaborado com as mesmas características do resumo em
-língua portuguesa. De acordo com o Regimento da Pós- Graduação da USP (Artigo
-99), deve ser redigido em inglês para fins de divulgação. 
-Text text text text text text text text text text text text text text text text
-text text text text text text text text text text text text text text text text
-text text text text text text text text text text text text text text text text
-text text text text text text text text text text text text.
-Text text text text text text text text text text text text text text text text
-text text text text text text text text text text text text text text text text
-text text text.
-\\
+%\\
 
-\noindent \textbf{Keywords:} anti-Ramsey, edge-coloring, keyword3.
+%\noindent \textbf{Keywords:} anti-Ramsey, edge-coloring, keyword3.
 
 % ---------------------------------------------------------------------------- %
 % Sumário
@@ -555,7 +523,7 @@ text text text.
 % ---------------------------------------------------------------------------- %
 % Listas de figuras e tabelas criadas automaticamente
 \listoffigures            
- \listoftables            
+% \listoftables            
 
 % ---------------------------------------------------------------------------- %
 % Capítulos do trabalho
@@ -573,8 +541,7 @@ text text text.
 \chapter{Introdução}
 \label{sec:intro}
 
-Este trabalho de doutoramento, elaborado pelo aluno de doutorado Paulo Matias da Silva Junior, no Centro de Matemática, Computação e Cognição, UFABC, enquadra-se na área de
-combinatória extremal.
+%Este trabalho de doutoramento, elaborado pelo aluno de doutorado Paulo Matias da Silva Junior, no Centro de Matemática, Computação e Cognição, UFABC, enquadra-se na área de combinatória extremal.
 
 A Teoria de Ramsey é uma área da matemática que investiga a existência de ordem de subconjuntos dentro de conjuntos grandes de objetos.
 O nome desse campo se deve ao resultado clássico de Frank P. Ramsey \cite{Ra} que provou que para quaisquer inteiros positivos $t$ e $q$, existe um inteiro $n$ tal que toda $q$-coloração do grafo completo $K_n$ contém uma cópia monocromática de $K_t$.
@@ -590,16 +557,67 @@ O \emph{número de Ramsey}~$r(H)$ de um grafo~$H$ é definido como o menor intei
 Problemas em Teoria de Ramsey têm sido muito estudados e técnicas elegantes têm sido desenvolvidas  para estimar os números de Ramsey.
 O trabalho de Conlon, Fox e Sudakov~\cite{CoFoSu15} contém um resumo  dos avanços na área.
 
-%%% \text{\color{red} adicionar historia geral da area?}
+Ao longo dos últimos anos, o grafo aleatório $G(n,p)$ tem sido o grafo de coloração cujas propriedades Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
+Uma variação do problema tipo Ramsey é a chamada \textit{propriedade anti-Ramsey} em que buscamos cópias \textit{rainbow} de um grafo $F$ nas colorações de $G(n,p)$, isto é, cópias de $F$ cujas arestas não repetem cor.
+Para cópias rainbow de $F$ em um grafo determinístico, o trabalho  de Fujita, Magnant e Ozeki~\cite{fujita2010rainbow} sumariza os resultados neste caso.
+Aqui, temos o objetivo de estimar a função limiar sobre a ocorrência de cópias rainbow de $F$ em $G(n,p)$. 
 
-%% \section{Organização do texto} \label{sec:justificativa}
+Esta última variante foi primeiro estudada por Bohman, Frieze, Pikhurko e Smyth~\cite{bohman10:_aR_rgs} e depois por  Kohayakawa, Konstadinidis e Mota \cite{KoKoMo12} que adicionaram a condição de que as colorações de arestas são próprias.
+ O problema de encontrar cópias rainbow de ciclos no $G(n,p)$ já tem sido estudado desde 1992, iniciado por Rödl e Tuza~\cite{roedl92:_rainb}, no entanto, a função limiar para esta  propriedade passa a ser investigada na última década.
 
 Neste trabalho 
 %% tem como objetivo o estudo de diversas propriedades de grafos que garantam a existência de estruturas monocromáticas e multicoloridas em grafos cujas arestas estão coloridas.
-são investigadas propriedades do tipo Ramsey, anti-Ramsey
-e size-Ramsey de grafos aleatórios e determinísticos em diferentes versões. 
-%e problemas, o ponto em comum dos temas apresentados é a coloração de arestas. 
-\section{Preliminares}
+são investigadas propriedades dos tipos Ramsey e anti-Ramsey
+de grafos aleatórios e determinísticos em diferentes versões, são problemas cujo ponto em comum é a coloração de arestas.
+
+
+
+\section{Organização do texto}
+
+Iniciamos no Capítulo \ref{cap:prelim} apresentando brevemente os conceitos mais relevantes sobre grafos neste trabalho.
+O Capítulo \ref{cap:triangles} exibe um resultado de padrões em coloração de arestas do grafo completo. 
+Especificamente, dado um natural $n$, calculamos a menor 
+quantidade de cores em que existe uma coloração própria de $E(K_n)$ de modo a se evitar a formação de triângulos disjuntos em vértices que repetem a trinca de cores nas arestas.
+Esse número era desconhecido quando $n$ é par e foi determinado para os primeiros números pares e para uma família infinita de valores de $n$.
+
+%%%% seção conclusão?
+%%%A importância e vigor da pesquisa em torno dos tópicos que propomos podem ser observados nos trabalhos clássicos de diversos pesquisadores renomados, como Erd\H{o}s, Rödl, Szemerédi, e Tao, dentre outros, e nos trabalhos modernos de proeminentes pesquisadores como Conlon, Gowers, e Schacht. 
+%%% Os trabalhos desses autores, que muitas vezes consideram grafos aleatórios, mostram que ainda existe muito a ser feito no desenvolvimento de uma teoria sólida para entendermos a existência de uma certa ordem em estruturas aparentemente caóticas, o cerne da Teoria de Ramsey.
+
+A propriedade anti-Ramsey estudada foi a de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, ou seja, colorações que evitem cópias rainbow. 
+ O Capítulo \ref{cap:anti} traz como resultado inédito as condições para que a propriedade anti-Ramsey ocorra no grafo aleatório $G(n,p)$ com relação a conter cópias isomorfas ao grafo bipartido completo $\K$. 
+A saber, dados inteiros $\ell,r \geq 3$, provamos que a função limiar para a propriedade do grafo aleatório ser colorido evitando cópias rainbow de $\K$ depende da 2-densidade máxima de $\K$, especificamente, a função limiar encontrada é 
+$n^{(\ell+r-2)/(\ell r-1)}$.
+Também verificamos que tal função limiar é assintoticamente menor do que este valor se $\ell=2$ e $r\geq 2$.
+
+
+\chapter[Conceitos preliminares]{Conceitos preliminares}
+\label{cap:prelim}
+
+Neste capítulo introduzimos as notações e conceitos básicos utilizados ao longo desta tese, seguimos notação e terminologia padronizadas (veja, por exemplo, os livros \cite{diestel10:_graph_theor, janson00:_random_graph}).
+
+Dadas funções $f, g : \mathbb{N} \rightarrow \mathbb{R}_+$ e um natural $n$, dizemos que $f(n) \ll g(n)$
+se e somente se, para
+todo $\epsilon > 0$, existe $n_0$ tal que, se $n \geq n_0$, então $f(n) < g(n)$.
+
+Um \textit{grafo} $G$ é um par de conjuntos $(V,E)$, também denotados por $V(G)$ e $E(G)$, os quais são
+os conjuntos dos \textit{vértices} e das \textit{arestas} de $G$, respectivamente.
+Dizemos que um grafo $H$ é um \textit{subgrafo} de $G$
+se $V(H) \subseteq V(G)$ e $E(H) \subseteq E(G)$. 
+Por vezes, dados grafos $G$ e $H$, se existe um subgrafo $F\subseteq G$ que é isomorfo a $H$, dizemos que $F$ é \textit{cópia} de $H$ em $G$. 
+
+Duas classes de grafos bastante presentes nos Capítulos \ref{cap:triangles} e \ref{cap:anti} são os ciclos e os grafos bipartidos completos, respectivamente.
+Um grafo $C$ é um \textit{ciclo} de comprimento $n$ se ${V(C)=\{v_1, \ldots, v_n\}}$ e $E(C) = \{v_1v_2, v_2v_3,\ldots, v_{n-1}v_n, v_nv_1\}$.
+Se $G$ é um grafo tal que $V(G)$ pode ser dividido em dois subconjuntos disjuntos, $A$ e $B$, e cada
+aresta de $E(G)$ possui extremidades entre $A$ e $B$, então dizemos que $G$ é um grafo \textit{bipartido}. 
+Ademais, se cada vértice de $A$ é adjacente a cada vértice de $B$, chamamos $G$ de \textit{bipartido completo}, denotando-o por $G[A,B]$, onde chamamos os conjuntos $A$ e $B$ de \textit{partes} de $G$.
+
+Neste trabalho estudamos problemas de coloração de arestas. 
+Definimos formalmente, dado um grafo $G$, uma \textit{coloração de arestas} de $G$ é uma função $\chi: E(G) \rightarrow \mathbb{N}$. 
+A coloração $\chi$ de $G$ é dita ser \textit{própria} se as arestas adjacentes possuem cores distintas, i.e., para cada vértice $v \in V(G)$, tem-se $\chi(\{v,u\}) \neq \chi(\{v,w\})$ para cada par $u,w$ de vizinhos de $v$.
+Chamamos de \textit{índice cromático} de $G$, denotado por $\chi'(G)$, o número mínimo de cores tal que existe uma coloração própria de $E(G)$.
+
+O \textit{grafo aleatório binomial} no modelo de Erd\H{o}s e Rényi, $G \in G(n, p)$, é um grafo com um conjunto de $n$ vértices, onde entre quaisquer dois vértices existe uma aresta com probabilidade $p$ e essas arestas são independentes.
 
 Ressaltamos uma definição importante que é objeto de investigação no grafo aleatório no Capítulo \ref{cap:anti}.
 Uma função $\hat{p}: \mathbb{N} \rightarrow [0,1]$ é chamada de \textit{função limiar} para uma propriedade
@@ -612,29 +630,33 @@ $\cP$ no $G(n,p)$ se
   \end{cases}
 \]
 Os limites na definição acima de função limiar são chamados de $0$-\emph{afirmação} e $1$-\emph{afirmação}, respectivamente. 
+
 Uma vez que os limiares são determinados por ordem de magnitude, vamos nos referir aos limiares $\hat{p}$ como \emph{o limiar} da propriedade $\cP$.
 
-grafos balanceados
+Um conjunto de grafos $\mathcal{A}$ é \textit{monótono} se para qualquer $H \in \mathcal{A}$ e $H \subseteq G$, tem-se que $G \in \mathcal{A}$. 
 
+Muitos resultados conhecidos de propriedades extremais no grafo aleatório dependem das densidades de um grafo.
+A \emph{$2$-densidade máxima} de um grafo $H$, denotada por~$m_2(H)$, é definida como 
+\begin{equation*}
+  m_2(H)=\max\left\{\frac{|E(J)|-1}{|V(J)|-2}\colon J\subset H,\;|V(J)|\geq3\right\},
+\end{equation*}
+onde assumimos~$|V(H)|\geq3$, e 
+\[
+    m(H) = \max\left\{\frac{|E(J)|}{|V(J)|}\colon J\subset H,\;|V(J)|\geq1\right\},
+\]
+é a \emph{densidade máxima} de $H$, a qual frequentemente vamos chamar só de densidade de $H$.
 
+Um resultado clássico de Bollobás que relaciona diferentes conceitos deste capítulo é dado a seguir.
 
-\section{Organização do texto}
+%%\begin{teorema}[\cite{friedgut96:_every}]\label{teo:monotona}     Toda propriedade monótona não trivial de grafos possui uma função limiar. \end{teorema}
 
-Iniciamos no Capítulo \ref{cap:triangles} com  um resultado de padrões em coloração de arestas do grafo completo. 
-Especificamente, dado um natural $n$, calculamos a menor 
-quantidade de cores em que existe uma coloração própria de $E(K_n)$ de modo a se evitar a formação de triângulos disjuntos em vértices que repetem a trinca de cores nas arestas.
-Esse número era desconhecido quando $n$ é par e foi determinado para os primeiros números pares e para uma família infinita de valores de $n$.
+\begin{teorema}[\cite{bollobas1981threshold}]\label{teo:gnpcontem}
+    Seja $H$ um grafo fixo. Então, $\hat{p} = n^{1/m(H)}$ é o limiar para a propriedade de que $G(n,p)$ contém $H$.
+\end{teorema}
 
-%%%% seção conclusão?
-%%%A importância e vigor da pesquisa em torno dos tópicos que propomos podem ser observados nos trabalhos clássicos de diversos pesquisadores renomados, como Erd\H{o}s, Rödl, Szemerédi, e Tao, dentre outros, e nos trabalhos modernos de proeminentes pesquisadores como Conlon, Gowers, e Schacht. 
-%%% Os trabalhos desses autores, que muitas vezes consideram grafos aleatórios, mostram que ainda existe muito a ser feito no desenvolvimento de uma teoria sólida para entendermos a existência de uma certa ordem em estruturas aparentemente caóticas, o cerne da Teoria de Ramsey.
+Um grafo $H$ é dito 2-\textit{balanceado} se a 2-densidade máxima de $H$ é maior ou igual que a 2-densidade de qualquer de seus subgrafos que contêm pelo menos três vértices. 
+Dados $\ell,r\geq 2$ inteiros, o grafo bipartido completo $\K$ é um exemplo de grafo 2-balanceado.
 
-A propriedade anti-Ramsey estudada foi a de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores. 
- O Capítulo \ref{cap:anti} traz como resultado novo os detalhes para que essa propriedade ocorra em grafos aleatórios com relação a conter subgrafos  isomorfos ao grafo bipartido completo $\K$. 
-A saber, dados os inteiros $r,\ell \geq 3$, provamos que o parâmetro de probabilidade para que um grafo aleatório possa ser colorido evitando cópias multicoloridas de $\K$ depende de uma relação com a densidade de $\K$.
-
-%%%%xxxx O número size-Ramsey de um grafo $H$ é o menor número de arestas tal que existe um grafo $G$ com essa quantidade de arestas de modo que $G \rightarrow H$. A Seção \ref{sec:size} tem este número por tema, nela estudamos a literatura a respeito deste parâmetro para grafos simples,  hipergrafos e grafos orientados. 
-%xxxxx Destacamos alguns resultados preliminares novos, especialmente de grafos orientados, em que calculamos os limitantes do número size-Ramsey para estrelas orientadas, mostrando que este número pode ser quadrático a depender da orientação escolhida para a estrela. Também exibimos o valor exato (ou um intervalo próximo) do número size-Ramsey  para grafos orientados pequenos com até $4$ vértices.
 
 
 
@@ -644,7 +666,7 @@ A saber, dados os inteiros $r,\ell \geq 3$, provamos que o parâmetro de probabi
 
 
 %% Nesta seção \footnote{Os resultados descritos nesta seção foram desenvolvidos em um projeto conjunto com Fábio Botler, Lucas Colucci, Guilherme Mota, Roberto Parente e Matheus Secco.}, vamos considerar grafos finitos e simples. 
-Os resultados descritos nesta Capítulo foram desenvolvidos em um projeto conjunto com Fábio Botler, Lucas Colucci, Guilherme Mota, Roberto Parente e Matheus Secco.
+Os resultados descritos neste capítulo foram desenvolvidos em um projeto conjunto com Fábio Botler, Lucas Colucci, Guilherme Mota, Roberto Parente e Matheus Secco \cite{botler2022proper}.
 Vamos considerar grafos finitos e simples. 
 Recordamos que uma coloração de arestas é chamada de \emph{própria} se para cada par de arestas que compartilham um vértice em comum as cores são distintas. Um artigo recente de Conlon e Tyomkyn  \cite{conlontyomkyn} introduziu um novo conceito relacionado a colorações próprias, definido a seguir: 
 
@@ -656,7 +678,7 @@ Recordamos que uma coloração de arestas é chamada de \emph{própria} se para 
   \begin{center}
 			\includegraphics[scale=0.25, keepaspectratio=true]{K6-repet-mark.png}
 			\captionof{figure}{Uma coloração própria do $K_{6}$ identificando triângulos repetidos.} 
-			\label{fig:K12} 
+			\label{fig:K6} 
 	\end{center}
 	
 
@@ -664,11 +686,11 @@ Para $H$ sendo um ciclo par, Conlon e Tyomkyn \cite{conlontyomkyn} perguntaram s
 existe um $t_0 = t_0(\eps)$ tal que, para todo 
 $t \geq t_0$, $f_2(n, C_{2t}) = \Omega(2^{2-\eps})$.
 %
-Xu, Zhang, Jing e Ge \cite{ge2020color} provaram que $f_3(n, C_4) = \Theta(n)$ e depois refinaram a conjectura de Conlon e Tyomkym questionando se
+Xu, Zhang, Jing e Ge~\cite{ge2020color} provaram que $f_3(n, C_4) = \Theta(n)$ e depois refinaram a conjectura de Conlon e Tyomkym questionando se
 $f_2(n, C_{2t}) = \Omega(n^{2-2/t})$. 
-Por fim, Janzer \cite{janzer2020rainbow} resolve esse problema provando o seguinte resultado:
+Por fim, Janzer \cite{janzer2023rainbow} resolve esse problema provando o seguinte resultado:
  
-    \begin{teorema}\label{teo:janzer-ciclos}\cite{janzer2020rainbow}
+    \begin{teorema}[\cite{janzer2023rainbow}]\label{teo:janzer-ciclos}
            Sejam $k,t \geq 2$ inteiros fixados. Então $f_k(n,C_{2t}) = \Omega\big(n^{\frac{k}{k-1} \cdot\frac{t-1}{t}}\big)$.
     \end{teorema}
 
@@ -828,7 +850,9 @@ O código está disponível em   %
 
         O parâmetro $f_2(n, K_3)$ com $n$ par continua a ser não compreendido sobre a existência de mais algum padrão em $\{n-1,n,n+1\}$ com outras sequências numéricas (Tabela \ref{tab:valores}).
         Variar o número de cópias de outros e também os grafos fixados forma um campo aberto a ser explorado.
-        Janzer \cite{janzer2020rainbow} provou um resultado mais geral sobre repetições de ciclos pares, que em particular diz  $f_2(n, C_4) = \Omega(n)$, enquanto Conlon e Tyomkin \cite{conlontyomkyn} verificaram que $f_2(n, C_4) = O(n^{3/2})$. Resta-nos a seguinte pergunta:
+        Xu e Ge \cite{xu2022color} provaram o seguinte limite inferior: $f_2(n, H_t) = \Omega(n^{1+\frac{1}{2t-3}})$, onde $H_t$ é uma 1-subdivisão do grafo completo $K_t$. Eles questionam se existe um expoente $\beta$ tal que $f_2(n, H_t) = \Theta(n^\beta)$.
+        
+        Janzer \cite{janzer2023rainbow} provou um resultado mais geral sobre repetições de ciclos pares, que em particular diz  $f_2(n, C_4) = \Omega(n)$, enquanto Conlon e Tyomkin \cite{conlontyomkyn} verificaram que $f_2(n, C_4) = O(n^{3/2})$. Resta-nos a seguinte pergunta:
         
         \begin{questao}\label{q:repeated-C4}
             Dado $n$ natural, $f_2(n, C_4) = \Theta(n)$?
@@ -846,7 +870,7 @@ O código está disponível em   %
  
  Conlon e Tyomkin \cite{conlontyomkyn} provaram que para árvores $T$ com $m$ arestas, existe alguma constante $k_0 = k_0(T)$ tal que para todo $k \geq k_0$ vale $f_k(n,T) = \Theta(n^{\frac{m+1}{m}})$. Os autores deixam a seguinte questão:
  
- \begin{questao}\label{q:repeated-T}\cite{conlontyomkyn}
+ \begin{questao}[\cite{conlontyomkyn}]\label{q:repeated-T}
      Qual o menor valor de $k_0$ tal que para todo inteiro $k \geq k_0$, vale $f_k(n,T) = \Theta(n^{\frac{m+1}{m}})$? 
  \end{questao}
  
@@ -874,9 +898,10 @@ A questão inicial levantada por nós é analisar o mesmo padrão de repetição
 \end{questao}
 
 Agora, voltados para este caso em que $H=K_3$, utilizando as propriedades apresentadas,
-a princípio, já refinamos o limite superior em (\ref{eq:frkn}) para $f_2^3(n,K_3) \leq f_2(3n, K_3)-1$, quando $n \geq 4$ é par.
+a princípio, é fácil refinar o limite superior em (\ref{eq:frkn}) para $f_2^3(n,K_3) \leq f_2(3n, K_3)-1$, quando $n \geq 4$ é par.
+Novamente, a principal dificuldade do problema está em determinar os valores de $f_2^3(n, K_3)$ com precisão, visto que seu comportamento assintótico segue o mesmo de $f_2(N, K_3)$, para algum $N$ inteiro.
 
-De casos iniciais, temos que $f_2^3(2, K_3) = 6$ (PROVA), $f_2^3(3,K_3) \in \{8,9\}$.
+%% De casos iniciais, temos que $f_2^3(2, K_3) = 6$ (PROVA), $f_2^3(3,K_3) \in \{8,9\}$.
 
  
 
@@ -892,35 +917,27 @@ A propriedade anti-Ramsey ${G\rbarrow H}$ é monótona, isto é, se ${G\rbarrow 
 grafos aleatórios implica que essa propriedade admite uma função limiar \cite{BoTh87}, que nós denotamos por $\hat{p}_H$. 
 
 
-Antes de discutirmos os resultados conhecidos desta propriedade anti-Ramsey, precisamos considerar diferentes densidades de um grafo. 
-A \emph{$2$-densidade máxima} de um grafo $H$, denotada por~$m_2(H)$, é definida como 
-\begin{equation*}
-  m_2(H)=\max\left\{\frac{|E(J)|-1}{|V(J)|-2}\colon J\subset H,\;|V(J)|\geq3\right\},
-\end{equation*}
-onde assumimos~$|V(H)|\geq3$, e 
-\[
-    m(H) = \max\left\{\frac{|E(J)|}{|V(J)|}\colon J\subset H,\;|V(J)|\geq1\right\},
-\]
-é a \emph{densidade máxima} de $H$, a qual frequentemente vamos chamar só de densidade de $H$.
-
-
-
 \section{Resultados existentes}
 
 No trabalho~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte resultado: a propriedade anti-Ramsey $G(n,p)\rbarrow H$ vale assintoticamente quase certamente sempre que $p\gg n^{-1/m_2(H)}$ para todo grafo fixo~$H$. Em outras palavras, garante-se em termos da $2$-densidade máxima de um grafo $H$ um limitante superior para a função limiar $\hat{p}_H$, como está enunciado a seguir.
 
-\begin{teorema}[Kohayakawa, Konstadinidis e Mota~\cite{KoKoMo12}]
+\begin{teorema}[%Kohayakawa, Konstadinidis e Mota~
+\cite{KoKoMo12}]
     \label{teo:conditional}
          Seja $H$ um grafo fixo. Então existe uma constante $C>0$ tal que, para $p=p(n)\geq Cn^{-1/m_2(H)}$, assintoticamente quase certamente temos ${G(n,p)\rbarrow H}$. 
          Em particular, $\hat{p}_H \leq n^{-1/m_2(H)}$.
   \end{teorema}
     
 Dado o Teorema \ref{teo:conditional} e sabendo que a $2$-densidade máxima tem um papel fundamental em Teoria de Ramsey, é natural perguntar se $n^{-1/m_2(H)}$ é função limiar para a propriedade $G(n,p)\rbarrow H$ para qualquer grafo $H$, o que exige provar o limitante inferior do limiar como $\hat{p}_H \geq n^{-1/m_2(H)}$.
-No entanto, em outro trabalho \cite{KoKoMo16+}, o mesmo grupo de pesquisadores obteve uma resposta negativa para essa pergunta, eles exibiram uma família infinita de grafos cuja função limiar é inferior a $n^{-1/m_2(H)}$.
+
+No entanto, em outro trabalho \cite{KoKoMo16+}, o mesmo grupo de pesquisadores obteve uma resposta negativa para essa pergunta, eles exibiram uma família infinita de grafos cuja função limiar é inferior a $n^{-1/m_2(H)}$, 
+e mais recentemente, o trabalho \cite{araujo2022anti} estendeu a família de grafos em que o limiar difere da 2-densidade.
 Porém a 2-densidade máxima se relaciona, de fato, à função limiar para alguns grafos $H$, como foi provado por Nenadov,
 Person, Škorić e Steger~\cite{NePeSkSt14}.
+Estes últimos autores desenvolveram um \emph{framework} geral de prova para limitantes inferiores de diversos problemas tipo Ramsey em grafos aleatórios.
 
-\begin{teorema}[Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14}]
+\begin{teorema}[%Nenadov, Person, Škorić e Steger~
+\cite{NePeSkSt14}]
 \label{teo:nen}
   Seja $H$ um ciclo de pelo menos $7$ vértices ou um grafo completo de pelo menos $19$ vértices. 
   Existe uma constante $c > 0$ tal que se
@@ -930,11 +947,11 @@ Person, Škorić e Steger~\cite{NePeSkSt14}.
 \end{teorema}
 
 
-O Teorema \ref{teo:nen} foi estendido para ciclos (\cite{barros2021anti}) e grafos completos (\cite{kohayakawa2019anti}) com mais de 5 vértices.
+O Teorema \ref{teo:nen} foi estendido para ciclos \cite{barros2021anti} e para grafos completos \cite{kohayakawa2019anti} com mais de 5 vértices. 
+O caso para o limiar de $C_4$ foi tratado por Mota em \cite{mota2017advances}.
 
 \begin{teorema}    
-[\cite{barros2021anti},
-\cite{kohayakawa2019anti}]
+[\cite{barros2021anti, kohayakawa2019anti, mota2017advances}]
 \label{teo:cyclecomplete} 
 Se $H$ é um ciclo ou um grafo completo de pelo menos $5$ vértices, 
 então $\hat{p}_{H} \geq n^{-1/m_2(H)}$. 
@@ -942,35 +959,39 @@ Além disso, $\hat{p}_{C_4} = n^{-3/4}$
 e $\hat{p}_{K_4} = n^{-7/15}$.
 \end{teorema}
 
-    O resultado sobre ciclos do Teorema \ref{teo:cyclecomplete} é consequência do seguinte lema:
+    O framework mencionado anteriormente de Nenadov,
+Person, Škorić e Steger~\cite{NePeSkSt14} reduz os problemas de limitantes inferiores  em grafos aleatórios para problemas determinísticos em grafos com densidade máxima limitada. 
+A saber, a propriedade de anti-Ramsey do grafo $F$ 2-balanceado possui como $0$-afirmação o limiar $p_F \geq n^{-1/m_2(F)}$ se todo grafo $G$ com $m(G) \leq m_2(F)$ é tal que $G \not\xrightarrow[]{rb} F$.
+O resultado sobre ciclos do Teorema \ref{teo:cyclecomplete} é uma consequência do seguinte lema, sendo o próprio lema uma aplicação deste mesmo framework:
     
-\begin{lema}\label{lema:rbciclos}\cite{barros2021anti}
+\begin{lema}[\cite{barros2021anti}]\label{lema:rbciclos}
          Sejam $\ell \geq 5$ um inteiro e $G$ um grafo tais que
-         $m(G) < (\ell-1)/(\ell-2)$. 
+         ${m(G) < (\ell-1)/(\ell-2) = m_2(C_\ell)}$. 
          Então, $G \not\xrightarrow[]{rb} C_\ell$.
 \end{lema}
     
 A essência da prova do Lema \ref{lema:rbciclos} está em usar uma estratégia de coloração própria nas arestas dos ciclos $C_\ell$ contidos no grafo $G$, de modo que toda cópia de ciclo $C_\ell$ tenha duas arestas coloridas com a mesma cor.
 %
-Para isso, os autores definem o que chamam de componente de ciclos dentro de $G$ como uma sequência crescente de subgrafos $(H_1, \ldots, H_t)$ em $G$, em que a cada subgrafo existe um $C_\ell$ em $H_{i}$ que não está em $H_{i-1}$, para $1 < i \leq t$, com alguma interseção não-nula com $H_{i-1}$.
+Para isso, os autores definem o que chamam de componente de ciclos dentro de $G$ como uma sequência crescente de subgrafos $(H_1, \ldots, H_t)$ em $G$, em que a cada subgrafo existe uma cópia de $C_\ell$ em $H_{i}$ que não está em $H_{i-1}$, para $1 < i \leq t$, com alguma interseção não-nula de arestas com $H_{i-1}$.
 %
 Eles observaram que tal sequência, com argumentos de densidade, impõe certas configurações restritas de como os novos ciclos aparecem entre os subgrafos, assim ao verificarem a ocorrência dessas configurações detalham alguns casos de como colorir arestas dessa sequência de subgrafos para evitar $C_\ell$ rainbow.
      Parte das ideias desse artigo são retomadas nas demonstrações descritas nas próximas seções.
  
  
-   Para provar que o limiar de grafos completos do Teorema \ref{teo:cyclecomplete} de que $G(n,p) \rbarrow K_\ell$, com $\ell \geq 5$ seja igual a $\hat{p}_{K_\ell} = n^{-1/m_2(K_\ell)} = n^{- 2/(\ell+1)}$, os autores provaram o seguinte lema.
+   Para provar que o limiar de grafos completos do Teorema \ref{teo:cyclecomplete} de que $G(n,p) \rbarrow K_\ell$, com $\ell \geq 5$, seja igual a $\hat{p}_{K_\ell} = n^{-1/m_2(K_\ell)} = n^{- 2/(\ell+1)}$, os autores provaram o seguinte lema.
    % destacamos que o grafo $K_4$ tem um limiar diferente e é tratado à parte no mesmo artigo.
    
-   \begin{lema}\label{lema:rbcomplete}\cite{kohayakawa2019anti}
+   \begin{lema}[\cite{kohayakawa2019anti}]\label{lema:rbcomplete}
          Sejam $\ell \geq 5$ um inteiro e $G$ um grafo tais que 
-         $m(G) < (\ell+1)/2$.
+         $m(G) < (\ell+1)/2 = m_2(K_\ell)$.
          Então, $G \not\xrightarrow[]{rb} K_\ell$.
     \end{lema}
     Para demonstrar o Lema \ref{lema:rbcomplete}, é suficiente mostrar que todo grafo $G$ com $m(G) < (\ell+1)/2$  admite colorações próprias que evitam $K_\ell$ rainbow. 
     A primeira observação é que é suficiente considerar $G$ como um grafo onde toda aresta está contida em algum $K_\ell$, pois são elas que importam em uma coloração sem $K_\ell$ rainbow. 
     Os autores notam que a densidade limitada de $G$ implica na existência de ao menos um vértice $v$ de grau $\ell$, e, com esse vértice destacado apresentam uma prova indutiva na quantidade de vértices de $G$: consideram na hipótese indutiva ao subgrafo $G_v$ de $G$ obtido após remover $v$ e seus vizinhos que participam de algum $K_\ell$ em comum.
     
-    Antes de dar a propriedade a ser preservada na indução, com argumentos usando a densidade limitada nos subgrafos de $G$, são analisadas as possíveis configurações da vizinhança de $v$ quanto a formar cliques que se interceptam. 
+    Antes de dar a propriedade estrutural a ser preservada na indução, com argumentos usando a densidade limitada nos subgrafos de $G$, os autores analisam as possíveis configurações da vizinhança de $v$ quanto a formar cliques que se interceptam. 
+    Dessas configurações, eles obtêm subcasos a tratar no passo indutivo que permite colorir $G$ evitando cópias rainbow de $K_\ell$.
     %% O parâmetro auxiliar $b(G)$ que contabiliza a proporção de arestas coloridas é relacionado a essas configurações e, com ele, a indução de $G_v$ para $G$ é construída notando que para diferentes valores em $b(G)$, cada $K_\ell$ do grafo será não-rainbow.
  
  
@@ -1004,7 +1025,7 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
     Portanto, existe uma cópia de $K_{2,r}$ obtida ao adicionar $b$ em $H_A$ que é rainbow, concluindo que  $K_{2,3r-2} \rb K_{2,r}$.
      \end{proof}
     
-    Agora, como  o limiar para
+    Agora, como pelo Teorema \ref{teo:gnpcontem}  o limiar para
     $K_{2,3r-2}\subset G(n,p)$ é $n^{-1/m(K_{2,3r-2})}$ e sabendo das densidades que
     $m(K_{2,3r-2}) = (6r-4)/3r < (\ell r - 1)/(\ell+r-2) =
     m_2(K_{\ell,r})$, 
@@ -1026,7 +1047,7 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
     \end{teorema}
 
     %%yyyyy
-    Uma vez que $\K$ é um grafo estritamente 2-balanceado, a partir do Teorema XX, podemos deduzir o Teorema \ref{teo:mainrb} a partir do seguinte resultado que é provado na Seção ZZ.
+    Uma vez que $\K$ é um grafo estritamente 2-balanceado, tal como fora utilizado em ciclos e grafos completos, pode-se pela aplicação do mesmo framework de Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14} deduzir o Teorema \ref{teo:mainrb} a partir do seguinte resultado: %%que é provado na Seção ZZ.
     
     \begin{teorema}\label{lemma:main} 
         Sejam $\ell,r \geq 3$ inteiros e
@@ -1049,7 +1070,7 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
      Começamos com a seguinte proposição cuja demonstração é obtida
      pela aplicação do chamado \textit{argumento de densidade}, este argumento será muito utilizado nas provas desta seção.
     %xxxxx Como estamos interessados em grafos $G$ tais que  $m(G) < m_2(\K) = (\ell r - 1)/(\ell+r-2)$,  we state a simple observation that will be helpful when analyzing subgraphs of $G$.  
-    Dado um grafo $G$, vamos denotar uma cópia de um grafo bipartido completo em $G$ com partes $A$ e $B$ por $G[A,B]$.
+    Dado um grafo $G$, lembramos da notação $G[A,B]$ para representar a cópia de um grafo bipartido completo em $G$ com partes $A$ e $B$.
     Ao longo do texto, comumente escrevemos $3\leq \ell \leq r$ para ressaltarmos que o bipartido $\K$ pode possuir partes com tamanhos distintos. 
     A proposição a seguir descreve uma condição algébrica sobre o bipartido $K_{a,b}$ formado entre duas cópias de $\K$ em $G$ cujos conjuntos de vértices de suas partes não se interceptam.
 
@@ -1211,19 +1232,33 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
       \footnote[1]{Um caso especial se dá quando $z = 0$ e 
      ou $Z_1$ ou $Z_2$ é um conjunto unitário, com isso, $V(H_i) = V(H_{i-1})$.}
        \end{enumerate}
+  
+  %%% multiple figures: https://tex.stackexchange.com/questions/271518/multiple-panel-figure-with-figures-side-by-side 
+  \begin{figure}[htb] \centering \includegraphics[width=0.9\textwidth]{images/configA.pdf}
+   \caption{Configuração do tipo $A$.}
+   \label{fig:configA}
+ \end{figure}
 
     Nós também dizemos que $H_i$ é de uma das configurações, $(A_{jk})_{pq}$ ou $(B_{sw})$, 
     quando $H_i = H_{i-1} \cup K$ e satisfaz as condições acima. 
 	De maneira geral, dizemos que $K$ é do \textit{tipo A} se $K$ é da configuração $(A_{jk})_{pq}$, analogamente,
-		$K$ é do \textit{tipo B} se $K$ é de uma configuração $(B_{sw})$.
-    As configurações de $\K$-componentes que são descritas pela Proposição \ref{aff:casoP1} serão denominadas do \textit{tipo C}.
+		$K$ é do \textit{tipo B} se $K$ é de uma configuração $(B_{sw})$ -- ver Figuras \ref{fig:configA} e \ref{fig:configB}.
+    As configurações de $\K$-componentes que são descritas pela Proposição \ref{aff:casoP1} serão denominadas do \textit{tipo C} (Figura \ref{fig:configC}).
   
-  \begin{figure}[htb] \centering \includegraphics[]{configAB_KLL.pdf}
-   \caption{Configurações $(A_{jk})_{pq}$ e $(B_{sw})$ de um $\K$ contido em $H_i$, mas não em $H_{i-1}$.}
-   \label{fig:configKLL}
+%%multiple figs:  https://tex.stackexchange.com/questions/119905/insert-multiple-figures-in-latex
+
+   %Configurações $(A_{jk})_{pq}$ e $(B_{sw})$ de um $\K$ contido em $H_i$, mas não em $H_{i-1}$.
+  
+ \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/configB.pdf}
+   \caption{Configuração do tipo $B$.}
+   \label{fig:configB}
  \end{figure}
- 
-  
+
+   \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/configC.pdf}
+   \caption{Configuração do tipo $C$.}
+   \label{fig:configC}
+ \end{figure}
+
  \begin{lema}\label{lema:config}
         Sejam $3\leq \ell \leq r$ inteiros, e $G$ um grafo tal que $m(G) < m_2(\K)$, 
      e $H = (H_1, \ldots, H_t)$ uma $\K$-componente de $G$.  
@@ -1352,15 +1387,14 @@ configuração~\hyperref[configB]{$(B_{2,0})$}.
     e para $K_{\ell-2,r}$ temos $e_i < \ell$ que também não forma outro $\K$.
     %
      Já se a intersecção for $K_{1,1}$, para todos os valores de $\ell$ e $r$ temos que $e_i = \ell-1$, e com isso podemos gerar um novo $\K$ de $H_{i}$, basta escolher um vértice de fora da interseção e adicionar a ele $e_i$ arestas de modo que forme $K_{\ell+1,r}$, logo, de configuração~\hyperref[configB]{$(B_{1,0})$}; analogamente, temos se $\ell \in
-        \{r-1, r\}$ para $e_i = r-1$, a configuração possível é
-        ~\hyperref[configB]{$(B_{0,1})$}.
+        \{r-1, r\}$ para $e_i = r-1$, a configuração possível é~\hyperref[configB]{$(B_{0,1})$}.
     %
     Para a interseção $K_{\ell-1, r-1}$ temos uma única solução $e_i=1$, e podemos dela obter $K_{\ell+1, r}$ ou $K_{\ell,r+1}$, logo, de configurações ~\hyperref[configB]{$(B_{1,0})$}
     e ~\hyperref[configB]{$(B_{0,1})$}, respectivamente.
     %
      A intersecção $K_{1,2}$ admite $e_i = \ell-1$, se $r > \ell^2 - 3\ell+3$ e isso permite a configuração~\hyperref[configB]{$(B_{1,0})$}.
     %
-    As outras intersecções da forma $K_{\ell, r-b_1}$ e $K_{\ell-1,b_2}$ -- as quais $\Slr$ provém de $\beta_1$ ou de $\beta_2$--,  de (\ref{eq:inter}) seguem as restrições $e_i < r$ e $e_i < \ell$, respectivamente; no entanto,
+    As outras intersecções da forma $K_{\ell, r-b_1}$ e $K_{\ell-1,b_2}$ -- as quais o conjunto $\Slr$ depende de $\beta_1$ ou de $\beta_2$--,  de (\ref{eq:inter}) seguem as restrições $e_i < r$ e $e_i < \ell$, respectivamente; no entanto,
 	para com elas obter outro $\K$ em $H_i$ precisaríamos adicionar pelo menos
 	$r$ e $\ell-1$ arestas, respectivamente, a um vértice. Logo, não formam cópia de $\K$. 
 	%para fazer que um vértice esteja em outra partição fora a inicial.
@@ -1381,7 +1415,7 @@ O resultado principal, semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbco
   Isso torna possível fazer uma coloração própria parcial  que evita cópias de $\K$ rainbow, o que nos permite concluir nosso resultado principal.
   
     \begin{proof}[Demonstração do Teorema~\ref{lemma:main}]
-      Sejam $7 \leq \ell \leq r$ inteiros e $G$ um grafo tal que $m(G) < (\ell r - 1)/(\ell+r-2)$.
+      Sejam $3 \leq \ell \leq r$ inteiros e $G$ um grafo tal que $m(G) < (\ell r - 1)/(\ell+r-2)$.
     
         Tome um bipartido $\K = [X,Y]$ arbitrário em $G$ para ser $H_1$ e atribua uma cor distinta $c_j$ para $\ell-3$ arestas paralelas entre $X$ e $Y$, a cada $\ell-3$ vértices de $Y$ em $H_1$, onde
         $1 \leq j \leq \lfloor \frac{r}{\ell-3}\rfloor$.
@@ -1400,64 +1434,82 @@ O resultado principal, semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbco
 
         Como $\{j,k\} \in \{\{x,y\} \in \Slr: x < \ell \text{ e } y < r\}$, então existem em $H_i$ pelo menos dois vértices, digamos que $u\in X$ e $v\in Y$, com arestas novas de modo que 
         %%%% a cada par $(u,v)$, 
-        usamos $\ell-3$ cores para as arestas de $u$ para vértices de $Y\setminus\{v\}$ e as repetimos de $v$ para $X\setminus\{u\}$; é possível fixar $u \in X$ e realizar esse processo de coloração exaustivamente para os vértices de $Y$.
-        Tais arestas são paralelas.
-        
+        usamos $\ell-3$ cores para as arestas de $u$ para vértices de $Y\setminus\{v\}$ e as repetimos de $v$ para $X\setminus\{u\}$; é possível realizar esse processo de coloração exaustivamente com novas $\ell-3$ cores para cada par de vértices $u\in X$ e $v\in Y$ que sejam de $H_i$.
+        Tais arestas coloridas são paralelas.
+        A Figura \ref{fig:configAcor} ilustra a coloração para esta configuração.
+
+ \begin{figure}[htb] \centering \includegraphics[width=0.94\textwidth]{images/tipoAcolor.pdf}
+   \caption{Esquema de coloração para configurações do tipo $A$.}
+   \label{fig:configAcor}
+ \end{figure}
         %% em $X$  (por conta dos pares em $\mathcal{S}$, vide (\ref{eq:conjS})) que podem ser coloridas com o mesmo processo usado em $H_1$.        
         %% Se $j = \ell-1$ e $k=r-1$, então podemos atribuir novas cores a cada $\ell-3$ vértices de $Y$ incidentes em $X$.
 
         \medskip \textbf{Caso B.} Se $H_i$ é do tipo B, ou seja, apresenta configuração~\hyperref[configB]{$(B_{sw})$}.
         
-        Aqui, vamos reutilizar alguma cor presente em $H_{i-1}$, pois esta configuração gera múltiplos $\K$ quando forma $K_{\ell+s,r+w}$ que intersectam cópias de $\K$ com arestas já coloridas em passos anteriores.
+        Aqui, vamos reutilizar alguma cor presente em $H_{i-1}$, pois esta configuração gera múltiplos $\K$ quando forma  um $K_{\ell+s,r+w}$ e intersecta cópias de grafos bipartidos com arestas coloridas em passos anteriores.
         
       Considere a configuração~\hyperref[configB]{$(B_{0,w})$} em
-      $H_i$ com $w > 0$, então existem $w$ novos vértices de um conjunto $Z$ tal que o bipartido adicionado é $K \cong K_{\ell,r+w} =[X, Y \cup Z]$, 
+      $H_i$ com $w > 2$, então existem $w$ novos vértices de um conjunto $Z$ tal que o bipartido adicionado é $K \cong K_{\ell,r+w} =[X, Y \cup Z]$, sendo que $[X,Y]$ já possui arestas coloridas em passos anteriores, 
       onde $1 \leq w \leq r$.  
       Repetimos o processo de coloração atribuindo uma nova cor a cada $\ell-3$ arestas 
       não-adjacentes com pontas entre $X$ e $Z$. 
       É evidente que não é possível tomar $r$ vértices de $Y \cup Z$ sem repetir uma aresta colorida com pontas em $X$.
-      Assim, os grafos bipartidos formados em $H_i$ não são rainbow para~\hyperref[configB]{$(B_{0,w})$}.  
-      
-	  No caso de ~\hyperref[configB]{$(B_{0,2})$}, chame de $u$ e $v$ os dois vértices novos de $H_i$, vamos reutilizar uma cor $c$ de $H_{i-1}$ nas arestas de $u$ e $v$ que incidem no $\K$ de interseção com $K_{\ell,r+2}$.  
-        A coloração é análoga para a configuração ~\hyperref[configB]{$(B_{1,w})$}.
+      Assim, cada cópia dos bipartidos $\K$ formados em $H_i$ não é rainbow para~\hyperref[configB]{$(B_{0,w})$}, onde $w >2$. 
+      A Figura \ref{fig:configBcor} ilustra a coloração de~\hyperref[configB]{$(B_{0,w})$}.
+      Note que esse procedimento de coloração pode ser facilmente usado para configurações~\hyperref[configB]{$(B_{s,w})$} com $s>0$ e $w>2$, onde para o bipartido formado $K_{\ell+s,r+w} =[X\cup Z_1, Y \cup Z_2]$ colorimos arestas paralelas entre $X$ e $Z_2$ e entre $Y$ e $Z_1$.
 
-        Quando $\ell = r$, a configuração~\hyperref[configB]{$(B_{2,0})$} representa um 
-        $K_{\ell, \ell+2} = [X, Y \cup Z]$, onde $Z = \{u,v\}$, e $[X,Y]$ já possui $\ell-3$ arestas coloridas com uma certa cor $c$. 
-        Então é suficiente repetir a mesma cor $c$ em duas arestas entre $u,v$ e dois vértices de $X$ que não receberam a cor $c$ ainda.
+
+ \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/tipoBcolor.pdf}
+   \caption{Esquema de coloração para configurações do tipo $B$.}
+   \label{fig:configBcor}
+ \end{figure}
+      
+	  No caso da configuração~\hyperref[configB]{$(B_{0,2})$},
+   temos  o bipartido $K_{\ell, r+2} = [X, Y \cup Z]$, onde $Z = \{u,v\}$ possui os vértices novos de $H_i$.
+   Vamos reutilizar uma cor $c$ de $H_{i-1}$ nas arestas de $u$ e $v$ que incidem em $X$ e que não receberam a cor $c$ ainda.
+   Além desta cor $c$, colorimos pares de arestas paralelas entre $Z$ e $X$ com outras $\ell-2$ cores novas (ver Figura \ref{fig:configBcor}).   
+        A coloração é análoga para a configuração~\hyperref[configB]{$(B_{1,1})$}.
+
+%        Quando $\ell = r$, a configuração~\hyperref[configB]{$(B_{2,0})$} representa um       $K_{\ell, \ell+2} = [X, Y \cup Z]$, onde $Z = \{u,v\}$, e $[X,Y]$ já possui $\ell-3$ arestas coloridas com uma certa cor $c$. 
+    % Então é suficiente repetir a mesma cor $c$ em duas arestas entre $u,v$ e dois vértices de $X$ que não receberam a cor $c$ ainda.
         
-       A configuração~\hyperref[configB]{$(B_{1,0})$} vista no Lema \ref{lema:config} possui três subcasos que a geram: 
+       A configuração~\hyperref[configB]{$(B_{1,0})$} vista na prova do Lema \ref{lema:config} possui três subcasos que a geram: 
        as intersecções da forma $K_{1,1}$, $K_{1,2}$ e $K_{\ell-1,r-1}$, respectivamente. 
-       Nos primeiros dois subcasos, existe um vértice, digamos $v$,
-        fora da interseção de $K \cong K_{\ell,r+1}$ em que podemos reusar uma
-        cor $c$ (pois cada cor é usada em no máximo $\ell-3$ arestas paralelas) atribuindo a cor $c$ a uma aresta incidente em $v$.
+       Nos primeiros dois subcasos, existe um vértice, digamos $v$ de $K \cong K_{\ell+1,r}$,
+        fora da interseção de $K_{1,1}$ ou $K_{1,2}$ em que podemos reusar uma
+        cor $c$ (pois cada cor é usada em no máximo $\ell-3$ arestas paralelas) atribuindo a cor $c$ a uma aresta incidente em $v$ e isso faz toda cópia $\K$ em $K$ não ser rainbow -- a Figura \ref{fig:configBcor} também exibe a coloração deste subcaso.
                 
         No terceiro subcaso, temos o acréscimo de uma única aresta e isto pode nos forçar a colorir alguma aresta já presente em $H_{i-1}$, então precisamos verificar que existem arestas não coloridas em $H_{i-1}$. 
-        Dito isso, o subgrafo $K \cong K_{\ell,r+1}$ tem uma aresta, digamos $vw$, adicionada em $H_i$, e pelo menos $\ell-3$ arestas pré-coloridas na cor $c$;
+        Dito isso, o subgrafo $K \cong K_{\ell+1,r}$ tem uma aresta, digamos $vw$, adicionada em $H_i$, e pelo menos $\ell-3$ arestas pré-coloridas na cor $c$;
         se tais arestas não contém $v$ e nem $w$, então colorimos $vw$ com $c$, caso contrário, atribuímos uma cor nova $c'$ a $vw$ e para outra aresta paralela a $vw$ que ainda não fora pintada em $K$.  
-        Uma coloração análoga é dada para a configuração~\hyperref[configB]{$(B_{0,1})$}.
+        Uma coloração análoga pode ser dada para a configuração~\hyperref[configB]{$(B_{0,1})$}.
         
-        Para concluir, precisamos verificar que o método de coloração dado anteriormente é válido.
-        Veremos que duas configurações ~\hyperref[configB]{$(B_{sw})$} não ocorrem de maneira sucessiva na sequência de subgrafos  de $G$, pois isso concentraria arestas nos mesmos vértices afetando sua densidade. %%, exceto se forem dois $(B_z)_1$ que equivalem a $(B_z)_2$ quando $z \in \{1,2\}$.  
-        O caso ~\hyperref[configB]{$(B_{2,0})$} não pode ser sucessivo no mesmo subconjunto de vértices, pois geraria densidades proibitivas com relação a $m_2(\K)$.
+        Para concluir, precisamos verificar que o método de coloração dado anteriormente é válido, isto é, de que temos arestas livres de cor quando necessário reutilizar .
+        Veremos que duas configurações~\hyperref[configB]{$(B_{sw})$} não ocorrem de maneira sucessiva na sequência de subgrafos  de $G$ que é uma $\K$-componente, pois isso concentraria arestas nos mesmos vértices afetando sua densidade. %%, exceto se forem dois $(B_z)_1$ que equivalem a $(B_z)_2$ quando $z \in \{1,2\}$.  
+       %% O caso~\hyperref[configB]{$(B_{2,0})$} não pode ser sucessivo no mesmo subconjunto de vértices, pois geraria densidades proibitivas com relação a $m_2(\K)$.
+       %
         %% de subgrafos tais como $K_{\ell+2,\ell+2}, K_{\ell, \ell+4}, K_{\ell+1,\ell+1}$.
-        Para $K \cong K_{\ell,r+1}$ advindo de um ~\hyperref[configB]{$(B_{1,0})$}, com interseção $K_{1,1}$, teríamos que 
+        Analisamos a configuração~\hyperref[configB]{$(B_{sw})$} de menor densidade que é~\hyperref[configB]{$(B_{1,0})$}.
+        Para $K \cong K_{\ell+1,r}$ advindo de um~\hyperref[configB]{$(B_{1,0})$}, com interseção $K_{1,1}$, teríamos que 
         
         \[
             \frac{2\ell r+\ell-2+e_i}{2\ell+2r-2} < \frac{\ell
 r-1}{r+\ell-2},
         \]
+        \\
         e isto permite $e_i = \ell-1$ para $r > 2\ell^2-5\ell+4$,
-        que gera um novo $\K$ de configuração~\hyperref[configB]{$(B_{1,0})$} pela inversão de um vértice da bipartição.
+        de modo que uma nova cópia $\K$ de configuração~\hyperref[configB]{$(B_{1,0})$} seria possível como subgrafo da sequência da $\K$-componente -- bastaria trocar um par de vértices na bipartição.
          Podemos colorir seguindo a mesma ideia se a configuração anterior for ~\hyperref[configB]{$(B_{1,0})$}, pois nesta intersecção possui duas cópias de $\K$ já coloridas com pelo menos duas cores.
         %
         Enquanto que a configuração~\hyperref[configB]{$(B_{1,0})$}
  das intersecçõess $K_{1,2}$ e $K_{\ell-1,r-1}$ não podem formar outra cópia de $\K$.  
 
  
-        Com isso, as configurações que exigiriam colorir arestas pré-existentes em $H_{i-1}$ não podem se suceder na sequência.
+        Fora isso, as configurações que exigiriam colorir arestas pré-existentes em $H_{i-1}$ não podem se suceder na sequência.
         Enquanto que nas outras configurações apenas colorimos arestas contidas exclusivamente em $H_{i}$.
 
-        \medskip \textbf{Caso C.} Se $H_i$ é do tipo C. Ou seja, apresenta a configuração dada na Proposição~\ref{aff:casoP1}.
+        \medskip \textbf{Caso C.} Se $H_i$ é do tipo C, ou seja, apresenta a configuração dada na Proposição~\ref{aff:casoP1}.
 
         Como o bipartido adicionado em $H_i$ contém um $K_{\ell-1,r-2}=[X,Y]$, podemos utilizar uma coloração de arestas semelhante ao caso A.
         
@@ -1467,7 +1519,7 @@ r-1}{r+\ell-2},
   
 \section{Problemas em aberto}
 \label{subsec:bipartido-prob}
-Ao longo desta seção, estávamos interessados em investigar quais classes de grafos $H$ apresentam função limiar para a propriedade $G(n,p)\rbarrow H$  dada por $n^{-1/m_2(H)}$, 
+Ao longo deste texto, estávamos interessados em investigar quais classes de grafos $H$ apresentam função limiar para a propriedade $G(n,p)\rbarrow H$  dada por $n^{-1/m_2(H)}$, 
 e verificamos isso para quase todos os grafos bipartidos completos.
 Ademais, há bastante espaço aberto para delimitar quais são as funções limiares para outras classes de grafos $H$. 
 Assim, a partir do que estudamos e do que se sabe de ciclos e grafos completos, o próximo passo é confirmar as seguintes conjecturas. % que podem ter respostas negativas a partir de contraexemplos.
@@ -1480,73 +1532,121 @@ Assim, a partir do que estudamos e do que se sabe de ciclos e grafos completos, 
 \end{conjectura}
 
 \begin{conjectura}\label{conj:antiregulares}
-     Seja $k \geq 3$, a propriedade $G(n,p)\rbarrow H$ tem função limiar em  $p(n) =  n^{-1/m_2(H)}$ quando $H$ é um grafo $k$-regular.
+     Seja $k \geq 3$ inteiro, a propriedade $G(n,p)\rbarrow H$ tem função limiar em  $p(n) =  n^{-1/m_2(H)}$ quando $H$ é um grafo $k$-regular.
 \end{conjectura}
 
-\chapter{Conclusão}
-\label{sec:conclusao}
+É importante ressaltar que já há trabalhos  que investigam a propriedade anti-Ramsey de cliques quando o grafo a ser colorido segue outro modelo de distribuição probabilística \cite{aigner2022large, aigner2022small}, o que mostra que há mais variantes do problema com oportunidades de pesquisa.
 
-Devido aos progressos já obtidos, estimamos que 
+\chapter[Considerações finais]{Considerações finais}
+\label{cap:conclusao}
 
+A temática de coloração tipo anti-Ramsey tem-se mostrado frutífera em  problemas e conjecturas
+com resultados relevantes tanto em grafos determinísticos, quanto em grafos aleatórios. 
+
+Neste trabalho, primeiro abordamos colorações próprias de arestas do grafo completo que evitam repetições coloridas de triângulos com métodos computacionais e algébricos (Capítulo \ref{cap:triangles}).
+Neste contexto, muitos dos problemas (ver Questões \ref{q:repeated-C4} e \ref{q:repeated-T}) se concentram em resultados assintóticos sobre o número mínimo de cores $f_k(n,H)$ para evitar repetições de $H$ no grafo $K_n$, enquanto nós exibimos soluções exatas de $f_2(n,K_3)$ que dependiam dos parâmetros.
+
+
+Sobre o segundo problema investigado, enfatizamos que este trabalho fez uso importante dos resultados de Nenadov,
+Person, Škorić e Steger~\cite{NePeSkSt14}. 
+Eles reduziram o problema de estimar o limiar da propriedade anti-Ramsey do bipartido completo no grafo aleatório para uma análise determinística em grafos com densidades limitadas. 
+Acreditamos que o uso deste procedimento possa ser replicado para mais classes de grafos. 
+No entanto, há uma dificuldade em transpor as informações algébricas de que a densidade do grafo é limitada para informações estruturais do grafo que permitam um método de coloração engenhoso.
+
+Pretendemos continuar estudando as Conjecturas \ref{conj:antibipartidos} e \ref{conj:antiregulares} visando generalizar os resultados conhecidos, porém mais ferramentas parecem ser necessárias para tal feito. 
+Este cenário de pesquisa da propriedade anti-Ramsey possui bastante potencial de descobertas, considerando que poucas classes de grafos puderam ser resolvidas.
+Por outro lado, existe também a possibilidade de estudarmos o limiar para esta propriedade anti-Ramsey no grafo aleatório com ferramentas probabilísticas já bem difundidas como a regularidade, este tratamento já tem sido feito em outros trabalhos, vide \cite{KoKoMo12,araujo2022anti, aigner2022large}.
 
 \appendix
 \chapter{Casos Pequenos}\label{cap:app}
 
 Neste apêndice apresentamos os conjuntos de $\Slr$ 
 que são soluções de pares $\{a,b\}$ para a desigualdade~(\ref{eq:pairs-ab})
-da Proposição~\ref{lemma:inter_a} para os casos pequenos, i.e., quando $3 \leq \ell < 7$, 
-que, em vista do Lema~\ref{lema:config}, completa o cenário de grafos bipartidos completos com mais de seis vértices.
+da Proposição~\ref{lemma:inter_a} para os casos que denominamos como pequenos, i.e., quando $3 \leq \ell < 7$, 
+que, em vista dos conjuntos apresentados na prova do Lema~\ref{lema:config}, completa o cenário de grafos bipartidos completos com mais de seis vértices.
 %
 Além disso, se $\ell \ll r$, as intersecções possíveis são semelhantes ao que encontramos na prova do Lema~\ref{lema:config} e as provas sobre suas respectivas configurações são análogas.  
 
+Primeiro, exibimos os conjuntos $\mathcal{S}_{3,r}$:
+\begin{equation*}%[label=\rmlabel]
+     \begin{aligned}
+        \mathcal{S}_{3, r}
+            &:=
+    \begin{cases}
+        \mathcal{S}_{3,3} \cup \{\{2,4\}, \{3,3\}\}, 
+        & \text{se }  r=4   \\ 
+        %
+        \mathcal{S}_{3,4} \cup \{\{2,5\}, \{3,4\}\}, 
+        & \text{se }  r=5    \\ 
+        %
+        \mathcal{S}_{3,5} \cup \{\{2,6\}, \{3,5\}\}, 
+        & \text{se }  r=6    \\ 
+        %
+         \mathcal{S}_{3,6} \cup \{\{3,6\}\}, 
+        & \text{se }  r=7    \\ 
+        %%
+		\mathcal{S}_{3,5} \cup \{\{3,\beta\}: 4 \leq \beta \leq r-1\}, & \text{se }  8\leq r \leq 10 \\
+		%%
+        \mathcal{S}_{3,4} \cup \{\{3,\beta\}: 4 \leq \beta \leq r-1\}, & \text{se }  r \geq 11
+        \end{cases}
+    \end{aligned}  
+\end{equation*}
 
+A partir deste ponto usamos os seguintes conjuntos auxiliares, $\beta_1$ e $\beta_2$ seguem a formulação dada em (\ref{eq:conjBeta}):
+\begin{equation*}
+    \begin{aligned}
+        I_1(\ell,r) &:= \{\{a,b\}: a=\ell\text{
+    e }b\in \beta_1\}
+        \\
+        I_2(\ell,r) &:= \{\{a,b\}: a=\ell\text{ e }b\in \beta_1;\text{ ou }a=\ell-1\text{
+    e }b\in \beta_2\}.
+    \end{aligned}
+\end{equation*}
+
+Os conjuntos $\mathcal{S}_{4, r}$ seguem a formulação:
+\begin{equation*}%[label=\rmlabel]
+    \begin{aligned}
+        \mathcal{S}_{4, r}
+            &:=
+  \begin{cases}
+  \mathcal{S}_{4,4} \cup \{\{3,5\}, \{4,4\}\}, 
+        & \text{se }  r=5      \\ 
+        %
+         \mathcal{S}_{4,5} \cup \{\{3,6\}, \{4,5\}\}, 
+        & \text{se }  r=6      \\ 
+        %%
+         \mathcal{S} \cup \{\{3,\alpha\}: 3\leq\alpha\leq7\}\cup \{\{4,\beta\}: 4\leq \beta\leq r-1\}, 
+        & \text{se }  r\in\{7,8\}      \\ 
+        %
+        %
+        \mathcal{S}_{4,7} \setminus\{\{3,7\}\}, 
+        & \text{se }  r=9      \\ 
+        %
+        %
+         \mathcal{S}_{4,9} \setminus\{\{3,6\}\}, 
+        & \text{se }  r=10      \\ 
+        %
+        %
+         \mathcal{S}_{4,9} \setminus\{\{3,5\}\}, 
+        & \text{se }  r=11      \\ 
+        %
+        %
+         \mathcal{S} \cup \{\{3,3\}\} \cup \{\{4,\beta\}: 4\leq \beta\leq r-1\}, 
+        & \text{se }  12\leq r\leq 15     \\ 
+        %
+        %
+         \mathcal{S}_{3,3} \cup I_1(\ell,r),  & \text{se }  r \geq 16  
+	\end{cases}
+    \end{aligned}  
+\end{equation*}
+
+Por último, a descrição de $\mathcal{S}_{\ell, r}$ para $\ell \in \{5,6\}$:
 \begin{equation*}%[label=\rmlabel]
     \begin{aligned}
         \mathcal{S}_{\ell, r}
             &:=
     \begin{cases}
-        \mathcal{S}_{3,3} \cup \{\{2,4\}, \{3,3\}\}, 
-        & \text{se } \ell=3 \text{ e } r=4   \\ 
-        %
-        \mathcal{S}_{3,4} \cup \{\{2,5\}, \{3,4\}\}, 
-        & \text{se } \ell=3 \text{ e } r=5    \\ 
-        %
-        \mathcal{S}_{3,5} \cup \{\{2,6\}, \{3,5\}\}, 
-        & \text{se } \ell=3 \text{ e } r=6    \\ 
-        %
-         \mathcal{S}_{3,6} \cup \{\{3,6\}\}, 
-        & \text{se } \ell=3 \text{ e } r=7    \\ 
-        %
-        %
-        \mathcal{S}_{3,5} \cup \{\{3,\beta\}: 4 \leq \beta \leq r-1\}, & \text{se } \ell =3 \text{ e } 8\leq r \leq 10 \\
-        %%
-         \mathcal{S}_{4,4} \cup \{\{3,5\}, \{4,4\}\}, 
-        & \text{se } \ell=4 \text{ e } r=5      \\ 
-        %
-         \mathcal{S}_{4,5} \cup \{\{3,6\}, \{4,5\}\}, 
-        & \text{se } \ell=4 \text{ e } r=6      \\ 
-        %%
-         \mathcal{S} \cup \{\{3,\alpha\}: 3\leq\alpha\leq7\}\cup \{\{4,\beta\}: 4\leq \beta\leq r-1\}, 
-        & \text{se } \ell=4 \text{ e } r\in\{7,8\}      \\ 
-        %
-        %
-        \mathcal{S}_{4,7} \setminus\{\{3,7\}\}, 
-        & \text{se } \ell=4 \text{ e } r=9      \\ 
-        %
-        %
-         \mathcal{S}_{4,9} \setminus\{\{3,6\}\}, 
-        & \text{se } \ell=4 \text{ e } r=10      \\ 
-        %
-        %
-         \mathcal{S}_{4,9} \setminus\{\{3,5\}\}, 
-        & \text{se } \ell=4 \text{ e } r=11      \\ 
-        %
-        %
-         \mathcal{S} \cup \{\{3,3\}\} \cup \{\{4,\beta\}: 4\leq \beta\leq r-1\}, 
-        & \text{se } \ell=4 \text{ e } 12\leq r\leq 15     \\ 
-        %
-        %
-         \mathcal{S}_{5,5} \cup \{\{4,6\}, \{5,5\}\}, 
+        \mathcal{S}_{5,5} \cup \{\{4,6\}, \{5,5\}\}, 
         & \text{se } \ell=5 \text{ e } r=6     \\
         %%
          \mathcal{S}_{3,3} \cup \{\{3,3\}\}\cup I_2(\ell,r), 
@@ -1558,11 +1658,6 @@ Além disso, se $\ell \ll r$, as intersecções possíveis são semelhantes ao q
          \mathcal{S}_{3,3} \cup I_1(\ell,r), 
         & \text{se } \ell=5 \text{ e } r\in \{11,12\}    \\
         %%
-        \mathcal{S}_{3,4} \cup \{\{3,\beta\}: 4 \leq \beta \leq r-1\}, & \text{se } \ell =3 \text{ e } r \geq 11 \\
-        %%
-        \mathcal{S}_{3,3} \cup I_1(\ell,r),  & \text{se } \ell =4 \text{ e } r \geq 16  \\
-        %
-        %
          \mathcal{S}_{3,3} \cup I_2(\ell,r),  & \text{se } \ell=6 \text{ e } r \in\{7,8\}  \\
          %%
         \mathcal{S} \cup I_2(\ell,r),  & \text{se } \ell=6 \text{ e }  9\leq r \leq 12 \\
@@ -1571,16 +1666,8 @@ Além disso, se $\ell \ll r$, as intersecções possíveis são semelhantes ao q
         \end{cases}
     \end{aligned}  
 \end{equation*}
-onde usamos os seguintes conjuntos:
-\begin{equation*}
-    \begin{aligned}
-        I_1(\ell,r) &:= \{\{a,b\}: a=\ell\text{
-    e }b\in \beta_1\}
-        \\
-        I_2(\ell,r) &:= \{\{a,b\}: a=\ell\text{ e }b\in \beta_1;\text{ ou }a=\ell-1\text{
-    e }b\in \beta_2\}
-    \end{aligned}
-\end{equation*}
+
+
 
 % ---------------------------------------------------------------------------- %
 % Bibliografia
