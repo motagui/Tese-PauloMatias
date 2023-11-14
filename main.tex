@@ -400,7 +400,7 @@ framexrightmargin=15pt
     \normalsize{Durante o desenvolvimento deste trabalho o autor recebeu auxílio
     financeiro da FAPESP}    
     \vskip 0.4cm
-    \normalsize{Santo André, novembro de 2023}
+    \normalsize{Santo André, dezembro de 2023}
 \end{center}
 
 
@@ -473,6 +473,8 @@ framexrightmargin=15pt
 		\item Prof. Dr. Guilherme Mota (orientador) - IME-USP 
 		\item Profª. Drª. Nome Completo - IME-USP %[sem ponto final]
 		\item Prof. Dr. Nome Completo - IMPA %[sem ponto final]
+         \item Prof. Dr. Nome Completo - UFBA %[sem ponto final]
+        \item Profª. Drª. Nome Completo - UFABC %[sem ponto final]
     \end{itemize}
       
     \end{quote}
@@ -501,20 +503,23 @@ Consideramos também o seguinte problema do tipo anti-Ramsey: dados grafos $G$ e
 Provamos que o valor da função limiar para $G(n,p) \rbarrow K_{\ell,r}$ é dado por $n^{(\ell+r-2)/(\ell r-1)}$, para grafos bipartidos completos $\K$ com $\ell,r \geq 3$. Provamos também que o limiar é assintoticamente menor que este valor se $\ell=2$ e $r\geq 2$.
 \\
 
-\noindent \textbf{Palavras-chave:} anti-Ramsey, coloração própria, função limiar, bipartidos.
+\noindent \textbf{Palavras-chave:} anti-Ramsey, coloração própria, função limiar, grafos bipartidos.
 
 % ---------------------------------------------------------------------------- %
 % Abstract
-% \chapter*{Abstract}
-%\noindent MATIAS, P. \textbf{Mysterious title in English}. 2010. 120 f.
-% Tese (Doutorado) - Centro de Matemática, Cognição e Computação,Universidade Federal do ABC, Santo André, 2023.\\
+\chapter*{Abstract}
+%% \noindent MATIAS, P. \textbf{Mysterious title in English}. 2010. 120 f.  Tese (Doutorado) - Centro de Matemática, Cognição e Computação,Universidade Federal do ABC, Santo André, 2023.\\
 
 % Elemento obrigatório, elaborado com as mesmas características do resumo em língua portuguesa. De acordo com o Regimento da Pós- Graduação da USP (Artigo 99), deve ser redigido em inglês para fins de divulgação. 
-% Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text. Text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text.
+This text focuses on the study of anti-Ramsey properties of random and deterministic graphs.
+  First, we consider the problem proposed by Conlon and Tyomkyn, of determining the smallest number of colors necessary to obtain a proper edge coloring of the complete graph $K_n$, so that no pair of vertex-disjoint triangles of $K_n$ have the same triple of colors.
+This number of colors was unknown for $n$ even and we were able to compute it for some small cases and also for an infinite family of $n$ values.
 
-%\\
+We also consider the following anti-Ramsey problem: given graphs $G$ and $H$, we denote by $G \rbarrow H$ the property in which every proper coloring of $E(G)$ contains a rainbow copy of $H $ in $G$.
+We prove that the value of the threshold function for $G(n,p) \rbarrow K_{\ell,r}$ is given by $n^{(\ell+r-2)/(\ell r-1)}$ , for complete bipartite graphs $\K$ with $\ell,r \geq 3$. We also prove that the threshold is asymptotically smaller than this value if $\ell=2$ and $r\geq 2$.
+\\
 
-%\noindent \textbf{Keywords:} anti-Ramsey, edge-coloring, keyword3.
+\noindent \textbf{Keywords:} anti-Ramsey, proper edge coloring, threshold function, bipartite graphs.
 
 % ---------------------------------------------------------------------------- %
 % Sumário
@@ -544,7 +549,7 @@ Provamos que o valor da função limiar para $G(n,p) \rbarrow K_{\ell,r}$ é dad
 %Este trabalho de doutoramento, elaborado pelo aluno de doutorado Paulo Matias da Silva Junior, no Centro de Matemática, Computação e Cognição, UFABC, enquadra-se na área de combinatória extremal.
 
 A Teoria de Ramsey é uma área da matemática que investiga a existência de ordem de subconjuntos dentro de conjuntos grandes de objetos.
-O nome desse campo se deve ao resultado clássico de Frank P. Ramsey \cite{Ra} que provou que para quaisquer inteiros positivos $t$ e $q$, existe um inteiro $n$ tal que toda $q$-coloração do grafo completo $K_n$ contém uma cópia monocromática de $K_t$.
+O nome desse campo se deve ao resultado clássico de Frank P. Ramsey \cite{Ra} que provou que para quaisquer inteiros positivos $t$ e $q$, existe um inteiro $n$ tal que toda $q$-coloração de arestas do grafo completo $K_n$ contém uma cópia monocromática de $K_t$.
 
 % Dentre as técnicas que pretendemos utilizar para atacar os problemas propostos, destacamos o Lema de Regularidade de Szemerédi e suas variantes (veja, por exemplo, \cite{gerke05:_sparse_survey, Kohayakawa97Szemeredi, KomlosSimonovits96, roedl05:PNAS, szemeredi76,  roedl10+:_graph_regul_lemmas, roedl07:_count,roedl07:_regul}). 
 
@@ -557,7 +562,7 @@ O \emph{número de Ramsey}~$r(H)$ de um grafo~$H$ é definido como o menor intei
 Problemas em Teoria de Ramsey têm sido muito estudados e técnicas elegantes têm sido desenvolvidas  para estimar os números de Ramsey.
 O trabalho de Conlon, Fox e Sudakov~\cite{CoFoSu15} contém um resumo  dos avanços na área.
 
-Ao longo dos últimos anos, o grafo aleatório $G(n,p)$ tem sido o grafo de coloração cujas propriedades Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
+Ao longo dos últimos anos, o grafo aleatório $G(n,p)$ tem sido o grafo alvo de coloração cujas propriedades Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
 Uma variação do problema tipo Ramsey é a chamada \textit{propriedade anti-Ramsey} em que buscamos cópias \textit{rainbow} de um grafo $F$ nas colorações de $G(n,p)$, isto é, cópias de $F$ cujas arestas não repetem cor.
 Para cópias rainbow de $F$ em um grafo determinístico, o trabalho  de Fujita, Magnant e Ozeki~\cite{fujita2010rainbow} sumariza os resultados neste caso.
 Aqui, temos o objetivo de estimar a função limiar sobre a ocorrência de cópias rainbow de $F$ em $G(n,p)$. 
@@ -617,7 +622,7 @@ Definimos formalmente, dado um grafo $G$, uma \textit{coloração de arestas} de
 A coloração $\chi$ de $G$ é dita ser \textit{própria} se as arestas adjacentes possuem cores distintas, i.e., para cada vértice $v \in V(G)$, tem-se $\chi(\{v,u\}) \neq \chi(\{v,w\})$ para cada par $u,w$ de vizinhos de $v$.
 Chamamos de \textit{índice cromático} de $G$, denotado por $\chi'(G)$, o número mínimo de cores tal que existe uma coloração própria de $E(G)$.
 
-O \textit{grafo aleatório binomial} no modelo de Erd\H{o}s e Rényi, $G \in G(n, p)$, é um grafo com um conjunto de $n$ vértices, onde entre quaisquer dois vértices existe uma aresta com probabilidade $p$ e essas arestas são independentes.
+O \textit{grafo aleatório binomial} no modelo de Erd\H{o}s e Rényi, $G \in G(n, p)$, é um grafo com um conjunto de $n$ vértices, em que entre quaisquer dois vértices existe uma aresta com probabilidade $p$ e essas arestas são independentes.
 
 Ressaltamos uma definição importante que é objeto de investigação no grafo aleatório no Capítulo \ref{cap:anti}.
 Uma função $\hat{p}: \mathbb{N} \rightarrow [0,1]$ é chamada de \textit{função limiar} para uma propriedade
@@ -654,7 +659,7 @@ Um resultado clássico de Bollobás que relaciona diferentes conceitos deste cap
     Seja $H$ um grafo fixo. Então, $\hat{p} = n^{1/m(H)}$ é o limiar para a propriedade de que $G(n,p)$ contém $H$.
 \end{teorema}
 
-Um grafo $H$ é dito 2-\textit{balanceado} se a 2-densidade máxima de $H$ é maior ou igual que a 2-densidade de qualquer de seus subgrafos que contêm pelo menos três vértices. 
+Um grafo $H$ é dito 2-\textit{balanceado} se a 2-densidade máxima de $H$ é maior ou igual que a 2-densidade de qualquer um de seus subgrafos que contêm pelo menos três vértices. 
 Dados $\ell,r\geq 2$ inteiros, o grafo bipartido completo $\K$ é um exemplo de grafo 2-balanceado.
 
 
