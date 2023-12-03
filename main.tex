@@ -14,6 +14,8 @@
 
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
+\usepackage{nomencl}
+\usepackage[fixlanguage]{babelbib}
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}           % usamos arquivos pdf/png como figuras
 \usepackage{setspace}                   % espaçamento flexível
@@ -27,14 +29,15 @@
 \usepackage{listings}                   % para formatar código-fonte (ex. em Java)
 \usepackage{titletoc}
 %\usepackage[bf,small,compact]{titlesec} % cabeçalhos dos títulos: menores e compactos
-\usepackage[fixlanguage]{babelbib}
-\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
-\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+
+\usepackage[width=0.6\textwidth ,font={small, sf,it},labelfont={color=blue,bf},
+labelsep=endash, format=plain,labelsep=period]{caption}
+\usepackage[dvipsnames*,svgnames,x11names]{xcolor}
 \usepackage[a4paper,top=2.54cm,bottom=2.0cm,left=2.0cm,right=2.54cm]{geometry} % margens
 %\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black,bookmarksopen=true]{hyperref} % links em preto
 \usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
 \usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
-\usepackage[square,sort,nonamebreak,comma]{natbib}  % citação bibliográfica alpha (alpha-ime.bst)
+\usepackage[square,sort,nonamebreak,comma,numbers]{natbib}  % citação bibliográfica alpha (alpha-ime.bst)
 \fontsize{60}{62}\usefont{OT1}{cmr}{m}{n}{\selectfont}
 
 
@@ -73,36 +76,9 @@
 \newcommand{\K}{K_{\ell,r}} %%add by Paulo
 \newcommand{\Slr}{\mathcal{S}_{\ell,r}} %%% add by Paulo
 
-\newcommand\cca{{\mathcal{A}}}
-\newcommand\ccc{{\mathcal{C}}}
-\newcommand\ccd{{\mathcal{D}}}
-\newcommand\ccg{{\mathcal{G}}}
-\newcommand\ccf{{\mathcal{F}}}
-\newcommand\cch{{\mathcal{H}}}
-\newcommand\cck{{\mathcal{K}}}
-\newcommand\ccl{{\mathcal{L}}}
-\newcommand\ccn{{\mathcal{N}}}
-\newcommand\ccp{{\mathcal{P}}}
-\newcommand\ccr{{\mathcal{R}}}
-\newcommand\cct{{\mathcal{T}}}
-\newcommand\ccq{{\mathcal{Q}}}
-\newcommand\ccv{{\mathcal{V}}}
-\newcommand\ccw{{\mathcal{W}}}
-\newcommand\bbn{{\mathds{N}}}
-\newcommand\abs{\mathop{\textrm{\rm abs}}\nolimits}
-\newcommand\res{\mathop{\textrm{\rm res}}\nolimits}
-%\newcommand\til{\mathop{\textrm{\rm til}}\nolimits}
-\newcommand\cte{\mathop{\textrm{\rm cte}}\nolimits}
-\newcommand\ini{\mathop{\textrm{\rm ini}}\nolimits}
-\newcommand\out{\mathop{\textrm{\rm out}}\nolimits}
 
 \let\phi=\varphi
 
-\newcommand{\Phibad}{\Phi_{\textsc{bad}}}
-%\homit make ``hom'' italic in definitions, lemmas and theorems.
-\newcommand{\homit}{{\textrm{hom}}}
-\newcommand{\opp}{{\textrm{opp}}}
-\newcommand{\colour}{{\textrm{colour}}}
 
 \def\til{\tilde}
 
@@ -228,18 +204,7 @@
 
 
 
-\def\PP{{\mathbb P}}
-\def\EE{{\mathbb E}}
-\def\ZZ{{\mathbb Z}}
-\def\NN{{\mathbb N}}
-\def\QQ{{\mathbb Q}}
 
-\def\cP{{\mathcal P}}
-\def\cL{{\mathcal L}}
-\def\bfa{\textbf{a}}
-\def\bfb{\textbf{b}}
-\def\bfx{\textbf{x}}
-\def\bfzero{\textbf{0}}
 
 \def\ex{\mathop{\text{\rm ex}}\nolimits}
 \def\exdeg{\mathop{\text{\rm exdeg}}\nolimits}
@@ -395,7 +360,7 @@ framexrightmargin=15pt
     
     \vskip 1.3cm
     Programa: Ciência da Computação\\
-    Orientador: Prof. Dr. Guilherme Mota
+    Orientador: Prof. Dr. Guilherme Oliveira Mota
    	\vskip 1cm
     \normalsize{Durante o desenvolvimento deste trabalho o autor recebeu auxílio
     financeiro da FAPESP}    
@@ -470,7 +435,7 @@ framexrightmargin=15pt
     \noindent Comissão Julgadora:
     
     \begin{itemize}
-		\item Prof. Dr. Guilherme Mota (orientador) - IME-USP 
+		\item Prof. Dr. Guilherme Oliveira Mota (orientador) - IME-USP 
 		\item Profª. Drª. Nome Completo - IME-USP %[sem ponto final]
 		\item Prof. Dr. Nome Completo - IMPA %[sem ponto final]
          \item Prof. Dr. Nome Completo - UFBA %[sem ponto final]
@@ -485,9 +450,18 @@ framexrightmargin=15pt
 % ---------------------------------------------------------------------------- %
 % Agradecimentos:
 % Se o candidato não quer fazer agradecimentos, deve simplesmente eliminar esta página 
-%% \chapter*{Agradecimentos}
-%Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto. Texto opcional.
+ \chapter*{Agradecimentos}
 
+Agradeço a Deus pela vida, a vida conjuga a matemática e vice-versa.
+
+Tenho gratidão sem medidas por minha mãe, a querida Dona Geisa, que batalhou pelos cinco filhos, muito tempo sozinha, e ainda os apoia até mesmo com eles crescidos. 
+Agradeço a toda minha família que, agitada como é, sempre me surpreende.
+
+Agradeço ao professor Guilherme Mota pela orientação, por ser sempre gentil e acreditar no meu potencial, além da visão ampla de ciência colaborativa que ele me apresentou.
+
+Preciso agradecer àqueles que caminharam comigo, destaco: Lucas Colucci pelas conversas sempre matemáticas; Giovani pelo papo cheio de histórias e Ariel pelos debates de assuntos complicados da vida.
+
+Por fim, agradeço à Fundação de Amparo à Pesquisa do Estado de São Paulo pela concessão de bolsas de estudo para a realização deste trabalho.
 
 % ---------------------------------------------------------------------------- %
 % Resumo
@@ -548,8 +522,8 @@ We prove that the value of the threshold function for $G(n,p) \rbarrow K_{\ell,r
 
 %Este trabalho de doutoramento, elaborado pelo aluno de doutorado Paulo Matias da Silva Junior, no Centro de Matemática, Computação e Cognição, UFABC, enquadra-se na área de combinatória extremal.
 
-A Teoria de Ramsey é uma área da matemática que investiga a existência de ordem de subconjuntos dentro de conjuntos grandes de objetos.
-O nome desse campo se deve ao resultado clássico de Frank P. Ramsey \cite{Ra} que provou que para quaisquer inteiros positivos $t$ e $q$, existe um inteiro $n$ tal que toda $q$-coloração de arestas do grafo completo $K_n$ contém uma cópia monocromática de $K_t$.
+A Teoria de Ramsey é uma área da matemática que investiga a existência de ordem de subconjuntos dentro de conjuntos grandes de objetos. 
+O nome desse campo se deve ao resultado clássico de Frank P. Ramsey \cite{Ra} que, em 1930, enquanto estudava um problema de lógica proposicional, ele provou o conhecido ``Teorema de Ramsey" que afirma que para quaisquer inteiros positivos $t$ e $q$, existe um inteiro $n$ tal que toda $q$-coloração de arestas do grafo completo $K_n$ contém uma cópia monocromática de $K_t$.
 
 % Dentre as técnicas que pretendemos utilizar para atacar os problemas propostos, destacamos o Lema de Regularidade de Szemerédi e suas variantes (veja, por exemplo, \cite{gerke05:_sparse_survey, Kohayakawa97Szemeredi, KomlosSimonovits96, roedl05:PNAS, szemeredi76,  roedl10+:_graph_regul_lemmas, roedl07:_count,roedl07:_regul}). 
 
@@ -559,25 +533,76 @@ Denotamos essa propriedade por $G\rightarrow (H)_q$.
 Quando $q=2$, escrevemos simplesmente $G\rightarrow H$.
 %Em sua forma mais simples, o clássico Teorema de Ramsey \cite{Ra} afirma que para qualquer grafo $H$ existe um inteiro $N$ tal que $K_N \rightarrow H$.
 O \emph{número de Ramsey}~$r(H)$ de um grafo~$H$ é definido como o menor inteiro~$N$ com tal que $K_N \rightarrow H$.
-Problemas em Teoria de Ramsey têm sido muito estudados e técnicas elegantes têm sido desenvolvidas  para estimar os números de Ramsey.
-O trabalho de Conlon, Fox e Sudakov~\cite{CoFoSu15} contém um resumo  dos avanços na área.
 
-Ao longo dos últimos anos, o grafo aleatório $G(n,p)$ tem sido o grafo alvo de coloração cujas propriedades Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
-Uma variação do problema tipo Ramsey é a chamada \textit{propriedade anti-Ramsey} em que buscamos cópias \textit{rainbow} de um grafo $F$ nas colorações de $G(n,p)$, isto é, cópias de $F$ cujas arestas não repetem cor.
+Uma generalização natural do número de Ramsey com mais cores na coloração do grafo completo é buscar cópias monocromáticas de múltiplos grafos.
+Com isso, chama-se de \emph{número de Ramsey de ordem} $q$, denotado por $r_q(H_1,H_2, \ldots ,H_q)$,
+ o menor inteiro positivo $N$ tal que, se as arestas de um grafo completo $K_N$ são particionadas em $q$ classes de cores distintas, fornecendo $q$ subgrafos $G_1, G_2, \ldots,G_q$, então,
+pelo menos um dos grafos $G_i$ contém um subgrafo isomorfo a $H_i$, onde $1 \leq i \leq q$.
+Problemas em Teoria de Ramsey têm sido muito estudados e técnicas elegantes têm sido desenvolvidas para estimar os números de Ramsey, especialmente de ordens dois \cite{pontiveros2016ramsey, montgomery2023ramsey} e três \cite{BeSk09, MoSaScTa13}, formando uma área ativa de pesquisa.
+O trabalho de Conlon, Fox e Sudakov~\cite{CoFoSu15} contém um resumo dos avanços na área de Ramsey, enquanto Radziszowski \cite{radziszowski2011small} possui um artigo resumo com constante atualização para o número de Ramsey de grafos pequenos.
+
+Uma variante de problema tipo Ramsey proposta por Erd\H{o}s, Faudree, Rousseau e Schelp~\cite{ErFaRoSc78} e bastante estudada é o de determinar o \emph{número size-Ramsey} de um grafo $H$, denotado por $\hat{r}(H)$, este é o menor número de arestas tal que existe um grafo $G$ com essa quantidade de arestas de modo que $G \rightarrow H$. 
+A princípio, Erd\H{o}s \cite{erdos81:_i} perguntou se o número de size-Ramsey de caminhos fosse tal que $\hat{r}(P_n) = \omega(n)$ e $\hat{r}(P_n) = o(n^2)$, enquanto Beck \cite{Be83} forneceu uma construção probabilística de que o número size-Ramsey de caminhos é linear, i.e., $\hat{r}(P_n) = \Theta(n)$.  
+O número de size-Ramsey tem sido estimado para diversas classes de grafos como ciclos \cite{HaKo95}, árvores \cite{dellamonica12:_ramsey}, grau limitado \cite{rodl2000size}, potências de hiperárvores \cite{letzter2021size} e grafos bipartidos completos \cite{conlon2023three}.
+
+Ao longo dos últimos anos, o grafo aleatório binomial $G(n,p)$ tem sido o grafo alvo de coloração cujas propriedades Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
+Uma variação do problema tipo Ramsey é a chamada \textit{propriedade anti-Ramsey} em que buscamos cópias \textit{rainbow} de um grafo $F$ nas colorações de $G(n,p)$, isto é, cópias de $F$ cujas arestas não repetem cor, denotamos esta propriedade por $G(n,p)\rbarrow F$.
 Para cópias rainbow de $F$ em um grafo determinístico, o trabalho  de Fujita, Magnant e Ozeki~\cite{fujita2010rainbow} sumariza os resultados neste caso.
-Aqui, temos o objetivo de estimar a função limiar sobre a ocorrência de cópias rainbow de $F$ em $G(n,p)$. 
 
+Nesta tese, temos o objetivo de estimar a função limiar sobre a ocorrência de cópias rainbow de $F$ em $G(n,p)$. 
 Esta última variante foi primeiro estudada por Bohman, Frieze, Pikhurko e Smyth~\cite{bohman10:_aR_rgs} e depois por  Kohayakawa, Konstadinidis e Mota \cite{KoKoMo12} que adicionaram a condição de que as colorações de arestas são próprias.
- O problema de encontrar cópias rainbow de ciclos no $G(n,p)$ já tem sido estudado desde 1992, iniciado por Rödl e Tuza~\cite{roedl92:_rainb}, no entanto, a função limiar para esta  propriedade passa a ser investigada na última década.
 
-Neste trabalho 
+ Uma a resposta à pergunta de Spencer em \cite{erdos79:_some} que questionou sobre a existência de grafos com largura arbitrariamente grandes conterem cópias rainbow de ciclos em colorações próprias foi dada em 1992, por Rödl e Tuza~\cite{roedl92:_rainb}.
+ Eles %% encontrar cópias rainbow de ciclos no $G(n,p)$ já tem sido estudado desde
+ provaram que para qualquer $\ell \geq 3$, existe uma probabilidade $p$ não nula tal que $G(n,p)\rbarrow C_\ell$ quase certamente.
+ No entanto, a função limiar para a propriedade anti-Ramsey só passa a ser investigada na última década.
+ O trabalho de Kohayakawa, Konstadinidis e Mota  \cite{KoKoMo12}, com métodos de regularidade \cite{Kohayakawa97Szemeredi, KoRo03}  e de quasialetoriedade \cite{ChGr08} para grafos esparsos, estabeleceu que a  função limiar de $G(n,p)\rbarrow F$, com $F$ sendo um grafo fixado, possui limitante superior dependente da 2-densidade máxima de $F$.
+ A dificuldade do problema passou então para a verificação do limite inferior desta propriedade.
+
+Nesta direção, encontrar famílias de grafos em que a função limiar seja dada ou não pela 2-densidade do grafo se tornou um campo de investigação. 
+Por exemplo, foi provado para ciclos a partir de cinco vértices que a função limiar segue da 2-densidade máxima de ciclos \cite{barros2021anti, NePeSkSt14}, 
+como também para grafos completos \cite{kohayakawa2019anti, NePeSkSt14} com mais de cinco vértices.
+Por outro lado, para o ciclo $C_4$, o grafo completo $K_4$ e famílias  infinitas de grafos obteve-se uma função limiar abaixo da 2-densidade \cite{mota2017advances, kohayakawa2019anti, KoKoMo16+, araujo2022anti}.
+
+Destacamos a variante de problema de determinar o chamado \emph{número de Ramsey canônico},
+ pois ele se coloca com resultados entre o Ramsey clássico e a propriedade anti-Ramsey.
+ Nesta variante, o número de cores para colorir as arestas do grafo completo não é limitado.
+ Um célebre resultado de Erd\H{o}s e Rado \cite{erdoes_rado50}, de 1950, mostra que para um número inteiro $N$ suficientemente grande
+e dada uma pré-ordem nos vértices de $K_N$, então qualquer coloração de arestas de $K_N$ contém um subgrafo completo $K_t$
+em que um dos seguintes casos ocorre:
+\begin{enumerate}[(a)]
+    \item \label{it:canrain} $K_t$ é rainbow;
+    \item \label{it:canmono} $K_t$ é monocromático;
+    \item \label{it:cancan} duas arestas de $K_t$ só recebem a mesma cor se, e somente se, são incidentes ao mesmo vértice de maior (menor) valor na pré-ordem de $K_N$.
+\end{enumerate}
+
+A coloração descrita em (\ref{it:cancan}) que é dependente da pré-ordem dos vértices do grafo alvo de coloração é denominada de \emph{lexicográfica}. 
+Dado um inteiro positivo $t$, o número de Ramsey canônico, $er(t)$, é justamente o menor inteiro $N$ tal que a afirmação acima vale.  
+O resultado de Erd\H{o}s e Rado é notório por elucidar que mesmo colorações do grafo completo, com uma quantidade arbitrária de cores, podem gerar basicamente três tipos de coloração padrão para um subgrafo: monocromática, rainbow ou lexicográfica. 
+Os melhores limitantes sobre $er(t)$ foram dados por Lefmann e R{\"o}dl~\cite{lefmann1995erdHos}, provaram que $2^{c_1t^2}\leq er(t) \leq 2^{c_2t^2\log t}$, onde $c_1$ e $c_2$ são constantes.
+
+Podemos generalizar a coloração descrita em (\ref{it:canrain})-(\ref{it:cancan}) para encontrar outros grafos além de $K_t$, chamando-a de \emph{canônica} \cite{lefmann1993canonical, axenovich2005canonical}.
+Recentemente, Kam{\v{c}}ev e Schacht  \cite{kamvcev2023canonical} trazem um resultado semelhante ao de Erd\H{o}s e Rado para uma versão aleatória, eles computaram a função limiar para a propriedade de colorações canônicas no grafo aleatório $G(n,p)$ conter cópias de $K_t$.
+
+O principal resultado deste trabalho trata da propriedade anti-Ramsey de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, ou seja, colorações que evitem cópias rainbow. 
+Dentro do problema de encontrar famílias de grafos cuja função limiar dependa ou não da 2-densidade máxima, trouxemos condições para que o grafo bipartido completo tenha limiar dado pela 2-densidade.
+
+Um problema secundário que lidamos durante a pesquisa foi introduzido por Conlon e Tyomkyn em \cite{conlontyomkyn}
+e consiste de, dados os inteiros positivos $k$ e $n$, e um grafo $H$, deseja-se determinar o menor números de cores 
+em que se possa colorir propriamente as arestas do grafo completo $K_n$ evitando $k$ repetições vértice-disjuntas de cópias de $H$ nas mesmas cores.
+O mesmo trabalho se dedicou em provar resultados assintóticos para diferentes famílias de grafos no parâmetro $H$: ciclos, florestas, bipartidos e não-bipartidos.
+Uma das questões deixadas por eles 
+ foi determinar exatamente esta quantidade de cores para $n$ par e $H = K_3$.
+ Investigamos isto para os primeiros valores pares de $n$ exibindo colorações, e também por via de uma construção algébrica de uma coloração que cobre infinitos valores pares de $n$.
+
+Em suma, neste trabalho 
 %% tem como objetivo o estudo de diversas propriedades de grafos que garantam a existência de estruturas monocromáticas e multicoloridas em grafos cujas arestas estão coloridas.
 são investigadas propriedades dos tipos Ramsey e anti-Ramsey
 de grafos aleatórios e determinísticos em diferentes versões, são problemas cujo ponto em comum é a coloração de arestas.
 
 
 
-\section{Organização do texto}
+\section*{Organização do texto}
 
 Iniciamos no Capítulo \ref{cap:prelim} apresentando brevemente os conceitos mais relevantes sobre grafos neste trabalho.
 O Capítulo \ref{cap:triangles} exibe um resultado de padrões em coloração de arestas do grafo completo. 
@@ -589,7 +614,6 @@ Esse número era desconhecido quando $n$ é par e foi determinado para os primei
 %%%A importância e vigor da pesquisa em torno dos tópicos que propomos podem ser observados nos trabalhos clássicos de diversos pesquisadores renomados, como Erd\H{o}s, Rödl, Szemerédi, e Tao, dentre outros, e nos trabalhos modernos de proeminentes pesquisadores como Conlon, Gowers, e Schacht. 
 %%% Os trabalhos desses autores, que muitas vezes consideram grafos aleatórios, mostram que ainda existe muito a ser feito no desenvolvimento de uma teoria sólida para entendermos a existência de uma certa ordem em estruturas aparentemente caóticas, o cerne da Teoria de Ramsey.
 
-A propriedade anti-Ramsey estudada foi a de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, ou seja, colorações que evitem cópias rainbow. 
  O Capítulo \ref{cap:anti} traz como resultado inédito as condições para que a propriedade anti-Ramsey ocorra no grafo aleatório $G(n,p)$ com relação a conter cópias isomorfas ao grafo bipartido completo $\K$. 
 A saber, dados inteiros $\ell,r \geq 3$, provamos que a função limiar para a propriedade do grafo aleatório ser colorido evitando cópias rainbow de $\K$ depende da 2-densidade máxima de $\K$, especificamente, a função limiar encontrada é 
 $n^{(\ell+r-2)/(\ell r-1)}$.
@@ -910,7 +934,7 @@ Novamente, a principal dificuldade do problema está em determinar os valores de
 
  
 
-\chapter{Um problema do tipo anti-Ramsey}\label{cap:anti}
+\chapter{Um problema do tipo anti-Ramsey em grafos bipartidos completos}\label{cap:anti}
 
 Dados grafos $G$ e $H$ e uma coloração de arestas de $G$, dizemos que uma cópia de $H$ em $G$ é \emph{rainbow} se não existem duas arestas de $H$ com a mesma cor.
 %
@@ -1228,7 +1252,10 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
     e também formam um 
     $K_{p,q} = \big[X_{j+1}^{j+p}, Y_{k+1}^{k+q}\big]$
     com  vértices de $H_{i-1}$, onde $X$ e $Y$ são completados com vértices de
-    $X_{j+p+1}^\ell$ e $Y_{k+q+1}^r$ em $H_i$, respectivamente;
+    $X_{j+p+1}^\ell$ 
+    e
+    $Y_{k+q+1}^r$ 
+    em $H_i$, respectivamente;
                 
        \item[$(B_{sw})$]\label{configB} 
         Existem conjuntos de vértices $X,Y$ em $H_{i-1}$ e $Z_1, Z_2$ em $H_i$, tais que
@@ -1276,9 +1303,12 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
         Dados $3\leq \ell \leq r$ inteiros,
         sejam $G$ um grafo tal que $m(G) < m_2(\K)$ e
         $H = (H_1, \ldots, H_t)$ uma $\K$-componente de $G$.
-        Vamos provar o resultado sobre os tipos de configuração que uma cópia $K$ de $\K$ apresenta para formar um $H_i$ arbitrário para todo número de vértices $v_i$, i.e., para qualquer $0\leq v_i \leq \ell+r-2$. %% juntamente do número de novos $\K$ adicionados a $H_i$.
-
-     O caso mais simples é o bipartido $K$ formar uma configuração do tipo C que só ocorre se $v_i =(\ell-1)+(r-2) = \ell+r-3$ e se $K$ seguir a interseção apresentada pela Proposição \ref{aff:casoP1}.        
+        Vamos provar o resultado sobre os tipos de configuração que uma cópia $K$ de $\K$ apresenta para formar um $H_i$ arbitrário para todo número de vértices $v_i$, i.e., 
+        para qualquer $0 \leq v_i \leq \ell + r-2$ . 
+        
+        O caso mais simples é o bipartido $K$ formar uma configuração do tipo C que só ocorre se 
+     $v_i = (\ell-1)+(r-2) = \ell+r-3$ 
+     e se $K$ seguir a interseção apresentada pela Proposição \ref{aff:casoP1}.        
        
     Para avaliar os tipos A e B, primeiro construímos conjuntos auxiliares que descrevem as intersecções de arestas de grafos bipartidos em $G$.   
     Dados os inteiros positivos $\ell$ e $r$, denote por
