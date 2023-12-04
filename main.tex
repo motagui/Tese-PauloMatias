@@ -523,7 +523,7 @@ We prove that the value of the threshold function for $G(n,p) \rbarrow K_{\ell,r
 %Este trabalho de doutoramento, elaborado pelo aluno de doutorado Paulo Matias da Silva Junior, no Centro de Matemática, Computação e Cognição, UFABC, enquadra-se na área de combinatória extremal.
 
 A Teoria de Ramsey é uma área da matemática que investiga a existência de ordem de subconjuntos dentro de conjuntos grandes de objetos. 
-O nome desse campo se deve ao resultado clássico de Frank P. Ramsey \cite{Ra} que, em 1930, enquanto estudava um problema de lógica proposicional, ele provou o conhecido ``Teorema de Ramsey" que afirma que para quaisquer inteiros positivos $t$ e $q$, existe um inteiro $n$ tal que toda $q$-coloração de arestas do grafo completo $K_n$ contém uma cópia monocromática de $K_t$.
+O nome desse campo se deve ao resultado clássico de Frank P. Ramsey \cite{Ra} que, em 1930, enquanto estudava um problema de lógica proposicional, ele provou o conhecido ``Teorema de Ramsey'' no qual afirma que para quaisquer inteiros positivos $t$ e $q$, existe um inteiro $n$ tal que toda $q$-coloração de arestas do grafo completo $K_n$ contém uma cópia monocromática de $K_t$.
 
 % Dentre as técnicas que pretendemos utilizar para atacar os problemas propostos, destacamos o Lema de Regularidade de Szemerédi e suas variantes (veja, por exemplo, \cite{gerke05:_sparse_survey, Kohayakawa97Szemeredi, KomlosSimonovits96, roedl05:PNAS, szemeredi76,  roedl10+:_graph_regul_lemmas, roedl07:_count,roedl07:_regul}). 
 
@@ -532,7 +532,7 @@ Dados grafos $G$ e $H$ e um inteiro positivo $q$, dizemos que $G$
 Denotamos essa propriedade por $G\rightarrow (H)_q$.
 Quando $q=2$, escrevemos simplesmente $G\rightarrow H$.
 %Em sua forma mais simples, o clássico Teorema de Ramsey \cite{Ra} afirma que para qualquer grafo $H$ existe um inteiro $N$ tal que $K_N \rightarrow H$.
-O \emph{número de Ramsey}~$r(H)$ de um grafo~$H$ é definido como o menor inteiro~$N$ com tal que $K_N \rightarrow H$.
+O \emph{número de Ramsey}~$r(H)$ de um grafo~$H$ é definido como o menor inteiro~$N$  tal que $K_N \rightarrow H$.
 
 Uma generalização natural do número de Ramsey com mais cores na coloração do grafo completo é buscar cópias monocromáticas de múltiplos grafos.
 Com isso, chama-se de \emph{número de Ramsey de ordem} $q$, denotado por $r_q(H_1,H_2, \ldots ,H_q)$,
@@ -542,33 +542,35 @@ Problemas em Teoria de Ramsey têm sido muito estudados e técnicas elegantes t�
 O trabalho de Conlon, Fox e Sudakov~\cite{CoFoSu15} contém um resumo dos avanços na área de Ramsey, enquanto Radziszowski \cite{radziszowski2011small} possui um artigo resumo com constante atualização para o número de Ramsey de grafos pequenos.
 
 Uma variante de problema tipo Ramsey proposta por Erd\H{o}s, Faudree, Rousseau e Schelp~\cite{ErFaRoSc78} e bastante estudada é o de determinar o \emph{número size-Ramsey} de um grafo $H$, denotado por $\hat{r}(H)$, este é o menor número de arestas tal que existe um grafo $G$ com essa quantidade de arestas de modo que $G \rightarrow H$. 
-A princípio, Erd\H{o}s \cite{erdos81:_i} perguntou se o número de size-Ramsey de caminhos fosse tal que $\hat{r}(P_n) = \omega(n)$ e $\hat{r}(P_n) = o(n^2)$, enquanto Beck \cite{Be83} forneceu uma construção probabilística de que o número size-Ramsey de caminhos é linear, i.e., $\hat{r}(P_n) = \Theta(n)$.  
-O número de size-Ramsey tem sido estimado para diversas classes de grafos como ciclos \cite{HaKo95}, árvores \cite{dellamonica12:_ramsey}, grau limitado \cite{rodl2000size}, potências de hiperárvores \cite{letzter2021size} e grafos bipartidos completos \cite{conlon2023three}.
+A princípio, Erd\H{o}s \cite{erdos81:_i} perguntou se o número size-Ramsey de caminhos seria tal que $\hat{r}(P_n) = \omega(n)$ e $\hat{r}(P_n) = o(n^2)$.
+Em resposta, Beck \cite{Be83} forneceu uma construção probabilística de que o número size-Ramsey de caminhos é linear, i.e., $\hat{r}(P_n) = \Theta(n)$.  
+O número size-Ramsey tem sido estimado para diversas classes de grafos tais como ciclos \cite{HaKo95}, árvores \cite{dellamonica12:_ramsey}, grau limitado \cite{rodl2000size}, potências de hiperárvores \cite{letzter2021size} e grafos bipartidos completos \cite{conlon2023three}.
 
-Ao longo dos últimos anos, o grafo aleatório binomial $G(n,p)$ tem sido o grafo alvo de coloração cujas propriedades Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
+Ao longo dos últimos anos, sob o repertório de técnicas probabilísticas, o grafo aleatório binomial $G(n,p)$ tem sido o grafo alvo de coloração das arestas em que propriedades tipo Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
+Aqui, uma função limiar indica a probabilidade em que uma propriedade começa a ter alta probabilidade de ser satisfeita pelo $G(n,p)$.
 Uma variação do problema tipo Ramsey é a chamada \textit{propriedade anti-Ramsey} em que buscamos cópias \textit{rainbow} de um grafo $F$ nas colorações de $G(n,p)$, isto é, cópias de $F$ cujas arestas não repetem cor, denotamos esta propriedade por $G(n,p)\rbarrow F$.
 Para cópias rainbow de $F$ em um grafo determinístico, o trabalho  de Fujita, Magnant e Ozeki~\cite{fujita2010rainbow} sumariza os resultados neste caso.
 
-Nesta tese, temos o objetivo de estimar a função limiar sobre a ocorrência de cópias rainbow de $F$ em $G(n,p)$. 
-Esta última variante foi primeiro estudada por Bohman, Frieze, Pikhurko e Smyth~\cite{bohman10:_aR_rgs} e depois por  Kohayakawa, Konstadinidis e Mota \cite{KoKoMo12} que adicionaram a condição de que as colorações de arestas são próprias.
+Nesta tese, em nosso principal problema vamos estimar a função limiar sobre a ocorrência de cópias rainbow para uma classe de grafos em $G(n,p)$. 
+Esta variante foi primeiro estudada por Bohman, Frieze, Pikhurko e Smyth~\cite{bohman10:_aR_rgs} e depois por  Kohayakawa, Konstadinidis e Mota \cite{KoKoMo12} que adicionaram a condição de que as colorações de arestas são próprias.
 
- Uma a resposta à pergunta de Spencer em \cite{erdos79:_some} que questionou sobre a existência de grafos com largura arbitrariamente grandes conterem cópias rainbow de ciclos em colorações próprias foi dada em 1992, por Rödl e Tuza~\cite{roedl92:_rainb}.
- Eles %% encontrar cópias rainbow de ciclos no $G(n,p)$ já tem sido estudado desde
+ Outra frente precursora deste problema foi uma resposta à pergunta de Spencer presente em \cite{erdos79:_some}, que questionava sobre a existência de grafos com largura arbitrariamente grandes conterem cópias rainbow de ciclos em colorações próprias. 
+ Em 1992, Rödl e Tuza~\cite{roedl92:_rainb}
  provaram que para qualquer $\ell \geq 3$, existe uma probabilidade $p$ não nula tal que $G(n,p)\rbarrow C_\ell$ quase certamente.
- No entanto, a função limiar para a propriedade anti-Ramsey só passa a ser investigada na última década.
- O trabalho de Kohayakawa, Konstadinidis e Mota  \cite{KoKoMo12}, com métodos de regularidade \cite{Kohayakawa97Szemeredi, KoRo03}  e de quasialetoriedade \cite{ChGr08} para grafos esparsos, estabeleceu que a  função limiar de $G(n,p)\rbarrow F$, com $F$ sendo um grafo fixado, possui limitante superior dependente da 2-densidade máxima de $F$.
+ No entanto, a função limiar para a propriedade anti-Ramsey só passa a ser investigada com maior detalhe na última década.
+ O trabalho de Kohayakawa, Konstadinidis e Mota~\cite{KoKoMo12}, com métodos de regularidade \cite{Kohayakawa97Szemeredi, KoRo03}  e de quasialetoriedade \cite{ChGr08} para grafos esparsos, estabeleceu que a  função limiar de $G(n,p)\rbarrow F$, com $F$ sendo um grafo fixado, possui limitante superior dependente da 2-densidade máxima de $F$.
  A dificuldade do problema passou então para a verificação do limite inferior desta propriedade.
 
 Nesta direção, encontrar famílias de grafos em que a função limiar seja dada ou não pela 2-densidade do grafo se tornou um campo de investigação. 
 Por exemplo, foi provado para ciclos a partir de cinco vértices que a função limiar segue da 2-densidade máxima de ciclos \cite{barros2021anti, NePeSkSt14}, 
 como também para grafos completos \cite{kohayakawa2019anti, NePeSkSt14} com mais de cinco vértices.
-Por outro lado, para o ciclo $C_4$, o grafo completo $K_4$ e famílias  infinitas de grafos obteve-se uma função limiar abaixo da 2-densidade \cite{mota2017advances, kohayakawa2019anti, KoKoMo16+, araujo2022anti}.
+Por outro lado, para o ciclo $C_4$, o grafo completo $K_4$ e algumas famílias infinitas de grafos obteve-se uma função limiar abaixo da 2-densidade \cite{mota2017advances, kohayakawa2019anti, KoKoMo16+, araujo2022anti}.
 
-Destacamos a variante de problema de determinar o chamado \emph{número de Ramsey canônico},
- pois ele se coloca com resultados entre o Ramsey clássico e a propriedade anti-Ramsey.
- Nesta variante, o número de cores para colorir as arestas do grafo completo não é limitado.
+Destacamos, agora, a variante de problema de determinar o chamado \emph{número de Ramsey canônico},
+ pois ele se coloca com resultados entre o Ramsey clássico e a propriedade anti-Ramsey mencionados anteriormente.
+ Nesta variante, o número de cores disponíveis para colorir as arestas do grafo completo não é limitado.
  Um célebre resultado de Erd\H{o}s e Rado \cite{erdoes_rado50}, de 1950, mostra que para um número inteiro $N$ suficientemente grande
-e dada uma pré-ordem nos vértices de $K_N$, então qualquer coloração de arestas de $K_N$ contém um subgrafo completo $K_t$
+e dada uma pré-ordem nos vértices de $K_N$, tem-se que qualquer coloração de arestas de $K_N$ contém um subgrafo completo $K_t$
 em que um dos seguintes casos ocorre:
 \begin{enumerate}[(a)]
     \item \label{it:canrain} $K_t$ é rainbow;
@@ -576,16 +578,21 @@ em que um dos seguintes casos ocorre:
     \item \label{it:cancan} duas arestas de $K_t$ só recebem a mesma cor se, e somente se, são incidentes ao mesmo vértice de maior (menor) valor na pré-ordem de $K_N$.
 \end{enumerate}
 
-A coloração descrita em (\ref{it:cancan}) que é dependente da pré-ordem dos vértices do grafo alvo de coloração é denominada de \emph{lexicográfica}. 
+A coloração que é dependente da pré-ordem dos vértices do grafo alvo de coloração, descrita no item (\ref{it:cancan}), é denominada de \emph{lexicográfica}. 
 Dado um inteiro positivo $t$, o número de Ramsey canônico, $er(t)$, é justamente o menor inteiro $N$ tal que a afirmação acima vale.  
-O resultado de Erd\H{o}s e Rado é notório por elucidar que mesmo colorações do grafo completo, com uma quantidade arbitrária de cores, podem gerar basicamente três tipos de coloração padrão para um subgrafo: monocromática, rainbow ou lexicográfica. 
-Os melhores limitantes sobre $er(t)$ foram dados por Lefmann e R{\"o}dl~\cite{lefmann1995erdHos}, provaram que $2^{c_1t^2}\leq er(t) \leq 2^{c_2t^2\log t}$, onde $c_1$ e $c_2$ são constantes.
+O resultado de Erd\H{o}s e Rado é notório por elucidar que as colorações de arestas do grafo completo, mesmo com uma quantidade arbitrária de cores, podem gerar basicamente três tipos de coloração padrão para um subgrafo: monocromática, rainbow ou lexicográfica. 
+Os melhores limitantes sobre $er(t)$ foram dados por Lefmann e R{\"o}dl~\cite{lefmann1995erdHos}, os autores provaram que $2^{c_1t^2}\leq er(t) \leq 2^{c_2t^2\log t}$, onde $c_1$ e $c_2$ são constantes.
 
 Podemos generalizar a coloração descrita em (\ref{it:canrain})-(\ref{it:cancan}) para encontrar outros grafos além de $K_t$, chamando-a de \emph{canônica} \cite{lefmann1993canonical, axenovich2005canonical}.
-Recentemente, Kam{\v{c}}ev e Schacht  \cite{kamvcev2023canonical} trazem um resultado semelhante ao de Erd\H{o}s e Rado para uma versão aleatória, eles computaram a função limiar para a propriedade de colorações canônicas no grafo aleatório $G(n,p)$ conter cópias de $K_t$.
+Recentemente, Kam{\v{c}}ev e Schacht  \cite{kamvcev2023canonical} trazem um resultado semelhante ao de Erd\H{o}s e Rado para uma versão aleatória do problema, eles computaram a função limiar para a propriedade de colorações canônicas no grafo aleatório $G(n,p)$ conter cópias de $K_t$.
 
-O principal resultado deste trabalho trata da propriedade anti-Ramsey de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, ou seja, colorações que evitem cópias rainbow. 
-Dentro do problema de encontrar famílias de grafos cuja função limiar dependa ou não da 2-densidade máxima, trouxemos condições para que o grafo bipartido completo tenha limiar dado pela 2-densidade.
+O principal resultado deste trabalho trata da propriedade anti-Ramsey de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, ou seja, colorações que evitem cópias rainbow do grafo bipartido completo.
+Lidamos especialmente com o problema de encontrar famílias de grafos cuja função limiar dependa ou não de sua 2-densidade máxima, e exibimos em que condições o grafo bipartido completo apresenta limiar dado pela 2-densidade.
+Nossa principal ferramenta para provar tal limiar se baseia na técnica de 
+Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14}.
+Esta técnica consiste em reduzir o problema de grafos aleatórios para um problema determinístico em que analisamos como as cópias do grafo bipartido completo podem ocorrer em um grafo com densidade limitada, e este último grafo é que deve ser cuidadosamente colorido. 
+Essa técnica foi, com devidas adaptações, utilizada para provar o limiar de ciclos \cite{barros2021anti, NePeSkSt14} e grafos completos \cite{kohayakawa2019anti, NePeSkSt14}.  
+%% Ao verificarmos os padrões de grafos bipartidos, podemos fornecer uma coloração de arestas bem 
 
 Um problema secundário que lidamos durante a pesquisa foi introduzido por Conlon e Tyomkyn em \cite{conlontyomkyn}
 e consiste de, dados os inteiros positivos $k$ e $n$, e um grafo $H$, deseja-se determinar o menor números de cores 
@@ -618,7 +625,7 @@ Esse número era desconhecido quando $n$ é par e foi determinado para os primei
 A saber, dados inteiros $\ell,r \geq 3$, provamos que a função limiar para a propriedade do grafo aleatório ser colorido evitando cópias rainbow de $\K$ depende da 2-densidade máxima de $\K$, especificamente, a função limiar encontrada é 
 $n^{(\ell+r-2)/(\ell r-1)}$.
 Também verificamos que tal função limiar é assintoticamente menor do que este valor se $\ell=2$ e $r\geq 2$.
-
+O Capítulo \ref{cap:conclusao} encerra a discussão com comentários finais a respeito dos resultados. 
 
 \chapter[Conceitos preliminares]{Conceitos preliminares}
 \label{cap:prelim}
