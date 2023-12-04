@@ -541,10 +541,10 @@ pelo menos um dos grafos $G_i$ contém um subgrafo isomorfo a $H_i$, onde $1 \le
 Problemas em Teoria de Ramsey têm sido muito estudados e técnicas elegantes têm sido desenvolvidas para estimar os números de Ramsey, especialmente de ordens dois \cite{pontiveros2016ramsey, montgomery2023ramsey} e três \cite{BeSk09, MoSaScTa13}, formando uma área ativa de pesquisa.
 O trabalho de Conlon, Fox e Sudakov~\cite{CoFoSu15} contém um resumo dos avanços na área de Ramsey, enquanto Radziszowski \cite{radziszowski2011small} possui um artigo resumo com constante atualização para o número de Ramsey de grafos pequenos.
 
-Uma variante de problema tipo Ramsey proposta por Erd\H{o}s, Faudree, Rousseau e Schelp~\cite{ErFaRoSc78} e bastante estudada é o de determinar o \emph{número size-Ramsey} de um grafo $H$, denotado por $\hat{r}(H)$, este é o menor número de arestas tal que existe um grafo $G$ com essa quantidade de arestas de modo que $G \rightarrow H$. 
+Uma variante de problema tipo Ramsey proposta por Erd\H{o}s, Faudree, Rousseau e Schelp~\cite{ErFaRoSc78} e bastante estudada consiste em determinar o \emph{número size-Ramsey} de um grafo $H$, denotado por $\hat{r}(H)$, sendo este o menor número de arestas tal que existe um grafo $G$ com essa quantidade de arestas de modo que $G \rightarrow H$. 
 A princípio, Erd\H{o}s \cite{erdos81:_i} perguntou se o número size-Ramsey de caminhos seria tal que $\hat{r}(P_n) = \omega(n)$ e $\hat{r}(P_n) = o(n^2)$.
 Em resposta, Beck \cite{Be83} forneceu uma construção probabilística de que o número size-Ramsey de caminhos é linear, i.e., $\hat{r}(P_n) = \Theta(n)$.  
-O número size-Ramsey tem sido estimado para diversas classes de grafos tais como ciclos \cite{HaKo95}, árvores \cite{dellamonica12:_ramsey}, grau limitado \cite{rodl2000size}, potências de hiperárvores \cite{letzter2021size} e grafos bipartidos completos \cite{conlon2023three}.
+O número size-Ramsey tem sido estimado para diversas classes de grafos tais como ciclos \cite{HaKo95}, árvores \cite{dellamonica12:_ramsey}, grau limitado \cite{rodl2000size}, potências de hiperárvores \cite{letzter2021size} e grafos bipartidos completos \cite{conlon2023three}. 
 
 Ao longo dos últimos anos, sob o repertório de técnicas probabilísticas, o grafo aleatório binomial $G(n,p)$ tem sido o grafo alvo de coloração das arestas em que propriedades tipo Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
 Aqui, uma função limiar indica a probabilidade em que uma propriedade começa a ter alta probabilidade de ser satisfeita pelo $G(n,p)$.
@@ -559,7 +559,7 @@ Esta variante foi primeiro estudada por Bohman, Frieze, Pikhurko e Smyth~\cite{b
  provaram que para qualquer $\ell \geq 3$, existe uma probabilidade $p$ não nula tal que $G(n,p)\rbarrow C_\ell$ quase certamente.
  No entanto, a função limiar para a propriedade anti-Ramsey só passa a ser investigada com maior detalhe na última década.
  O trabalho de Kohayakawa, Konstadinidis e Mota~\cite{KoKoMo12}, com métodos de regularidade \cite{Kohayakawa97Szemeredi, KoRo03}  e de quasialetoriedade \cite{ChGr08} para grafos esparsos, estabeleceu que a  função limiar de $G(n,p)\rbarrow F$, com $F$ sendo um grafo fixado, possui limitante superior dependente da 2-densidade máxima de $F$.
- A dificuldade do problema passou então para a verificação do limite inferior desta propriedade.
+ O foco desse problema se voltou então para a verificação do limite inferior desta propriedade, pois isto poderia determinar a função limiar ou ao menos gerar uma estimativa mais precisa da mesma.
 
 Nesta direção, encontrar famílias de grafos em que a função limiar seja dada ou não pela 2-densidade do grafo se tornou um campo de investigação. 
 Por exemplo, foi provado para ciclos a partir de cinco vértices que a função limiar segue da 2-densidade máxima de ciclos \cite{barros2021anti, NePeSkSt14}, 
@@ -569,7 +569,7 @@ Por outro lado, para o ciclo $C_4$, o grafo completo $K_4$ e algumas famílias i
 Destacamos, agora, a variante de problema de determinar o chamado \emph{número de Ramsey canônico},
  pois ele se coloca com resultados entre o Ramsey clássico e a propriedade anti-Ramsey mencionados anteriormente.
  Nesta variante, o número de cores disponíveis para colorir as arestas do grafo completo não é limitado.
- Um célebre resultado de Erd\H{o}s e Rado \cite{erdoes_rado50}, de 1950, mostra que para um número inteiro $N$ suficientemente grande
+ Um célebre resultado de Erd\H{o}s e Rado~\cite{erdoes_rado50}, de 1950, cujo teorema herda o nome de seus criadores, mostra que para um número inteiro $N$ suficientemente grande
 e dada uma pré-ordem nos vértices de $K_N$, tem-se que qualquer coloração de arestas de $K_N$ contém um subgrafo completo $K_t$
 em que um dos seguintes casos ocorre:
 \begin{enumerate}[(a)]
@@ -580,42 +580,51 @@ em que um dos seguintes casos ocorre:
 
 A coloração que é dependente da pré-ordem dos vértices do grafo alvo de coloração, descrita no item (\ref{it:cancan}), é denominada de \emph{lexicográfica}. 
 Dado um inteiro positivo $t$, o número de Ramsey canônico, $er(t)$, é justamente o menor inteiro $N$ tal que a afirmação acima vale.  
-O resultado de Erd\H{o}s e Rado é notório por elucidar que as colorações de arestas do grafo completo, mesmo com uma quantidade arbitrária de cores, podem gerar basicamente três tipos de coloração padrão para um subgrafo: monocromática, rainbow ou lexicográfica. 
-Os melhores limitantes sobre $er(t)$ foram dados por Lefmann e R{\"o}dl~\cite{lefmann1995erdHos}, os autores provaram que $2^{c_1t^2}\leq er(t) \leq 2^{c_2t^2\log t}$, onde $c_1$ e $c_2$ são constantes.
+O ``Teorema de Erd\H{o}s e Rado'' é notório por elucidar que as colorações de arestas do grafo completo, mesmo com uma quantidade arbitrária de cores, podem gerar basicamente três tipos de coloração padrão para um subgrafo: monocromática, rainbow ou lexicográfica. 
+Os melhores limitantes sobre $er(t)$ foram dados por Lefmann e R{\"o}dl~\cite{lefmann1995erdHos}, os autores provaram que
 
-Podemos generalizar a coloração descrita em (\ref{it:canrain})-(\ref{it:cancan}) para encontrar outros grafos além de $K_t$, chamando-a de \emph{canônica} \cite{lefmann1993canonical, axenovich2005canonical}.
-Recentemente, Kam{\v{c}}ev e Schacht  \cite{kamvcev2023canonical} trazem um resultado semelhante ao de Erd\H{o}s e Rado para uma versão aleatória do problema, eles computaram a função limiar para a propriedade de colorações canônicas no grafo aleatório $G(n,p)$ conter cópias de $K_t$.
+$$2^{c_1t^2}\leq er(t) \leq 2^{c_2t^2\log t},$$ 
+onde $c_1$ e $c_2$ são constantes.
 
-O principal resultado deste trabalho trata da propriedade anti-Ramsey de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, ou seja, colorações que evitem cópias rainbow do grafo bipartido completo.
-Lidamos especialmente com o problema de encontrar famílias de grafos cuja função limiar dependa ou não de sua 2-densidade máxima, e exibimos em que condições o grafo bipartido completo apresenta limiar dado pela 2-densidade.
-Nossa principal ferramenta para provar tal limiar se baseia na técnica de 
+Podemos generalizar a coloração descrita em (\ref{it:canrain})-(\ref{it:cancan}) para encontrar outros grafos além de $K_t$, esta coloração é comumente chamada de \emph{canônica} \cite{lefmann1993canonical, axenovich2005canonical}.
+Recentemente, Kam{\v{c}}ev e Schacht  \cite{kamvcev2023canonical} trouxeram um resultado semelhante ao de Erd\H{o}s e Rado para uma versão aleatória do problema, eles computaram a função limiar para a propriedade de colorações canônicas no grafo aleatório $G(n,p)$ conter cópias de $K_t$.
+
+O principal resultado deste trabalho trata da propriedade anti-Ramsey de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, a saber, colorações que evitem cópias rainbow do grafo bipartido completo.
+Em essência, lidamos com o problema de encontrar famílias de grafos cuja função limiar dependa ou não de sua 2-densidade máxima, e exibimos em que condições o grafo bipartido completo apresenta limiar dado pela 2-densidade.
+
+Nossa principal ferramenta para provar o limiar para esta propriedade anti-Ramsey se baseia na técnica de 
 Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14}.
-Esta técnica consiste em reduzir o problema de grafos aleatórios para um problema determinístico em que analisamos como as cópias do grafo bipartido completo podem ocorrer em um grafo com densidade limitada, e este último grafo é que deve ser cuidadosamente colorido. 
-Essa técnica foi, com devidas adaptações, utilizada para provar o limiar de ciclos \cite{barros2021anti, NePeSkSt14} e grafos completos \cite{kohayakawa2019anti, NePeSkSt14}.  
+Tal técnica consiste em reduzir o problema de grafos aleatórios para um problema determinístico em que analisamos como as cópias do grafo bipartido completo podem ocorrer em um grafo com densidade limitada, e este último grafo é que deve ser cuidadosamente colorido com relação às cópias rainbow de um bipartido completo. 
+Esta técnica também foi, com devidas adaptações, utilizada para provar o limiar de ciclos \cite{barros2021anti, NePeSkSt14} e grafos completos \cite{kohayakawa2019anti, NePeSkSt14}, porém em nossa demonstração conseguimos tratar grafos bipartidos completos que não são necessariamente simétricos, nem regulares.  
 %% Ao verificarmos os padrões de grafos bipartidos, podemos fornecer uma coloração de arestas bem 
 
 Um problema secundário que lidamos durante a pesquisa foi introduzido por Conlon e Tyomkyn em \cite{conlontyomkyn}
-e consiste de, dados os inteiros positivos $k$ e $n$, e um grafo $H$, deseja-se determinar o menor números de cores 
-em que se possa colorir propriamente as arestas do grafo completo $K_n$ evitando $k$ repetições vértice-disjuntas de cópias de $H$ nas mesmas cores.
-O mesmo trabalho se dedicou em provar resultados assintóticos para diferentes famílias de grafos no parâmetro $H$: ciclos, florestas, bipartidos e não-bipartidos.
+e consiste de, dados os inteiros positivos $k$ e $n$, e um grafo $H$, deseja-se determinar o menor números de cores, escrito como $f_k(n,H)$, 
+tal que se possa colorir propriamente as arestas do grafo completo $K_n$ evitando $k$ repetições de cópias de $H$ nas mesmas cores e vértice-disjuntas.
+O mesmo trabalho se dedicou em provar resultados assintóticos de $f_k(n,H)$ para diferentes famílias de grafos no parâmetro $H$: ciclos, florestas, bipartidos e não-bipartidos.
 Uma das questões deixadas por eles 
- foi determinar exatamente esta quantidade de cores para $n$ par e $H = K_3$.
+ foi determinar exatamente esta quantidade de cores para $n$ par, $k=2$ e $H = K_3$, ou seja, calcular $f_2(n, K_3)$ é evitar duas cópias isomorfas em cores de triângulos em colorações do $K_n$, onde $n$ é par.
  Investigamos isto para os primeiros valores pares de $n$ exibindo colorações, e também por via de uma construção algébrica de uma coloração que cobre infinitos valores pares de $n$.
+ Resultados de colorações próprias de arestas de $K_n$, quando estas são representadas na matriz de adjacências, possuem aplicações diretas em quadrados latinos simétricos e, estes últimos por sua vez se refletem em quasigrupos \cite{andersen1994symmetric}.
+ 
+Apesar do trabalho de Conlon e Tyomkyn ser recente, esse parâmetro introduzido por eles sobre padrões de repetições em colorações do grafo completo já vem sendo estudado para repetições de grafos tais como ciclos pares \cite{janzer2023rainbow}, potências de árvores \cite{liu2022color} e subdivisões do grafo completo \cite{xu2022color}.
 
 Em suma, neste trabalho 
 %% tem como objetivo o estudo de diversas propriedades de grafos que garantam a existência de estruturas monocromáticas e multicoloridas em grafos cujas arestas estão coloridas.
 são investigadas propriedades dos tipos Ramsey e anti-Ramsey
-de grafos aleatórios e determinísticos em diferentes versões, são problemas cujo ponto em comum é a coloração de arestas.
+de grafos aleatórios e determinísticos em diferentes versões. 
+Lidamos com problemas cujo ponto em comum é a coloração própria de arestas sob a restrição de encontrarmos certas cópias coloridas de grafos específicos.
 
 
 
 \section*{Organização do texto}
 
+
 Iniciamos no Capítulo \ref{cap:prelim} apresentando brevemente os conceitos mais relevantes sobre grafos neste trabalho.
 O Capítulo \ref{cap:triangles} exibe um resultado de padrões em coloração de arestas do grafo completo. 
 Especificamente, dado um natural $n$, calculamos a menor 
 quantidade de cores em que existe uma coloração própria de $E(K_n)$ de modo a se evitar a formação de triângulos disjuntos em vértices que repetem a trinca de cores nas arestas.
-Esse número era desconhecido quando $n$ é par e foi determinado para os primeiros números pares e para uma família infinita de valores de $n$.
+Esse número era desconhecido quando $n$ é par e foi determinado para os primeiros números pares (ver Tabela \ref{tab:valores}) e também para uma família infinita de valores pares de $n$ (Teorema \ref{teo:seq-f2}) via  construção direta de colorações.
 
 %%%% seção conclusão?
 %%%A importância e vigor da pesquisa em torno dos tópicos que propomos podem ser observados nos trabalhos clássicos de diversos pesquisadores renomados, como Erd\H{o}s, Rödl, Szemerédi, e Tao, dentre outros, e nos trabalhos modernos de proeminentes pesquisadores como Conlon, Gowers, e Schacht. 
@@ -623,9 +632,11 @@ Esse número era desconhecido quando $n$ é par e foi determinado para os primei
 
  O Capítulo \ref{cap:anti} traz como resultado inédito as condições para que a propriedade anti-Ramsey ocorra no grafo aleatório $G(n,p)$ com relação a conter cópias isomorfas ao grafo bipartido completo $\K$. 
 A saber, dados inteiros $\ell,r \geq 3$, provamos que a função limiar para a propriedade do grafo aleatório ser colorido evitando cópias rainbow de $\K$ depende da 2-densidade máxima de $\K$, especificamente, a função limiar encontrada é 
-$n^{(\ell+r-2)/(\ell r-1)}$.
-Também verificamos que tal função limiar é assintoticamente menor do que este valor se $\ell=2$ e $r\geq 2$.
-O Capítulo \ref{cap:conclusao} encerra a discussão com comentários finais a respeito dos resultados. 
+$n^{(\ell+r-2)/(\ell r-1)}$, e isto é consequência dos Teoremas \ref{teo:conditional} e \ref{teo:mainrb}.
+Também verificamos que tal função limiar é assintoticamente menor do que este valor se $\ell=2$ e $r\geq 2$ (vide Corolário \ref{cor:k2r}).
+%%O Apêndice \ref{cap:app}
+
+Por último, o Capítulo \ref{cap:conclusao} encerra nossa discussão com comentários finais a respeito dos resultados destacando contribuições e próximos passos para os problemas investigados. 
 
 \chapter[Conceitos preliminares]{Conceitos preliminares}
 \label{cap:prelim}
@@ -745,7 +756,7 @@ Os próximos dois resultados mostram que, para $n = 6$ e $n = 8$, exatamente $n 
 Chamamos dois triângulos vértices-disjuntos de \textit{similares} em uma coloração de um grafo se suas arestas recebem as mesmas três cores;  uma cor é dita ser \textit{cheia} se as arestas com tal cor formam um matching perfeito no grafo completo. 
 Com essas breves definições podemos provar os resultados nos casos pequenos.
 
-\begin{teorema}
+\begin{teorema}\label{teo:n6K3}
        $f_2(6,K_3)=7$.
 \end{teorema}
 \begin{proof}
@@ -765,7 +776,7 @@ Com essas breves definições podemos provar os resultados nos casos pequenos.
 \end{proof}
 
 
-\begin{teorema}
+\begin{teorema}\label{teo:n8K3}
      $f_2(8,K_3)=9$.
 \end{teorema}
 \begin{proof}
@@ -1066,11 +1077,12 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
     $m(K_{2,3r-2}) = (6r-4)/3r < (\ell r - 1)/(\ell+r-2) =
     m_2(K_{\ell,r})$, 
     temos que $K_{2,3r-2}$ força um limite superior menor do que
-     $n^{-1/m_2(K_{2,r})}$, i.e., nós concluímos que
-    \[ 
-      \hat{p}_{K_{2,r}} \ll n^{-1/m_2(K_{2,r})}.
-    \]
-
+     $n^{-1/m_2(K_{2,r})}$, i.e., nós concluímos o seguinte Corolário:
+     
+    \begin{corolario}\label{cor:k2r}
+        Seja $r\geq 2$ um inteiro, então $\hat{p}_{K_{2,r}} \ll n^{-1/m_2(K_{2,r})}$.
+    \end{corolario}
+    
     Nosso principal resultado (Teorema \ref{teo:mainrb}) mostra que, diferentemente do limiar de $K_{2,r}$,
     o limiar $\hat{p}_{\K}$, para $\ell,r \geq 3$ inteiros, é de fato da ordem 
     $n^{-1/m_2(\K)} = n^{-(\ell+r-2)/(\ell r-1)}$.
@@ -1602,10 +1614,10 @@ Por outro lado, existe também a possibilidade de estudarmos o limiar para esta 
 \appendix
 \chapter{Casos Pequenos}\label{cap:app}
 
-Neste apêndice apresentamos os conjuntos de $\Slr$ 
-que são soluções de pares $\{a,b\}$ para a desigualdade~(\ref{eq:pairs-ab})
-da Proposição~\ref{lemma:inter_a} para os casos que denominamos como pequenos, i.e., quando $3 \leq \ell < 7$, 
-que, em vista dos conjuntos apresentados na prova do Lema~\ref{lema:config}, completa o cenário de grafos bipartidos completos com mais de seis vértices.
+Neste Apêndice apresentamos os conjuntos $\Slr$ 
+que são soluções escritas como pares não-ordenados de inteiros, $\{a,b\}$, para a desigualdade~(\ref{eq:pairs-ab})
+da Proposição~\ref{lemma:inter_a} cobrindo os casos que denominamos como pequenos, i.e., quando $3 \leq \ell < 7$. 
+Tal informação, em vista dos conjuntos apresentados na prova do Lema~\ref{lema:config}, completa o cenário de grafos bipartidos completos com mais de seis vértices.
 %
 Além disso, se $\ell \ll r$, as intersecções possíveis são semelhantes ao que encontramos na prova do Lema~\ref{lema:config} e as provas sobre suas respectivas configurações são análogas.  
 
