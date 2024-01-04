@@ -365,7 +365,7 @@ framexrightmargin=15pt
     \normalsize{Durante o desenvolvimento deste trabalho o autor recebeu auxílio
     financeiro da FAPESP}    
     \vskip 0.4cm
-    \normalsize{Santo André, dezembro de 2023}
+    \normalsize{Santo André, Janeiro de 2024}
 \end{center}
 
 
@@ -423,7 +423,7 @@ framexrightmargin=15pt
     \begin{flushright}
 	Esta versão da dissertação/tese contém as correções e alterações sugeridas\\
 	pela Comissão Julgadora durante a defesa da versão original do trabalho,\\
-	realizada em dd/12/2023.
+	realizada em dd/01/2024.
     %Uma cópia da versão original está disponível no\\ Instituto de Matemática e Estatística da Universidade de São Paulo.
 
     \vskip 2cm
@@ -546,15 +546,15 @@ A princípio, Erd\H{o}s \cite{erdos81:_i} perguntou se o número size-Ramsey de 
 Em resposta, Beck \cite{Be83} forneceu uma construção probabilística de que o número size-Ramsey de caminhos é linear, i.e., $\hat{r}(P_n) = \Theta(n)$.  
 O número size-Ramsey tem sido estimado para diversas classes de grafos tais como ciclos \cite{HaKo95}, árvores \cite{dellamonica12:_ramsey}, grau limitado \cite{rodl2000size}, potências de hiperárvores \cite{letzter2021size} e grafos bipartidos completos \cite{conlon2023three}. 
 
-Ao longo dos últimos anos, sob o repertório de técnicas probabilísticas, o grafo aleatório binomial $G(n,p)$ tem sido o grafo alvo de coloração das arestas em que propriedades tipo Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
-Aqui, uma função limiar indica a probabilidade em que uma propriedade começa a ter alta probabilidade de ser satisfeita pelo $G(n,p)$.
+Ao longo dos últimos anos, sob o repertório de técnicas probabilísticas, o grafo aleatório binomial $G(n,p)$ tem sido o grafo alvo de coloração de arestas em que propriedades tipo Ramsey são estudadas \cite{rodl1993lower, rodl1995threshold}, especialmente quanto a funções limiares. 
+Aqui, uma função limiar indica a probabilidade em que uma propriedade passa a ter alta probabilidade de ser satisfeita pelo $G(n,p)$ quando $n$ é suficientemente grande.
 Uma variação do problema tipo Ramsey é a chamada \textit{propriedade anti-Ramsey} em que buscamos cópias \textit{rainbow} de um grafo $F$ nas colorações de $G(n,p)$, isto é, cópias de $F$ cujas arestas não repetem cor, denotamos esta propriedade por $G(n,p)\rbarrow F$.
 Para cópias rainbow de $F$ em um grafo determinístico, o trabalho  de Fujita, Magnant e Ozeki~\cite{fujita2010rainbow} sumariza os resultados neste caso.
 
-Nesta tese, em nosso principal problema vamos estimar a função limiar sobre a ocorrência de cópias rainbow para uma classe de grafos em $G(n,p)$. 
+Nesta tese, vamos estimar a função limiar sobre a ocorrência de cópias rainbow para uma classe de grafos em $G(n,p)$. 
 Esta variante foi primeiro estudada por Bohman, Frieze, Pikhurko e Smyth~\cite{bohman10:_aR_rgs} e depois por  Kohayakawa, Konstadinidis e Mota \cite{KoKoMo12} que adicionaram a condição de que as colorações de arestas são próprias.
 
- Outra frente precursora deste problema foi uma resposta à pergunta de Spencer presente em \cite{erdos79:_some}, que questionava sobre a existência de grafos com largura arbitrariamente grandes conterem cópias rainbow de ciclos em colorações próprias. 
+ Outra frente precursora deste problema foi uma resposta à pergunta de Spencer presente em \cite{erdos79:_some}, que questionava sobre a existência de grafos com largura arbitrariamente grande conterem cópias rainbow de ciclos em colorações próprias. 
  Em 1992, Rödl e Tuza~\cite{roedl92:_rainb}
  provaram que para qualquer $\ell \geq 3$, existe uma probabilidade $p$ não nula tal que $G(n,p)\rbarrow C_\ell$ quase certamente.
  No entanto, a função limiar para a propriedade anti-Ramsey só passa a ser investigada com maior detalhe na última década.
@@ -589,14 +589,14 @@ onde $c_1$ e $c_2$ são constantes.
 Podemos generalizar a coloração descrita em (\ref{it:canrain})-(\ref{it:cancan}) para encontrar outros grafos além de $K_t$, esta coloração é comumente chamada de \emph{canônica} \cite{lefmann1993canonical, axenovich2005canonical}.
 Recentemente, Kam{\v{c}}ev e Schacht  \cite{kamvcev2023canonical} trouxeram um resultado semelhante ao de Erd\H{o}s e Rado para uma versão aleatória do problema, eles computaram a função limiar para a propriedade de colorações canônicas no grafo aleatório $G(n,p)$ conter cópias de $K_t$.
 
-O principal resultado deste trabalho trata da propriedade anti-Ramsey de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, a saber, colorações que evitem cópias rainbow do grafo bipartido completo.
-Em essência, lidamos com o problema de encontrar famílias de grafos cuja função limiar dependa ou não de sua 2-densidade máxima, e exibimos em que condições o grafo bipartido completo apresenta limiar dado pela 2-densidade.
+O principal resultado desta tese trata da propriedade anti-Ramsey de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, a saber, colorações que evitem cópias rainbow do grafo bipartido completo.
+Em essência, lidamos com o problema de encontrar famílias de grafos cuja função limiar dependa ou não de sua 2-densidade máxima, e exibimos em que condições o grafo bipartido completo apresenta limiar dado por sua 2-densidade.
 
 Nossa principal ferramenta para provar o limiar para esta propriedade anti-Ramsey se baseia na técnica de 
 Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14}.
 Tal técnica consiste em reduzir o problema de grafos aleatórios para um problema determinístico em que analisamos como as cópias do grafo bipartido completo podem ocorrer em um grafo com densidade limitada, e este último grafo é que deve ser cuidadosamente colorido com relação às cópias rainbow de um bipartido completo. 
-Esta técnica também foi, com devidas adaptações, utilizada para provar o limiar de ciclos \cite{barros2021anti, NePeSkSt14} e grafos completos \cite{kohayakawa2019anti, NePeSkSt14}, porém em nossa demonstração conseguimos tratar grafos bipartidos completos que não são necessariamente simétricos, nem regulares.  
-%% Ao verificarmos os padrões de grafos bipartidos, podemos fornecer uma coloração de arestas bem 
+Esta técnica também foi, com devidas adaptações, utilizada para provar o limiar de ciclos \cite{barros2021anti, NePeSkSt14} e grafos completos \cite{kohayakawa2019anti, NePeSkSt14}, porém em nossa demonstração conseguimos tratar grafos bipartidos completos que não são necessariamente grafos simétricos, nem regulares.  
+
 
 Um problema secundário que lidamos durante a pesquisa foi introduzido por Conlon e Tyomkyn em \cite{conlontyomkyn}
 e consiste de, dados os inteiros positivos $k$ e $n$, e um grafo $H$, deseja-se determinar o menor números de cores, escrito como $f_k(n,H)$, 
@@ -938,7 +938,7 @@ Logo, quando $r$ é uma constante, os resultados sobre os limitantes superiores 
 Além disso, se o grafo $H$ contém uma clique $K_{r+1}$, então ${f_k^r(n, H) = \chi'(K^r_n)}$, pois $K^r_n$ não contém $K_{r+1}$ e assim, toda coloração própria de $K_n^r$ evita repetições de $H$.
 
 É direto que $f_k(n,H) = f_k^1(n,H)$ e também que $f_k^2(n, K_3)= n$, este último porque grafos bipartidos não contêm triângulos e a coloração própria de $E(K_{n,n})$ utiliza $n$ cores. 
-A questão inicial levantada por nós é analisar o mesmo padrão de repetição de triângulos começando pelo grafo tripartido completo, ou seja, estimar o número $f_2^3(n, K_3)$, visto que neste grafo base a presença de triângulos se dá com cada vértice em uma parte distinta:
+A questão inicial levantada por nós é analisar o mesmo padrão de repetição de triângulos começando pelo grafo tripartido completo, ou seja, estimar o número $f_2^3(n, K_3)$, visto que neste grafo base a presença de triângulos se dá com cada vértice do triângulo em uma parte distinta:
 
 \begin{questao}\label{q:tripartido}
     Dado $n$ natural, qual o valor de $f_2^3(n, K_3)$?
@@ -949,8 +949,39 @@ a princípio, é fácil refinar o limite superior em (\ref{eq:frkn}) para $f_2^3
 Novamente, a principal dificuldade do problema está em determinar os valores de $f_2^3(n, K_3)$ com precisão, visto que seu comportamento assintótico segue o mesmo de $f_2(N, K_3)$, para algum $N$ inteiro.
 
 %% De casos iniciais, temos que $f_2^3(2, K_3) = 6$ (PROVA), $f_2^3(3,K_3) \in \{8,9\}$.
+A seguir, mostramos que $f_2^3(2, K_3) = f_2(6,K_3) - 1= 6$.
 
- 
+\begin{fato}
+    $f_2^3(2, K_3) = 6$.
+\end{fato}
+\begin{proof}
+    Para uma coloração de arestas do tripartido completo $K_{2,2,2}$ utilizando 4 cores, 
+    %chamemos as cores pelos elementos do conjunto $[4]$, 
+    como tal grafo possui 12 arestas, cada classe de cor forma um emparelhamento perfeito e esta coloração é única, a menos de permutações de cores, para ser própria (Figura \ref{fig:K222-5c}). 
+    Note que os triângulos disjuntos contidos nesta coloração são repetidos, a saber, $K_{2,2,2}$ possui 8 triângulos e cada um deles possui uma repetição vértice-disjunta formando quatro pares distintos de triângulos repetidos: 123, 124, 134, 234. 
+        
+    Partindo desta coloração, se usássemos uma quinta cor há dois casos: esta poderia ser aplicada em duas arestas da mesma classe de cor ou em duas arestas de classes distintas. 
+    No primeiro caso, existe um triângulo que não utiliza a cor substituída e continuaríamos com sua repetição vértice-disjunta.
+    No segundo caso, basta verificarmos que um dos quatro pares de triângulos vértice-disjuntos não é afetado pela recoloração de duas arestas, o que pela coloração inicial forma uma repetição de triângulos.
+    % suponha que as arestas recoloridas pela nova cor tinham as cores 1 e 2. 
+    % Com isso, existem dois vértices, digamos que $1$ e $2$, ainda incidentes em arestas de cores 1 e 2. Vamos ver que esses pares de arestas fecham triângulos repetidos com uma das cores que não foram trocadas. 
+    Como no $K_{2,2,2}$ cada aresta está contida em dois triângulos distintos, tem-se que as duas arestas recoloridas estão em quatro triângulos, e não é difícil ver que dois destes triângulos são vértice-disjuntos. 
+    Logo, os quatro triângulos contendo arestas recoloridas alteram até três dos quatro triângulos possíveis da coloração inicial de 4 cores.
+    
+    A Figura \ref{fig:K222-6c} exibe uma coloração própria do $K_{2,2,2}$ com 6 cores e sem triângulos repetidos que segue a coloração proposta no parágrafo anterior e acrescenta uma sexta cor para evitar a repetição não coberta pela quinta cor.
+    
+\end{proof}
+
+ \begin{center}
+			\includegraphics[scale=0.75, keepaspectratio=true]{K222-5c.pdf}
+			\captionof{figure}{A única coloração própria do $K_{2,2,2}$ com 4 cores a menos de permutações de cores.} 
+			\label{fig:K222-5c} 
+	\end{center}
+  \begin{center}
+			\includegraphics[scale=0.75, keepaspectratio=true]{K222-6c.pdf}
+			\captionof{figure}{Coloração própria do $K_{2,2,2}$ com 6 cores sem triângulos repetidos.} 
+			\label{fig:K222-6c} 
+	\end{center}
 
 \chapter{Um problema do tipo anti-Ramsey em grafos bipartidos completos}\label{cap:anti}
 
@@ -966,7 +997,7 @@ grafos aleatórios implica que essa propriedade admite uma função limiar \cite
 
 \section{Resultados existentes}
 
-No trabalho~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte resultado: a propriedade anti-Ramsey $G(n,p)\rbarrow H$ vale assintoticamente quase certamente sempre que $p\gg n^{-1/m_2(H)}$ para todo grafo fixo~$H$. Em outras palavras, garante-se em termos da $2$-densidade máxima de um grafo $H$ um limitante superior para a função limiar $\hat{p}_H$, como está enunciado a seguir.
+No trabalho~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte resultado para grafos aleatórios: a propriedade anti-Ramsey $G(n,p)\rbarrow H$ vale assintoticamente quase certamente sempre que $p\gg n^{-1/m_2(H)}$ para todo grafo fixo~$H$. Em outras palavras, garante-se em termos da $2$-densidade máxima de um grafo $H$ um limitante superior para a função limiar $\hat{p}_H$, como está enunciado a seguir.
 
 \begin{teorema}[%Kohayakawa, Konstadinidis e Mota~
 \cite{KoKoMo12}]
@@ -995,7 +1026,7 @@ Estes últimos autores desenvolveram um \emph{framework} geral de prova para lim
 
 
 O Teorema \ref{teo:nen} foi estendido para ciclos \cite{barros2021anti} e para grafos completos \cite{kohayakawa2019anti} com mais de 5 vértices. 
-O caso para o limiar de $C_4$ foi tratado por Mota em \cite{mota2017advances}.
+O caso para o limiar do ciclo $C_4$ foi tratado por Mota em \cite{mota2017advances}.
 
 \begin{teorema}    
 [\cite{barros2021anti, kohayakawa2019anti, mota2017advances}]
@@ -1007,8 +1038,8 @@ e $\hat{p}_{K_4} = n^{-7/15}$.
 \end{teorema}
 
     O framework mencionado anteriormente de Nenadov,
-Person, Škorić e Steger~\cite{NePeSkSt14} reduz os problemas de limitantes inferiores  em grafos aleatórios para problemas determinísticos em grafos com densidade máxima limitada. 
-A saber, a propriedade de anti-Ramsey do grafo $F$ 2-balanceado possui como $0$-afirmação o limiar $p_F \geq n^{-1/m_2(F)}$ se todo grafo $G$ com $m(G) \leq m_2(F)$ é tal que $G \not\xrightarrow[]{rb} F$.
+Person, Škorić e Steger~\cite{NePeSkSt14} reduz o problemas de limitante inferior em grafos aleatórios para um problema determinístico em grafos com densidade máxima limitada. 
+A saber, a propriedade de anti-Ramsey para um grafo fixo 2-balanceado $F$ possui como $0$-afirmação o limiar $p_F \geq n^{-1/m_2(F)}$ se todo grafo $G$ com $m(G) \leq m_2(F)$ é tal que $G \not\xrightarrow[]{rb} F$.
 O resultado sobre ciclos do Teorema \ref{teo:cyclecomplete} é uma consequência do seguinte lema, sendo o próprio lema uma aplicação deste mesmo framework:
     
 \begin{lema}[\cite{barros2021anti}]\label{lema:rbciclos}
@@ -1019,7 +1050,7 @@ O resultado sobre ciclos do Teorema \ref{teo:cyclecomplete} é uma consequência
     
 A essência da prova do Lema \ref{lema:rbciclos} está em usar uma estratégia de coloração própria nas arestas dos ciclos $C_\ell$ contidos no grafo $G$, de modo que toda cópia de ciclo $C_\ell$ tenha duas arestas coloridas com a mesma cor.
 %
-Para isso, os autores definem o que chamam de componente de ciclos dentro de $G$ como uma sequência crescente de subgrafos $(H_1, \ldots, H_t)$ em $G$, em que a cada subgrafo existe uma cópia de $C_\ell$ em $H_{i}$ que não está em $H_{i-1}$, para $1 < i \leq t$, com alguma interseção não-nula de arestas com $H_{i-1}$.
+Para isso, os autores definem o que chamam de \emph{componente de ciclos} dentro de $G$ como uma sequência crescente de subgrafos $(H_1, \ldots, H_t)$ em $G$, em que a cada subgrafo $H_{i}$ existe uma cópia de $C_\ell$ que não está em $H_{i-1}$, para ${1 < i \leq t}$, com alguma interseção não-nula de arestas com $H_{i-1}$.
 %
 Eles observaram que tal sequência, com argumentos de densidade, impõe certas configurações restritas de como os novos ciclos aparecem entre os subgrafos, assim ao verificarem a ocorrência dessas configurações detalham alguns casos de como colorir arestas dessa sequência de subgrafos para evitar $C_\ell$ rainbow.
      Parte das ideias desse artigo são retomadas nas demonstrações descritas nas próximas seções.
@@ -1033,8 +1064,9 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
          $m(G) < (\ell+1)/2 = m_2(K_\ell)$.
          Então, $G \not\xrightarrow[]{rb} K_\ell$.
     \end{lema}
+    
     Para demonstrar o Lema \ref{lema:rbcomplete}, é suficiente mostrar que todo grafo $G$ com $m(G) < (\ell+1)/2$  admite colorações próprias que evitam $K_\ell$ rainbow. 
-    A primeira observação é que é suficiente considerar $G$ como um grafo onde toda aresta está contida em algum $K_\ell$, pois são elas que importam em uma coloração sem $K_\ell$ rainbow. 
+    A primeira observação é que é suficiente considerar $G$ como um grafo onde toda aresta está contida em algum $K_\ell$, pois são elas que precisam ser examinadas para uma coloração sem cópias rainbow de $K_\ell$. 
     Os autores notam que a densidade limitada de $G$ implica na existência de ao menos um vértice $v$ de grau $\ell$, e, com esse vértice destacado apresentam uma prova indutiva na quantidade de vértices de $G$: consideram na hipótese indutiva ao subgrafo $G_v$ de $G$ obtido após remover $v$ e seus vizinhos que participam de algum $K_\ell$ em comum.
     
     Antes de dar a propriedade estrutural a ser preservada na indução, com argumentos usando a densidade limitada nos subgrafos de $G$, os autores analisam as possíveis configurações da vizinhança de $v$ quanto a formar cliques que se interceptam. 
@@ -1042,13 +1074,13 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
     %% O parâmetro auxiliar $b(G)$ que contabiliza a proporção de arestas coloridas é relacionado a essas configurações e, com ele, a indução de $G_v$ para $G$ é construída notando que para diferentes valores em $b(G)$, cada $K_\ell$ do grafo será não-rainbow.
  
  
-\section{Limiar para grafos bipartidos completos}
+\section{Limiar para grafos bipartidos completos}\label{sec:limiar}
 
     Nesta seção começamos a discussão da prova para grafos bipartidos completos um resultado semelhante ao que foi comentado anteriormente sobre ciclos e grafos completos, a saber, a propriedade anti-Ramsey de grafos bipartidos completos em grafos aleatórios.
     Ou seja, dados os inteiros $\ell,r \geq 3$, pretendemos verificar que o limiar para a propriedade $G(n,p) \xrightarrow[]{rb} \K$ é dado por $n^{-1/m_2(\K)}$.
 
     Note que como toda coloração própria de arestas de uma estrela $K_{1,r}$ é obrigatoriamente rainbow, então
-    o limiar da propriedade anti-Ramsey no caso de estrelas $K_{1,r}$ coincide com o limiar para que uma estrela $K_{1,r}$ apareça em grafos aleatórios.
+    o limiar da propriedade anti-Ramsey no caso de estrelas $K_{1,r}$ coincide com o limiar para que o grafo aleatório contenha uma estrela $K_{1,r}$.
 
     O caso de grafos bipartidos completos $K_{2,r}$, para $r\geq 1$ inteiro (o caso $r=2$, que corresponde ao $C_4$, é coberto pelo
     Teorema~\ref{teo:cyclecomplete}),
@@ -1076,7 +1108,7 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
     $K_{2,3r-2}\subset G(n,p)$ é $n^{-1/m(K_{2,3r-2})}$ e sabendo das densidades que
     $m(K_{2,3r-2}) = (6r-4)/3r < (\ell r - 1)/(\ell+r-2) =
     m_2(K_{\ell,r})$, 
-    temos que $K_{2,3r-2}$ força um limite superior menor do que
+    temos que a presença de $K_{2,3r-2}$ no $G(n,p)$ força um limite superior menor do que
      $n^{-1/m_2(K_{2,r})}$, i.e., nós concluímos o seguinte Corolário:
      
     \begin{corolario}\label{cor:k2r}
@@ -1116,11 +1148,11 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
      Para isto, precisamos analisar como se dão as interseções de arestas entre cópias de grafos bipartidos completos, dado que colorir tais arestas para evitarmos $\K$ rainbow pode exigir uma coloração engenhosa. 
      
      Começamos com a seguinte proposição cuja demonstração é obtida
-     pela aplicação do chamado \textit{argumento de densidade}, este argumento será muito utilizado nas provas desta seção.
+     pela aplicação do chamado \textit{argumento de densidade}, este argumento examina as restrições em grafos geradas por uma densidade limitada superiormente e será muito utilizado nas provas desta seção.
     %xxxxx Como estamos interessados em grafos $G$ tais que  $m(G) < m_2(\K) = (\ell r - 1)/(\ell+r-2)$,  we state a simple observation that will be helpful when analyzing subgraphs of $G$.  
     Dado um grafo $G$, lembramos da notação $G[A,B]$ para representar a cópia de um grafo bipartido completo em $G$ com partes $A$ e $B$.
     Ao longo do texto, comumente escrevemos $3\leq \ell \leq r$ para ressaltarmos que o bipartido $\K$ pode possuir partes com tamanhos distintos. 
-    A proposição a seguir descreve uma condição algébrica sobre o bipartido $K_{a,b}$ formado entre duas cópias de $\K$ em $G$ cujos conjuntos de vértices de suas partes não se interceptam.
+    A proposição a seguir descreve uma condição algébrica sobre o bipartido $K_{a,b}$ formado pela interseção de arestas entre duas cópias de $\K$ em $G$ cujos conjuntos de vértices de suas partes não se interceptam.
 
     %% caso a=b=0 a desigualdade continua valendo normalmente
     \begin{proposicao}
@@ -1137,8 +1169,8 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
       \end{equation}
       \end{proposicao}
     \begin{proof}
-    Sejam $H_1:=G[A_1,B_1]$ e ${H_2:=G[A_2,B_2]}$.
-    Da mesma forma, seja $H := G[a,b]$, onde $a = A_1\cap
+    Sejam $H_1:=G[A_1,B_1]$ e ${H_2:=G[A_2,B_2]}$ cópias de $\K$ em $G$.
+    Da mesma forma, seja $H := G[a,b]$, o bipartido completo onde $a = A_1\cap
     A_2$ e $b = B_1\cap B_2$.  
     Uma vez que 
     $v(H_1 \cup H_2) = (\ell + r) +
@@ -1187,19 +1219,20 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
          $X'$ tem $x$ vértices, $A'$ tem $a$ vértices, $B'$ tem $b$ vértices e $Y'$ tem $y$ vértices (ver Figura \ref{fig:interP1}).
 
 
-  \begin{figure}[htb] \centering \includegraphics[]{images/interP1.pdf}
+  \begin{figure}[htb] \centering \includegraphics[]{interP1.pdf}
    \caption{Interseção de arestas entre cópias de $\K$, $G[A,B]$ e $G[X,Y]$, usando arestas dentro da partição.}
    \label{fig:interP1}
  \end{figure}
          
          É evidente que $a \geq 1$, $b \geq 1$, e também que $a + b+y = r$ e $a + (\ell-x) \leq \ell$ são restrições da construção. 
-         Reunindo essas informações e calculando a densidade como na Proposição \ref{lemma:inter_a}, temos que 
+         Reunindo essas informações e calculando a densidade como na Proposição~\ref{lemma:inter_a}, temos que 
          
          \[
             m(K \cup K') = \frac{\ell r + xr + (\ell-x)(b+y)}{\ell+r+x+y}
             < \frac{\ell r - 1}{\ell+r-2},
          \]
-         de onde obtemos que a única solução inteira nessas condições é $b=1$, $x = \ell-1$, $a=1$ e $y=r-2$. 
+         
+         de onde obtemos que a única solução inteira nessas condições é  $a=1$, $b=1$, $x = \ell-1$ e $y=r-2$. 
          De $X'$ e $Y'$ obtemos $K_{\ell-1, r-2}$ em $K'$ vértice disjunto de $K$.
          Uma parametrização semelhante usando arestas internas de ambos os conjuntos $A$ e $B$ não gera soluções.       
      \end{proof}
@@ -1214,57 +1247,59 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
 	 O grafo $G$ pode conter uma intersecção de múltiplas cópias de
     $\K$, e neste caso cada cópia de $\K$ seria um subgrafo de $K_{\ell+x,r+y}$ onde $x$ ou $y$ são inteiros não-negativos, e, como veremos, esta intersecção múltipla pode afetar a maneira como colorimos a $\K$-componente de $G$. %%%% explicar
     
-    Notamos que uma sequência de cópias de $\K$ que se interceptam em arestas possui menor densidade se as intersecções entre cada par de $\K$ da sequência forem da forma $K_{1,1}$. 
-     Dada esta informação, computamos o limite inferior para a densidade de uma sequência de $\K$ em $G$, e obtivemos restrições sobre a estrutura das intersecções de arestas na $\K$-componente de $G$, como é apresentado no seguinte fato.
+    A partir da Proposição \ref{lemma:inter_a} também notamos que uma sequência de cópias de $\K$ que se interceptam em arestas possui menor densidade se as intersecções entre cada par de $\K$ da sequência forem da forma $K_{1,1}$. 
+     Dada esta informação, computamos o limite inferior para a densidade de uma sequência de cópias de $\K$ em $G$, e obtivemos restrições sobre a estrutura das intersecções de arestas na $\K$-componente de $G$, como é apresentado no seguinte fato.
      
       \begin{fato}\label{fato:ciclos}
         Sejam $3\leq \ell \leq r$ inteiros e seja $G$ um grafo tal que $m(G) < m_2(\K)$.  
         Dada uma $\K$-componente $(H_1, \ldots, H_t)$ de $G$, 
         então o grafo bipartido $K \cong \K$ contido em $H_i$, mas não em $H_{i-1}$ é tal que ou $E_G(K) \cap E_G(H_j) = \varnothing$
         para todo $1 \leq j < i-1$, ou  $K \subseteq K_{\ell+s, r+w}$
-        para algum valor de $0\leq s < \ell$, $0\leq w < r$ .  
+        para algum valor de $0\leq s < \ell$, $0\leq w < r$, sendo $s$ e $w$ não ambos nulos. 
   \end{fato}
 \begin{proof}
-        As interseções de arestas entre somente duas cópias de $\K$ em $G$ da forma $K_{1,1}$ são as que apresentam menor densidade, e com isso, permitiriam o acréscimo de mais arestas considerando qualquer sequência de subgrafos $(H_1, \ldots, H_t)$ que seja uma $\K$-componente. 
+        Seja $G$ um grafo com densidade limitada $m(G) < m_2(\K)$. 
+        As interseções de arestas entre somente duas cópias de $\K$ em $G$ da forma $K_{1,1}$ são as que apresentam menor densidade, e com isso, permitiriam o acréscimo máximo de arestas considerando qualquer sequência de subgrafos $(H_1, \ldots, H_t)$ que seja uma $\K$-componente. 
         
         Sem perda de generalidade, restringimos $G$ a sua maior $\K$-componente.       
-         Seja $\mathcal{I}(G)$ o grafo de interseção cujo conjunto de vértices é o conjunto de cópias de $\K$ em $G$ e cujas arestas correspondem a pares $\{K, K'\}$ tais que $K \neq K'$ e $E_G(K) \cap E_G(K') \neq \varnothing$.
+        Defina $\mathcal{I}(G)$ como o \emph{grafo de interseção} de $G$ cujo conjunto de vértices é o conjunto de cópias de $\K$ em $G$ e cujas arestas correspondem a pares $\{K, K'\}$ tais que $K \neq K'$ e $E_G(K) \cap E_G(K') \neq \varnothing$.
          
-        Suponha que existe um $s$-ciclo no grafo de interseção $\mathcal{I}(G)$ -- o que representa uma cadeia de cópias de $\K$ em $G$ --  considerando só interseções da forma $K_{1,1}$.
+        Suponha que existe um $s$-ciclo no grafo de interseção $\mathcal{I}(G)$ considerando só interseções da forma $K_{1,1}$, o que representa uma cadeia de cópias intersectantes de $\K$ em $G$.
         Teríamos em termos de densidade em $G$ dessa cadeia de interseções que
         \[
             \frac{s\ell r - s}{s(\ell+r) - 2s} =  \frac{\ell r - 1}{\ell+r - 2}
             \not < m_2(\K). 
         \]
-        Logo, o grafo de interseção não contém ciclos considerando interseções de úm único $\K$ entre cada subgrafo da $\K$-componente.
+        Logo, o grafo de interseção não contém ciclos considerando que as interseções são de um único $\K$ entre os subgrafos $H_i$ e $H_{i+1}$ da $\K$-componente, $1 \leq i < t$.
         
-       Poderíamos tratar o caso de múltiplos $\K$ gerados por uma única intersecão como um único vértice de $\mathcal{I}(G)$, o que torna acíclico este último grafo pelo mesmo argumento. 
+       Poderíamos tratar o caso de múltiplas cópias de $\K$ geradas por uma interseção entre $H_i$ e $H_{i+1}$ como um único vértice do grafo $\mathcal{I}(G)$, o que torna acíclico este último grafo pelo mesmo argumento de densidade. 
        Logo, qualquer cópia de $\K$  numa sequência $(H_1, \ldots, H_t)$ ou acaba de ser formada num determinado $H_i$ ou está contida em um $K_{\ell+s, r+w}$.
 \end{proof}
 
-Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em $H_i$ dentro da sequência $(H_1, \ldots, H_t)$ sendo tal que ou ele não intersecta arestas de termos anteriores a $H_{i-1}$ ou ele está contido em uma intersecção múltipla da forma de $K_{\ell+s, r+w}$. 
+Em outras palavras, o Fato \ref{fato:ciclos} afirma que cada bipartido $\K$ que surge em $H_i$ dentro da sequência de subgrafos $(H_1, \ldots, H_t)$ é tal que ou ele não intersecta arestas de termos anteriores a $H_{i-1}$ ou ele está contido em uma intersecção múltipla com a forma de $K_{\ell+s, r+w}$. 
 
-      Nós usaremos as consequências da Proposição \ref{lemma:inter_a} e, com a análise de densidade de múltiplas intersecções entre grafos bipartidos $\K$ na sequência de subgrafos $(H_1, \ldots, H_t)$, obtemos um resultado que caracteriza a confuguração estrutural da cópia de $\K$ que aparece entre $H_{i-1}$ e $H_i$.
-     Antes, definimos os parâmetros $e_j$ e $v_j$, para cada $1 < j \leq t$:
+      Nós usaremos as consequências da Proposição \ref{lemma:inter_a} e, com a análise de densidade de diferentes intersecções entre  os grafos bipartidos $\K$ na sequência de subgrafos $(H_1, \ldots, H_t)$, obtemos um resultado que caracteriza a configuração estrutural da cópia de $\K$ que aparece entre $H_{i-1}$ e $H_i$.
+     Antes disso, precisamos definir os parâmetros $e_j$ e $v_j$, para cada  $1 < j \leq t$ inteiro:
      \begin{itemize}
          \item $e_j$ é o número de arestas em $E(H_{j}) \setminus E(H_{j-1})$;
          \item $v_j$ é o número de vértices em $V(H_{j}) \setminus V(H_{j-1})$. 
      \end{itemize}
      
      Note que $v_j \leq \ell+r-2$, pois por intersecção de arestas, o $\K$ entre $H_{j-1}$ e $H_{j}$ contém ao menos uma aresta de $H_{j-1}$, o que exige dois vértices em $H_{j-1}$. 
-     Os $v_{j}$ vértices formam um $K_{\ell-a,r-b}$ em $H_{j}$, com $0 \leq a\leq \ell$ e $0\leq b\leq r$, onde $a,b$ são inteiros e ambos não assumem o valor máximo (mínimo) ao mesmo tempo, e $v_{j} = \ell+r-a-b$.
+     Os $v_{j}$ vértices formam um $K_{\ell-a,r-b}$ em $H_{j}$, com $0 \leq a\leq \ell$ e $0\leq b\leq r$, onde $a,b$ são inteiros e ambos não assumem o valor máximo (mínimo) ao mesmo tempo, sendo que $v_{j} = \ell+r-a-b$.
  
 
   Para um conjunto de vértices $X = \{x_1, \ldots, x_\ell\}$, dados inteiros $1 \leq a \leq b \leq \ell$, denotamos por $X_a^b$ o subconjunto $\{x_a, \ldots, x_b\}$ de $X$. 
 
-    Dada uma $\K$-componente $(H_1, \ldots, H_t)$ de $G$, 
-    seja $K = [X, Y]$ uma cópia de $\K$ em $H_i$, mas não em $H_{i-1}$, 
+    Pretendemos exibir uma descrição matemática que consiga abranger as possibilidades de ocorrência das cópias do bipartido $\K$ numa dada $\K$-componente $(H_1, \ldots, H_t)$ de um grafo $G$.
+    Seja $K = [X, Y]$ uma cópia de $\K$ em $H_i$, mas não em $H_{i-1}$, 
     onde $X = \{x_1, \ldots, x_\ell\}$ e $Y=\{y_1, \ldots, y_r\}$, para algum $2\leq i\leq t$
-    e considere os inteiros $1 \leq j, s \leq \ell$ e $1 \leq k,w \leq r$.  
+    e considere os inteiros $j\in [\ell]$, $k \in [r]$, $w \in \{0\}\cup [r]$ e $s \in\{0,1,2\}$.  
     Sejam $0 \leq p \leq \ell-j$, $0\leq q \leq r -k$ e $z = s+w$ inteiros, 
-     definimos as seguintes \emph{configurações} de $K$: 
-       \begin{enumerate}
-       \item[$(A_{jk})_{pq}$]\label{configA} 
+     definimos as seguintes \emph{configurações} para o bipartido $K$: 
+     
+     \begin{enumerate}
+       \item[\hypertarget{HconfigA}{$(A_{jk})_{pq}$}] \label{configA} 
         os conjuntos de vértices $X$ e $Y$ são tais que $K$
     contém o subgrafo
     $K_{j,k} = \big[X_1^j, Y_1^k\big]$ em $H_{i-1}$, 
@@ -1276,8 +1311,8 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
     $Y_{k+q+1}^r$ 
     em $H_i$, respectivamente;
                 
-       \item[$(B_{sw})$]\label{configB} 
-        Existem conjuntos de vértices $X,Y$ em $H_{i-1}$ e $Z_1, Z_2$ em $H_i$, tais que
+       \item[\hypertarget{HconfigB}{$(B_{sw})$}]\label{configB} 
+        Existem conjuntos de vértices $X$ e $Y$ em $H_{i-1}$, $Z_1$ e $Z_2$ em $H_i$ tais que
       $K_{s,w} = [Z_1, Z_2]$ e 
       $K_{\ell+s,r+w}= [X\cup Z_1, Y\cup Z_2]$ que contém~$K$.
       \footnote[1]{Um caso especial se dá quando $z = 0$ e 
@@ -1285,7 +1320,7 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
        \end{enumerate}
   
   %%% multiple figures: https://tex.stackexchange.com/questions/271518/multiple-panel-figure-with-figures-side-by-side 
-  \begin{figure}[htb] \centering \includegraphics[width=0.9\textwidth]{images/configA.pdf}
+  \begin{figure}[htb] \centering \includegraphics[width=0.94\textwidth]{configA.pdf}
    \caption{Configuração do tipo $A$.}
    \label{fig:configA}
  \end{figure}
@@ -1294,18 +1329,21 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
     quando $H_i = H_{i-1} \cup K$ e satisfaz as condições acima. 
 	De maneira geral, dizemos que $K$ é do \textit{tipo A} se $K$ é da configuração $(A_{jk})_{pq}$, analogamente,
 		$K$ é do \textit{tipo B} se $K$ é de uma configuração $(B_{sw})$ -- ver Figuras \ref{fig:configA} e \ref{fig:configB}.
-    As configurações de $\K$-componentes que são descritas pela Proposição \ref{aff:casoP1} serão denominadas do \textit{tipo C} (Figura \ref{fig:configC}).
+    As configurações de $K$ que são descritas pela Proposição~\ref{aff:casoP1} serão denominadas do \textit{tipo C} (Figura \ref{fig:configC}).
+    
+    O resultado a seguir conjuga as definições e propriedades anteriores da seção mostrando que as cópias de $\K$ num grafo $G$ com densidade limitada são de configurações que se restringem aos tipos $A, B$ ou $C$. 
+    Com isso, obtemos uma caracterização estrutural dos grafos bipartidos para numa etapa posterior realizarmos coloração de $G$ que evita $\K$ rainbow.
   
 %%multiple figs:  https://tex.stackexchange.com/questions/119905/insert-multiple-figures-in-latex
 
    %Configurações $(A_{jk})_{pq}$ e $(B_{sw})$ de um $\K$ contido em $H_i$, mas não em $H_{i-1}$.
   
- \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/configB.pdf}
+ \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{configB.pdf}
    \caption{Configuração do tipo $B$.}
    \label{fig:configB}
  \end{figure}
 
-   \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/configC.pdf}
+   \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{configC.pdf}
    \caption{Configuração do tipo $C$.}
    \label{fig:configC}
  \end{figure}
@@ -1322,16 +1360,16 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
         Dados $3\leq \ell \leq r$ inteiros,
         sejam $G$ um grafo tal que $m(G) < m_2(\K)$ e
         $H = (H_1, \ldots, H_t)$ uma $\K$-componente de $G$.
-        Vamos provar o resultado sobre os tipos de configuração que uma cópia $K$ de $\K$ apresenta para formar um $H_i$ arbitrário para todo número de vértices $v_i$, i.e., 
-        para qualquer $0 \leq v_i \leq \ell + r-2$ . 
+        Vamos provar o resultado sobre os tipos de configuração que $K$, uma cópia de $\K$, apresenta ao ser formado entre $H_{i-1}$ e $H_i$ arbitrários para cada número possível de vértices $v_i$, i.e., 
+        para qualquer $0 \leq v_i \leq \ell + r-2$. 
         
         O caso mais simples é o bipartido $K$ formar uma configuração do tipo C que só ocorre se 
      $v_i = (\ell-1)+(r-2) = \ell+r-3$ 
-     e se $K$ seguir a interseção apresentada pela Proposição \ref{aff:casoP1}.        
+     e se $K$ seguir as condições da interseção apresentada pela Proposição \ref{aff:casoP1}.        
        
-    Para avaliar os tipos A e B, primeiro construímos conjuntos auxiliares que descrevem as intersecções de arestas de grafos bipartidos em $G$.   
+    Para avaliar os tipos A e B, primeiro construímos conjuntos auxiliares que descrevam as intersecções de arestas de grafos bipartidos em $G$.   
     Dados os inteiros positivos $\ell$ e $r$, denote por
-    $\mathcal{S}_{\ell,r}$ o conjunto de pares $\{a,b\}$ tal que a desigualdade~\ref{eq:pairs-ab} vale.  
+    $\mathcal{S}_{\ell,r}$ o conjunto de pares de inteiros $\{a,b\}$ tal que a desigualdade~\ref{eq:pairs-ab} vale.  
     Para descrever $\Slr$, antes definimos os seguintes conjuntos de pares inteiros
     \begin{align}\label{eq:conjS} 
         \mathcal{S} &:= \left\{\{1,1\},\{1,2\},\{1,3\},\{2,2\}\right\},
@@ -1341,94 +1379,109 @@ Podemos entender o Fato \ref{fato:ciclos} como cada bipartido $\K$ que surge em 
     \end{align} 
         
     Também definimos os conjuntos de inteiros consecutivos 
-    \begin{align}\label{eq:conjBeta}
-        \beta_1 &:=
-        \left\{\left\lceil \frac{\ell^2r - 4\ell r + \ell+2r}{(\ell-1)^2}\right\rceil,\dots, r-1\right\}   
-        \\
-        \beta_2 &:=
-        \left\{\left\lceil \frac{-\ell^2r +5\ell r - \ell-2r-1}{r-\ell^2+3\ell-3}\right\rceil,\ldots, r\right\}.
-    \end{align} 
-    Uma verificação algébrica da Proposição~\ref{lemma:inter_a} nos dá os valores de $\mathcal{S}_{\ell,r}$ e estes são apresentados a seguir (mais conjuntos para casos menores $3 \leq \ell < 7$ são descritos no Apêndice \ref{cap:app}):
+    \begin{equation}
+        \begin{aligned}[b]
+                \beta_1 &:=
+                \left\{\left\lceil \frac{\ell^2r - 4\ell r + \ell+2r}{(\ell-1)^2}\right\rceil,\dots, r-1\right\}   
+                \\
+                \beta_2 &:=
+                \left\{\left\lceil \frac{-\ell^2r +5\ell r - \ell-2r-1}{r-\ell^2+3\ell-3}\right\rceil,\ldots, r\right\}.
+            \end{aligned} 
+        \label{eq:conjBeta}
+    \end{equation}
     
-      \begin{itemize}
-      \item [(i)] se $r=\ell = 3$ ou $r=\ell \geq 7$, então
+    
+    Uma verificação algébrica da desigualdade da Proposição~\ref{lemma:inter_a} nos dá os elementos de $\mathcal{S}_{\ell,r}$ e estes são apresentados a seguir (os conjuntos $\mathcal{S}_{\ell,r}$ para casos menores, quando $3 \leq \ell, r < 7$, são descritos no Apêndice \ref{cap:app}):
+    
+      \begin{enumerate}[(i)]
+      \item \label{it:Si} se $r=\ell = 3$ ou $r=\ell \geq 7$, então
     $\mathcal{S}_{\ell,r} = \mathcal{S}_\ell$;
-      \item [(ii)] se $r=\ell = 4$, então $\mathcal{S}_{\ell,r} =
+      \item  se $r=\ell = 4$, então $\mathcal{S}_{\ell,r} =
     \mathcal{S}_\ell \cup\big\{\{2,3\}\big\}$;
-      \item [(iii)] se $r=\ell = 5$, então $\mathcal{S}_{\ell,r} =
+      \item se $r=\ell = 5$, então $\mathcal{S}_{\ell,r} =
     \mathcal{S}_\ell \cup\big\{\{2,3\},\{3,3\},\{3,4\}\big\}$;
-      \item [(iv)] se $r=\ell = 6$, então $\mathcal{S}_{\ell,r} =
+      \item se $r=\ell = 6$, então $\mathcal{S}_{\ell,r} =
     \mathcal{S}_\ell \cup\big\{\{2,3\},\{3,3\},\{4,5\}\big\}$;
-      \item[(v)] if $7 \leq \ell < r \text{ e } r > \ell^2-3\ell+3$,
+      \item \label{it:Sv} if $7 \leq \ell < r \text{ e } r > \ell^2-3\ell+3$,
     então $\mathcal{S}_{\ell,r} = \mathcal{S} \cup \{\{a,b\}: a=\ell\text{
     e }b\in \beta_1\}$;
-       \item[(vi)] se $7 \leq \ell < r \text{ e } r \leq
+       \item \label{it:Svi} se $7 \leq \ell < r \text{ e } r \leq
     \ell^2-3\ell+3$, então $\mathcal{S}_{\ell,r} = \mathcal{S} \cup
     \{\{a,b\}: a=\ell\text{ e }b\in \beta_1;\text{ ou }a=\ell-1\text{
     e }b\in \beta_2\}$.
-      \end{itemize}
+      \end{enumerate}
 
      \begin{figure}[htb] \centering 
       \includegraphics[]{Kll-inter.pdf}
-       \caption{Grafos bipartidos completos $K_{a,b}$ obtidos na interseção seguindo os pares $\{a,b\} \in\mathcal{S}_\ell$.}
+       \caption{Grafos bipartidos completos $K_{a,b}$ obtidos na interseção quando $\ell=r$ seguindo os pares $\{a,b\} \in\mathcal{S}_\ell$.}
        \label{fig:configKLL}
      \end{figure}
 
-    Agora, prosseguimos dividindo os casos por $v_i$ e se $K$ forma mais de uma cópia de $\K$ em $H_i$. 
-    Os valores que $v_i$ pode assumir depende diretamente dos conjuntos $\Slr$, pois $K$ forma interseções de arestas com quantidades delimitadas por $\Slr$.
+    Agora, prosseguimos dividindo os casos por $v_i$ e também se $K$ forma mais de uma cópia de $\K$ em $H_i$. 
+    Os valores que $v_i$ pode assumir depende diretamente dos conjuntos $\Slr$, pois $K$ forma interseções de arestas entre $H_{i-1}$ e $H_i$ com quantidades delimitadas por $\Slr$.
     
     \medskip \textbf{Caso 1.}
-	Se $3 \leq v_i \leq \ell+r-2$ e somente uma cópia de $\K$ é formada entre $H_{i-1}$ e $H_i$.
-   
+	\emph{Se $3 \leq v_i \leq \ell+r-2$ e somente uma cópia de $\K$ é formada entre $H_{i-1}$ e $H_i$}.
+       
     Seja $v_i= \ell+r-a-b$, onde $a,b$ são inteiros positivos.  
-    Os $v_i$ vértices dessa única cópia $K \cong \K= [X,Y]$ formam um bipartido $K_{\ell-a,r-b}$ em $H_i$; a $\K$-componente é composta pelas intersecções de arestas de $K$ com $H_{i-1}$, 
-    o que pela Proposição \ref{lemma:inter_a},  forma $K_{j,k}$,
-    onde $\{j,k\} \in \{\{x,y\} \in \Slr: x < \ell \text{ e } y < r\}$, pois se $j=\ell$ ou $k=r$ teríamos mais de uma cópia de $\K$ formada.  
+    Os $v_i$ vértices dessa única cópia $K \cong \K= [X,Y]$ formam um bipartido $K_{\ell-a,r-b}$ em $H_i$; 
+    a $\K$-componente $H$ é composta pelas intersecções de arestas de $K$ com $H_{i-1}$, 
+    o que pela Proposição \ref{lemma:inter_a}, elas formam bipartidos completos $K_{j,k}$,
+    onde $\{j,k\} \in \{\{x,y\} \in \Slr: x < \ell \text{ e } y < r\}$, pois se $j=\ell$ ou $k=r$ teríamos mais de uma cópia de $\K$ formada na sequência $H$.  
    
-   Além disso, completamos a partição $[X,Y]$ tomando outros $p,q$ vértices em $H_{i-1}$ tais que um bipartido $K_{p,q}$ é obtido satisfazendo às condições de  $j+p = a$ e $k+q = b$. 
+   Além disso, completamos a partição $[X,Y]$ tomando outros $p$ vértices em $H_{i-1}$ para $X$ e $q$ vértices em $H_{i-1}$ para $Y$, estes vértices são tais que um bipartido $K_{p,q}$ é obtido satisfazendo às condições de  $j+p = a$ e $k+q = b$. 
    
-   Suponha que já haviam arestas em $K_{p,q}$  para algum $H_{i'}$ na sequência de subgrafos com $i' < i-1$.
+   Suponha que já haviam arestas em $K_{p,q}$  para algum $H_{i'}$ na sequência de subgrafos~$H$ com $i' < i-1$.
    Logo, o novo $K$ adicionado teria interseção de arestas com algum outro bipartido completo $K'$, além do bipartido $K''$ que contém $K_{jk}$ em $H_{i-1}$.
    Assim, considerando o subgrafo $H_{i}$,
    %teríamos que existe um caminho entre $K'$ e $K''$, e 
    temos que $K$ 
    intersecta arestas de algum $H_{i'}$ para $i'<i-1$, o que contradiz o Fato \ref{fato:ciclos}.
   
-     Com isso, as arestas de $K_{p,q}$ são adicionadas por $H_i$ na $\K$-componente e, nós obtemos a configuração~\hyperref[configA]{$(A_{jk})_{pq}$} tornando $K$ do tipo A.  
-    Esta configuração formou um único $\K$ com $H_i$,  agora consideramos casos onde mais de uma cópia de $\K$ aparece em $H_i$.
+     Com isso, as arestas de $K_{p,q}$ são adicionadas por $H_i$ na $\K$-componente e, nós obtemos que $K$ é da configuração %~\hyperref[configA]{$(A_{jk})_{pq}$},
+     \hyperlink{HconfigA}{$(A_{jk})_{pq}$}
+     ou seja, $K$ é do tipo A.  
+    Esta configuração formou um único $\K$ entre $H_{i-1}$ e $H_i$, agora consideramos casos onde mais de uma cópia de $\K$ venha a aparecer em $H_i$.
 
-    Sejam $b_1, b_2$ inteiros positivos tais que $b_1 \in \beta_1$ ou $b_2 \in \beta_2$.
+    Sejam $b_1, b_2$ inteiros positivos tais que $b_1 \in \beta_1$ ou $b_2 \in \beta_2$, onde os conjuntos $\beta_1$ e $\beta_2$ foram definidos em (\ref{eq:conjBeta}).
     
      \medskip \textbf{Caso 2.} 
-    Se $v_i \in [1, \max\{r - b_1, r+1-b_2\}]$ e existem múltiplas cópias de $\K$ entre $H_{i-1}$ e $H_i$.
+   \emph{Se $v_i \in \left[1, \max\{r - b_1, r+1-b_2\}\right]$ e existem múltiplas cópias de $\K$ entre $H_{i-1}$ e $H_i$}.
 
- 
-   Seja $Z=Z_1\cup Z_2$ o conjunto com estes $v_i$ vértices de modo que 
-   $K_{sw}=[Z_1,Z_2]$ é formado em $H_i$, onde $K \subset K_{\ell+s, r+w}$. 
-   Se existe exatamente uma aresta em $Z$, digamos $uv$, então temos que
-    $Z_1 = \{u\}$ e $v \in Z_2$ e, com isso, a configuração
-    ~\hyperref[configB]{$(B_{1,w})$} é possível, onde $w = r-b_2$.
+    Na sequência $H$, o acréscimo de $K$ em $H_{i-1}$ forma múltiplas cópias novas de $\K$ em $H_i$, o que pela maneira que se dá a interseção de arestas vista na Proposição \ref{lemma:inter_a} 
+    %%e pelos conjuntos $\Slr$ 
+    teríamos que 
+    $K \subset K_{\ell+s, r+w}$, onde $v_i = s+w$ com $s,w \geq 0$ inteiros. 
+    Resta-nos restringir os valores de $s$ e $w$ para verificarmos que estes coincidem com a descrição da configuração do tipo B.
+    %% Logo, $K$ teria a configuração~\hyperlink{HconfigB}{$(B_{s,w})$}
+
+    Considere os conjuntos $\Slr$ especialmente nos casos (\ref{it:Si}) e (\ref{it:Sv})-(\ref{it:Svi}) para notar que $K_{\ell+s, r+w}$ implica que $s \in \{0,1,2\}$.
+    Seja $Z=Z_1\cup Z_2$ o conjunto com $v_i$ vértices tal que 
+   $K_{sw}=[Z_1,Z_2]$ é formado em $H_i$. 
+   A configuração~\hyperlink{HconfigB}{$(B_{1,w})$} é possível 
+   se existe exatamente uma aresta em $Z$, digamos que $uv$, e então teríamos que
+    $Z_1 = \{u\}$ e $v \in Z_2$, onde $w = r-b_2$.
         
-        Outro subcaso ocorre se não há arestas em $Z$, assim $Z_1 =
-    \varnothing$ e obtemos a configuração~\hyperref[configB]{$(B_{0,w})$}, 
+    Outro subcaso ocorre se não há arestas em $Z$, assim $Z_1 =
+    \varnothing$ e obtemos a configuração~\hyperlink{HconfigB}{$(B_{0,w})$}, 
     onde $w = r-b_1$.
+    Um último subcaso ocorre quando $\ell = r$ e permite a
+configuração~\hyperlink{HconfigB}{$(B_{2,0})$}. 
     
-    Um caso excepcional ocorre quando $\ell = r$ e permite a
-configuração~\hyperref[configB]{$(B_{2,0})$}. 
-    
-    Neste caso, o bipartido $K$ é do tipo B.
+    Com isso, neste caso obtivemos que o bipartido $K$ é do tipo B.
    
  \medskip \textbf{Caso 3.} 
-	  Se $v_i = 0$ e existem uma ou mais cópias de $\K$ entre $H_{i-1}$ e $H_i$. 
+	 \emph{Se $v_i = 0$ e existem uma ou mais cópias de $\K$ entre $H_{i-1}$ e $H_i$}. 
 	  
 	 Neste caso temos que toda nova aresta de $H_i$ se liga a vértices pré-existentes de $H_{i-1}$. 
-      Se considerarmos somente a adição de arestas em uma única cópia de $\K$ em $H_{i-1}$, veremos que não é possível criar outro bipartido $K$, pois pelo argumento de densidade temos que
+      Se considerarmos somente a adição de arestas em uma única cópia de $K' \cong \K$ em $H_{i-1}$, veremos que não é possível criar outro bipartido $K$, pois pelo argumento de densidade temos que a adição de $e_i$ arestas em $K'$ nos dá
+      
     \[ 
 		\frac{\ell r + e_i}{\ell+r} < \frac{\ell r-1}{r+\ell-2},
     \]
 	e isto implica sob as condições de $3 \leq \ell \leq r$ que 
 	$e_i \leq (2\ell r -\ell-r)/(\ell+r-2) < \ell+r-2$, 
-	tal quantidade $e_i$ é insuficiente para inverter dois vértices da partição no subgrafo que resulte em um novo $\K$.
+	e esse limitante de $e_i$ o torna insuficiente na quantidade de arestas que se possa, por exemplo, inverter dois vértices da partição de $K'$ que resulte em um novo $\K$.
     Com isso, para $v_i=0$, resta-nos analisar intersecções de mais de uma cópia de $\K$ em $H_{i-1}$ para formar $K$.
     
     Para as intersecções possíveis entre dois bipartidos completos $K'$ e $K''$, descritas na Proposição \ref{lemma:inter_a} que formam um $K_{a,b}$, com $\{a,b\} \in \Slr$, realizamos a  análise da seguinte desigualdade de densidades:
@@ -1437,115 +1490,126 @@ configuração~\hyperref[configB]{$(B_{2,0})$}.
         \frac{2\ell r - e(K'\cap K'') + e_i}{2\ell+2r - v(K' \cap K'')} < \frac{\ell r- 1}{\ell+r-2}.
     \end{equation}
 	    
-     Em particular, vemos que as intersecções $K_{1,3}$, $K_{2,2}$ são  justas, isto é, são subgrafos de $H_{i-1}$ cujo argumento de densidade em (\ref{eq:inter}) requer $e_i=0$, i.e., não permitem acréscimo de arestas;
-    e para $K_{\ell-2,r}$ temos $e_i < \ell$ que também não forma outro $\K$.
-    %
-     Já se a intersecção for $K_{1,1}$, para todos os valores de $\ell$ e $r$ temos que $e_i = \ell-1$, e com isso podemos gerar um novo $\K$ de $H_{i}$, basta escolher um vértice de fora da interseção e adicionar a ele $e_i$ arestas de modo que forme $K_{\ell+1,r}$, logo, de configuração~\hyperref[configB]{$(B_{1,0})$}; analogamente, temos se $\ell \in
-        \{r-1, r\}$ para $e_i = r-1$, a configuração possível é~\hyperref[configB]{$(B_{0,1})$}.
-    %
-    Para a interseção $K_{\ell-1, r-1}$ temos uma única solução $e_i=1$, e podemos dela obter $K_{\ell+1, r}$ ou $K_{\ell,r+1}$, logo, de configurações ~\hyperref[configB]{$(B_{1,0})$}
-    e ~\hyperref[configB]{$(B_{0,1})$}, respectivamente.
-    %
-     A intersecção $K_{1,2}$ admite $e_i = \ell-1$, se $r > \ell^2 - 3\ell+3$ e isso permite a configuração~\hyperref[configB]{$(B_{1,0})$}.
-    %
-    As outras intersecções da forma $K_{\ell, r-b_1}$ e $K_{\ell-1,b_2}$ -- as quais o conjunto $\Slr$ depende de $\beta_1$ ou de $\beta_2$--,  de (\ref{eq:inter}) seguem as restrições $e_i < r$ e $e_i < \ell$, respectivamente; no entanto,
-	para com elas obter outro $\K$ em $H_i$ precisaríamos adicionar pelo menos
-	$r$ e $\ell-1$ arestas, respectivamente, a um vértice. Logo, não formam cópia de $\K$. 
-	%para fazer que um vértice esteja em outra partição fora a inicial.
+     Em particular, listamos as configurações possíveis para as interseções seguindo os conjuntos $\Slr$ que resolvem (\ref{eq:inter}):
+     \begin{itemize}
+         \item as intersecções $K_{1,3}$, $K_{2,2}$ são  justas, isto é, são subgrafos de $H_{i-1}$ cujo argumento de densidade em (\ref{eq:inter}) requer $e_i=0$, i.e., não permitem acréscimo de arestas.
+         
+         \item para $K_{\ell-2,r}$, temos $e_i < \ell$ que também não forma outro $\K$.
+         
+        \item se a intersecção for $K_{1,1}$, para todos os valores de $\ell$ e $r$ temos que $e_i = \ell-1$, e com isso podemos gerar um novo $\K$ de $H_{i}$, basta escolher um vértice de fora da interseção e adicionar a ele $e_i$ arestas de modo que forme $K_{\ell+1,r}$, logo, de configuração~\hyperlink{HconfigB}{$(B_{1,0})$}; analogamente, temos se $\ell \in
+        \{r-1, r\}$ para $e_i = r-1$, que uma configuração possível é~\hyperlink{HconfigB}{$(B_{0,1})$}.
+        
+        \item  para a interseção $K_{\ell-1, r-1}$ temos uma única solução $e_i=1$, e podemos dela obter $K_{\ell+1, r}$ ou $K_{\ell,r+1}$, logo, de configurações~\hyperlink{HconfigB}{$(B_{1,0})$}
+    e~\hyperlink{HconfigB}{$(B_{0,1})$}, respectivamente.
     
+        \item A intersecção $K_{1,2}$ admite $e_i = \ell-1$, se $r > \ell^2 - 3\ell+3$ e isso permite a configuração~\hyperlink{HconfigB}{$(B_{1,0})$}.
+        
+        \item  As outras intersecções da forma $K_{\ell, r-b_1}$ e $K_{\ell-1,b_2}$ -- as quais o conjunto $\Slr$ depende de $\beta_1$ ou de $\beta_2$--,  de (\ref{eq:inter}) seguem as restrições $e_i < r$ e $e_i < \ell$, respectivamente; no entanto,
+    	para com elas obter outro $\K$ em $H_i$ precisaríamos adicionar pelo menos
+    	$r$ e $\ell-1$ arestas, respectivamente, a um vértice. Logo, não formam cópia de $\K$. 
+     \end{itemize}
+      
    Agora, examinamos o subcaso em que o acréscimo de arestas se dá entre duas cópias disjuntas de $\K$ em $H_{i-1}$, digamos que $K'$ e $K''$, para formar um outro bipartido $K\cong\K$.
     Como $K'$ e $K''$ estão na mesma $\K$-componente e são disjuntos, $K'$ ou $K''$ deve estar contido em um subgrafo $H_{i'}$ da sequência dessa componente para algum $i'<i-1$.
-    Com isso, teríamos que $K$ em $H_i$ intercepta arestas de $H_{i'}$, o que contraria o Fato \ref{fato:ciclos}, logo, arestas novas entre duas cópias disjuntas de $\K$ em $H_{i-1}$ não podem formar um novo bipartido $K$.
+    Com isso, teríamos que $K$ em $H_i$ intercepta arestas de $H_{i'}$, o que contraria o Fato \ref{fato:ciclos}, logo, quaisquer arestas novas entre duas cópias disjuntas de $\K$ em $H_{i-1}$ não podem formar um novo bipartido $K$.
 
 \end{proof}
   
-  A Figura \ref{fig:configKLL} ilustra as configurações de intersecção entre $H_i$ e $H_{i+1}$ dadas pelo Lema \ref{lema:config}.
+  A Figura \ref{fig:configKLL} ilustra as configurações de intersecção de arestas entre $H_i$ e $H_{i+1}$ dadas pela Proposição~\ref{lemma:inter_a} quando $\ell=r$.
 
 \section{Limiar em $n^{-1/m_2(K_{\ell,r})}$}
 \label{sec:mainres}
 
-Nesta seção provamos o Teorema~\ref{lemma:main}, ele segue da construção de uma coloração de arestas de $G$ sem cópias rainbow de~$\K$ que exibimos dado que $m(G) < m_2(\K)$.
-O resultado principal, semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbcomplete}, foca em verificar que as configurações do tipo B, i.e., que geram múltiplos $\K$ entre cada subgrafo de uma $\K$-componente, são menos presentes por conta da densidade elevada que possuem, e, aparecem no máximo duas vezes seguidas. 
-  Isso torna possível fazer uma coloração própria parcial  que evita cópias de $\K$ rainbow, o que nos permite concluir nosso resultado principal.
+Nesta seção provamos o Teorema~\ref{lemma:main}, ele segue da construção de uma coloração própria de arestas de um grafo $G$ arbitrário em que $m(G) < m_2(\K)$, e mostramos que esta coloração  não contém cópias rainbow de~$\K$, e com isso, $G \not\rbarrow \K$.
+
+Na seção anterior, obtivemos propriedades estruturais de como os grafos bipartidos completos são formados em $G$, especialmente o Lema \ref{lema:config} que os sintetiza em três tipos de configurações: A, B e C.
+Nosso resultado principal é semelhante aos Lemas \ref{lema:rbciclos} e \ref{lema:rbcomplete}, pois exibe colorações sem determinadas cópias rainbow. 
+Uma parte importante de nossa prova aqui é verificar que as configurações do tipo B 
+-- que geram múltiplos $\K$ entre cada subgrafo de uma $\K$-componente de $G$ -- 
+são menos presentes por conta da densidade elevada que possuem, e, aparecem no máximo duas vezes seguidas. 
+  Isso torna possível fazer uma coloração própria parcial de $G$ que evita cópias de $\K$ rainbow, o que nos permite concluir o resultado de que $G \not\rbarrow \K$.
+  A prova segue abaixo:  
   
     \begin{proof}[Demonstração do Teorema~\ref{lemma:main}]
       Sejam $3 \leq \ell \leq r$ inteiros e $G$ um grafo tal que $m(G) < (\ell r - 1)/(\ell+r-2)$.
     
         Tome um bipartido $\K = [X,Y]$ arbitrário em $G$ para ser $H_1$ e atribua uma cor distinta $c_j$ para $\ell-3$ arestas paralelas entre $X$ e $Y$, a cada $\ell-3$ vértices de $Y$ em $H_1$, onde
-        $1 \leq j \leq \lfloor \frac{r}{\ell-3}\rfloor$.
+        $1 \leq j \leq \lfloor \frac{r}{\ell-3}\rfloor$. 
+        Com isso, a cópia de $\K$ em $H_1$ não é rainbow.
+        Excepcionalmente nesta prova, se $\ell \in\{3,4\}$, colorimos as arestas paralelas de mesma cor sempre como um único par.
 
         Seja $H = H_t$, com $t \geq 2$, uma $\K$-componente de $G$ obtida por uma sequência de subgrafos $(H_1, \ldots, H_t)$ construída pela interseção de bipartidos completos.
 
-         Vamos considerar as configurações dadas pelo Lema \ref{lema:config} que ocorrem nesta sequência $(H_1, \ldots, H_t)$.
+         Vamos considerar as três configurações dadas pelo Lema \ref{lema:config} que ocorrem nesta sequência $(H_1, \ldots, H_t)$.
          %
          Para cada $1 < i \leq t$, existe pelo menos um bipartido $\K$ em $H_{i}$ que não está em $H_{i-1}$.
-         Nosso objetivo é atribuir cores para as arestas de $E(H_{i})$ evitando cópias rainbow de $\K$.
+         Nosso objetivo é atribuir cores para as arestas em $E(H_{i})$ evitando cópias rainbow de $\K$ para qualquer tipo de configuração, provando isto, consequentemente, teremos que $G \not\rbarrow\K$, pois o resultado sobre $\K$-componentes cobre todas as cópias de $\K$ em $G$.
+         Dito isso, dividimos a coloração de $E(H_i)$ em três casos seguindo os tipos A, B e C de configuração de $H_i$:
 
-         \medskip \textbf{Caso A.} Se $H_i$ é do tipo A, ou seja, apresenta configuração~\hyperref[configA]{$(A_{jk})_{pq}$}, onde $j < \ell$ e $k < r$.
+         \medskip \textbf{Caso A.} Se $H_i$ é do tipo A, ou seja, apresenta configuração~ \hyperlink{HconfigA}{$(A_{jk})_{pq}$}, onde $j < \ell$ e $k < r$.
          
          %%xxxxx if $\ell \geq 7$, 
-        Neste caso é adicionado um único $\K = [X,Y]$ em $H_i$.      
+        Neste caso é adicionado um único $\K = [X,Y]$ em $H_i$.     
 
-        Como $\{j,k\} \in \{\{x,y\} \in \Slr: x < \ell \text{ e } y < r\}$, então existem em $H_i$ pelo menos dois vértices, digamos que $u\in X$ e $v\in Y$, com arestas novas de modo que 
+        Como $\{j,k\} \in \{\{x,y\} \in \Slr: x < \ell \text{ e } y < r\}$, então existem em $H_i \setminus H_{i-1}$ pelo menos dois vértices, digamos que $u\in X$ e $v\in Y$, com arestas novas de modo que 
         %%%% a cada par $(u,v)$, 
-        usamos $\ell-3$ cores para as arestas de $u$ para vértices de $Y\setminus\{v\}$ e as repetimos de $v$ para $X\setminus\{u\}$; é possível realizar esse processo de coloração exaustivamente com novas $\ell-3$ cores para cada par de vértices $u\in X$ e $v\in Y$ que sejam de $H_i$.
-        Tais arestas coloridas são paralelas.
+        usamos $\ell-3$ cores novas para as arestas de $u$ para os vértices de $Y\setminus\{v\}$ e repetimos tais cores nas arestas de $v$ para $X\setminus\{u\}$; é possível realizar esse processo de coloração exaustivamente com novas $\ell-3$ cores para cada par de vértices $u\in X$ e $v\in Y$ que sejam de $H_i\setminus H_{i-1}$ e que não tiveram arestas coloridas.
+        Assim, temos arestas de mesma cor que são paralelas em uma cópia de $\K$ para não ser rainbow.
         A Figura \ref{fig:configAcor} ilustra a coloração para esta configuração.
 
- \begin{figure}[htb] \centering \includegraphics[width=0.94\textwidth]{images/tipoAcolor.pdf}
+ \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{tipoAcolor.pdf}
    \caption{Esquema de coloração para configurações do tipo $A$.}
    \label{fig:configAcor}
  \end{figure}
         %% em $X$  (por conta dos pares em $\mathcal{S}$, vide (\ref{eq:conjS})) que podem ser coloridas com o mesmo processo usado em $H_1$.        
         %% Se $j = \ell-1$ e $k=r-1$, então podemos atribuir novas cores a cada $\ell-3$ vértices de $Y$ incidentes em $X$.
 
-        \medskip \textbf{Caso B.} Se $H_i$ é do tipo B, ou seja, apresenta configuração~\hyperref[configB]{$(B_{sw})$}.
+        \medskip \textbf{Caso B.} Se $H_i$ é do tipo B, ou seja, apresenta configuração~\hyperlink{HconfigB}{$(B_{sw})$}, onde $w \in \{0\}\cup [r]$ e $s \in\{0,1,2\}$.
         
-        Aqui, vamos reutilizar alguma cor presente em $H_{i-1}$, pois esta configuração gera múltiplos $\K$ quando forma  um $K_{\ell+s,r+w}$ e intersecta cópias de grafos bipartidos com arestas coloridas em passos anteriores.
+        Aqui, vamos reutilizar alguma cor presente em $H_{i-1}$, pois neste caso a configuração do tipo B gera múltiplos $\K$ ao formar um $K_{\ell+s,r+w}$ em $H_i$, este último bipartido que intersecta cópias de $\K$ com arestas coloridas em passos anteriores da $\K$-componente.
         
-      Considere a configuração~\hyperref[configB]{$(B_{0,w})$} em
-      $H_i$ com $w > 2$, então existem $w$ novos vértices de um conjunto $Z$ tal que o bipartido adicionado é $K \cong K_{\ell,r+w} =[X, Y \cup Z]$, sendo que $[X,Y]$ já possui arestas coloridas em passos anteriores, 
-      onde $1 \leq w \leq r$.  
-      Repetimos o processo de coloração atribuindo uma nova cor a cada $\ell-3$ arestas 
-      não-adjacentes com pontas entre $X$ e $Z$. 
-      É evidente que não é possível tomar $r$ vértices de $Y \cup Z$ sem repetir uma aresta colorida com pontas em $X$.
-      Assim, cada cópia dos bipartidos $\K$ formados em $H_i$ não é rainbow para~\hyperref[configB]{$(B_{0,w})$}, onde $w >2$. 
-      A Figura \ref{fig:configBcor} ilustra a coloração de~\hyperref[configB]{$(B_{0,w})$}.
-      Note que esse procedimento de coloração pode ser facilmente usado para configurações~\hyperref[configB]{$(B_{s,w})$} com $s>0$ e $w>2$, onde para o bipartido formado $K_{\ell+s,r+w} =[X\cup Z_1, Y \cup Z_2]$ colorimos arestas paralelas entre $X$ e $Z_2$ e entre $Y$ e $Z_1$.
+      Considere a configuração~\hyperlink{HconfigB}{$(B_{0,w})$} em
+      $H_i$ com $w > 2$, então existem $w$ novos vértices de um conjunto $Z$ tal que o bipartido formado é $K \cong K_{\ell,r+w} =[X, Y \cup Z]$, sendo que $[X,Y]$ já possui arestas coloridas em passos anteriores. %%onde $2 < w \leq r$ 
+       Faremos um processo de coloração semelhante ao visto anteriormente, atribuímos uma nova cor a cada $\ell-3$ arestas paralelas com pontas entre $X$ e $Z$. 
+      É importante notar que tomando $r$ vértices quaisquer de $Y \cup Z$, tem-se que algum par de vértices envia arestas de mesma cor com pontas em $X$.
+      Com isso, cada cópia dos bipartidos $\K$ formados em $H_i$ não é rainbow para~\hyperlink{HconfigB}{$(B_{0,w})$}, onde $w >2$. 
+      A Figura \ref{fig:configBcor} esboça esta coloração de~\hyperlink{HconfigB}{$(B_{0,w})$}.
+      Note que esse procedimento de coloração pode ser facilmente usado para configurações~\hyperlink{HconfigB}{$(B_{s,w})$} com $s>0$ e $w>2$, onde adaptamos para o bipartido formado $K_{\ell+s,r+w} =[X\cup Z_1, Y \cup Z_2]$ que colorimos as arestas paralelas entre $X$ e $Z_2$ e entre $Y$ e $Z_1$.
 
 
- \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/tipoBcolor.pdf}
+ \begin{figure}[htb] \centering \includegraphics[width=0.96\textwidth]{tipoBcolor.pdf}
    \caption{Esquema de coloração para configurações do tipo $B$.}
    \label{fig:configBcor}
  \end{figure}
       
-	  No caso da configuração~\hyperref[configB]{$(B_{0,2})$},
+	  No caso da configuração~\hyperlink{HconfigB}{$(B_{0,2})$},
    temos  o bipartido $K_{\ell, r+2} = [X, Y \cup Z]$, onde $Z = \{u,v\}$ possui os vértices novos de $H_i$.
    Vamos reutilizar uma cor $c$ de $H_{i-1}$ nas arestas de $u$ e $v$ que incidem em $X$ e que não receberam a cor $c$ ainda.
    Além desta cor $c$, colorimos pares de arestas paralelas entre $Z$ e $X$ com outras $\ell-2$ cores novas (ver Figura \ref{fig:configBcor}).   
-        A coloração é análoga para a configuração~\hyperref[configB]{$(B_{1,1})$}.
+        A coloração é análoga para a configuração~\hyperlink{HconfigB}{$(B_{1,1})$}. 
+        A viabilidade de reutilizarmos cores de $H_{i-1}$ é discutida no final da demonstração.
 
-%        Quando $\ell = r$, a configuração~\hyperref[configB]{$(B_{2,0})$} representa um       $K_{\ell, \ell+2} = [X, Y \cup Z]$, onde $Z = \{u,v\}$, e $[X,Y]$ já possui $\ell-3$ arestas coloridas com uma certa cor $c$. 
+%        Quando $\ell = r$, a configuração~\hyperlink{HconfigB}{$(B_{2,0})$} representa um       $K_{\ell, \ell+2} = [X, Y \cup Z]$, onde $Z = \{u,v\}$, e $[X,Y]$ já possui $\ell-3$ arestas coloridas com uma certa cor $c$. 
     % Então é suficiente repetir a mesma cor $c$ em duas arestas entre $u,v$ e dois vértices de $X$ que não receberam a cor $c$ ainda.
         
-       A configuração~\hyperref[configB]{$(B_{1,0})$} vista na prova do Lema \ref{lema:config} possui três subcasos que a geram: 
+       A configuração~\hyperlink{HconfigB}{$(B_{1,0})$} vista na prova do Lema \ref{lema:config} possui três subcasos que a geram: 
        as intersecções da forma $K_{1,1}$, $K_{1,2}$ e $K_{\ell-1,r-1}$, respectivamente. 
-       Nos primeiros dois subcasos, existe um vértice, digamos $v$ de $K \cong K_{\ell+1,r}$,
+       Nos primeiros dois subcasos, existe um vértice de $K \cong K_{\ell+1,r}$, digamos que $v$,
         fora da interseção de $K_{1,1}$ ou $K_{1,2}$ em que podemos reusar uma
-        cor $c$ (pois cada cor é usada em no máximo $\ell-3$ arestas paralelas) atribuindo a cor $c$ a uma aresta incidente em $v$ e isso faz toda cópia $\K$ em $K$ não ser rainbow -- a Figura \ref{fig:configBcor} também exibe a coloração deste subcaso.
+        cor $c$ (pois cada cor é usada em no máximo $\ell-3$ arestas paralelas) atribuindo a cor $c$ a uma aresta incidente em $v$, e isso faz com que toda cópia $\K$ em $K$ não seja rainbow -- a Figura \ref{fig:configBcor} também exibe a coloração deste subcaso.
                 
         No terceiro subcaso, temos o acréscimo de uma única aresta e isto pode nos forçar a colorir alguma aresta já presente em $H_{i-1}$, então precisamos verificar que existem arestas não coloridas em $H_{i-1}$. 
         Dito isso, o subgrafo $K \cong K_{\ell+1,r}$ tem uma aresta, digamos $vw$, adicionada em $H_i$, e pelo menos $\ell-3$ arestas pré-coloridas na cor $c$;
         se tais arestas não contém $v$ e nem $w$, então colorimos $vw$ com $c$, caso contrário, atribuímos uma cor nova $c'$ a $vw$ e para outra aresta paralela a $vw$ que ainda não fora pintada em $K$.  
-        Uma coloração análoga pode ser dada para a configuração~\hyperref[configB]{$(B_{0,1})$}.
+        Uma coloração análoga pode ser dada para a configuração~\hyperlink{HconfigB}{$(B_{0,1})$}.
         
-        Para concluir, precisamos verificar que o método de coloração dado anteriormente é válido, isto é, de que temos arestas livres de cor quando necessário reutilizar .
-        Veremos que duas configurações~\hyperref[configB]{$(B_{sw})$} não ocorrem de maneira sucessiva na sequência de subgrafos  de $G$ que é uma $\K$-componente, pois isso concentraria arestas nos mesmos vértices afetando sua densidade. %%, exceto se forem dois $(B_z)_1$ que equivalem a $(B_z)_2$ quando $z \in \{1,2\}$.  
-       %% O caso~\hyperref[configB]{$(B_{2,0})$} não pode ser sucessivo no mesmo subconjunto de vértices, pois geraria densidades proibitivas com relação a $m_2(\K)$.
+        Para concluir, precisamos verificar que o método de coloração dado anteriormente é válido, isto é, de que existem arestas livres de cor quando for necessário reutilizar alguma cor neste processo.
+        Veremos que duas configurações~\hyperlink{HconfigB}{$(B_{sw})$} não ocorrem de maneira sucessiva na sequência de subgrafos  de $G$ que é uma $\K$-componente, pois isso concentraria arestas nos mesmos vértices afetando sua densidade. %%, exceto se forem dois $(B_z)_1$ que equivalem a $(B_z)_2$ quando $z \in \{1,2\}$.  
+       %% O caso~\hyperlink{HconfigB}{$(B_{2,0})$} não pode ser sucessivo no mesmo subconjunto de vértices, pois geraria densidades proibitivas com relação a $m_2(\K)$.
        %
         %% de subgrafos tais como $K_{\ell+2,\ell+2}, K_{\ell, \ell+4}, K_{\ell+1,\ell+1}$.
-        Analisamos a configuração~\hyperref[configB]{$(B_{sw})$} de menor densidade que é~\hyperref[configB]{$(B_{1,0})$}.
-        Para $K \cong K_{\ell+1,r}$ advindo de um~\hyperref[configB]{$(B_{1,0})$}, com interseção $K_{1,1}$, teríamos que 
+        Analisamos a configuração~\hyperlink{HconfigB}{$(B_{sw})$} de menor densidade que é~\hyperlink{HconfigB}{$(B_{1,0})$}.
+        Para $K \cong K_{\ell+1,r}$ advindo de um~\hyperlink{HconfigB}{$(B_{1,0})$}, com interseção $K_{1,1}$, teríamos uma densidade em que 
         
         \[
             \frac{2\ell r+\ell-2+e_i}{2\ell+2r-2} < \frac{\ell
@@ -1553,15 +1617,15 @@ r-1}{r+\ell-2},
         \]
         \\
         e isto permite $e_i = \ell-1$ para $r > 2\ell^2-5\ell+4$,
-        de modo que uma nova cópia $\K$ de configuração~\hyperref[configB]{$(B_{1,0})$} seria possível como subgrafo da sequência da $\K$-componente -- bastaria trocar um par de vértices na bipartição.
-         Podemos colorir seguindo a mesma ideia se a configuração anterior for ~\hyperref[configB]{$(B_{1,0})$}, pois nesta intersecção possui duas cópias de $\K$ já coloridas com pelo menos duas cores.
+        de modo que uma nova cópia $\K$ de configuração~\hyperlink{HconfigB}{$(B_{1,0})$} seria possível como subgrafo da sequência da $\K$-componente -- bastaria inverter um par de vértices na bipartição para isto.
+         Podemos colorir seguindo a mesma ideia se a configuração anterior for~\hyperlink{HconfigB}{$(B_{1,0})$}, pois nesta intersecção possui duas cópias de $\K$ já coloridas com pelo menos duas cores.
         %
-        Enquanto que a configuração~\hyperref[configB]{$(B_{1,0})$}
- das intersecçõess $K_{1,2}$ e $K_{\ell-1,r-1}$ não podem formar outra cópia de $\K$.  
+        Enquanto que a configuração~\hyperlink{HconfigB}{$(B_{1,0})$}
+que advém das intersecções $K_{1,2}$ e $K_{\ell-1,r-1}$ não podem formar outra cópia de $\K$.  
 
  
-        Fora isso, as configurações que exigiriam colorir arestas pré-existentes em $H_{i-1}$ não podem se suceder na sequência.
-        Enquanto que nas outras configurações apenas colorimos arestas contidas exclusivamente em $H_{i}$.
+        Fora isso, as outras configurações que exigiriam colorir arestas pré-existentes em $H_{i-1}$ não podem se suceder na sequência da $\K$-componente de $G$ por apresentarem uma densidade maior do que~\hyperlink{HconfigB}{$(B_{1,0})$}.
+        Com isso, na maioria das configurações para $H_i$ apenas colorimos dentre as $e_i$ arestas presentes a partir de $H_i$.
 
         \medskip \textbf{Caso C.} Se $H_i$ é do tipo C, ou seja, apresenta a configuração dada na Proposição~\ref{aff:casoP1}.
 
@@ -1569,14 +1633,16 @@ r-1}{r+\ell-2},
         
      \end{proof}
  
-  
-  
+  Como discutido ao final da Seção \ref{sec:limiar}, a demonstração do Teorema \ref{lemma:main} junto ao framework de Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14} 
+  implicam o resultado sobre o limiar da propriedade anti-Ramsey para $G(n,p) \rbarrow \K$ ser de $n^{-1/m_2(\K)}$ (Teorema \ref{teo:mainrb}).
+
+    
 \section{Problemas em aberto}
 \label{subsec:bipartido-prob}
-Ao longo deste texto, estávamos interessados em investigar quais classes de grafos $H$ apresentam função limiar para a propriedade $G(n,p)\rbarrow H$  dada por $n^{-1/m_2(H)}$, 
+Ao longo deste capítulo, estávamos interessados em investigar quais classes de grafos $H$ apresentam função limiar para a propriedade $G(n,p)\rbarrow H$  dada por $n^{-1/m_2(H)}$, 
 e verificamos isso para quase todos os grafos bipartidos completos.
-Ademais, há bastante espaço aberto para delimitar quais são as funções limiares para outras classes de grafos $H$. 
-Assim, a partir do que estudamos e do que se sabe de ciclos e grafos completos, o próximo passo é confirmar as seguintes conjecturas. % que podem ter respostas negativas a partir de contraexemplos.
+Ademais, ainda há bastante campo de pesquisa com relação às funções limiares para outras classes de grafos $H$. 
+Assim, a partir do que estudamos e do que se sabe de ciclos e grafos completos, o próximo passo é confirmar ou contrapor as seguintes conjecturas. % que podem ter respostas negativas a partir de contraexemplos.
 
 %%%xxx \begin{conjectura}\label{conj:antiKll}      A propriedade $G(n,p)\rbarrow \K$ tem função limiar em  $p(n) =  n^{-1/m_2(\K)}$ para todo inteiro $\ell \geq 3$. \end{conjectura}
 
@@ -1591,6 +1657,8 @@ Assim, a partir do que estudamos e do que se sabe de ciclos e grafos completos, 
 
 É importante ressaltar que já há trabalhos  que investigam a propriedade anti-Ramsey de cliques quando o grafo a ser colorido segue outro modelo de distribuição probabilística \cite{aigner2022large, aigner2022small}, o que mostra que há mais variantes do problema com oportunidades de pesquisa.
 
+
+
 \chapter[Considerações finais]{Considerações finais}
 \label{cap:conclusao}
 
@@ -1598,12 +1666,12 @@ A temática de coloração tipo anti-Ramsey tem-se mostrado frutífera em  probl
 com resultados relevantes tanto em grafos determinísticos, quanto em grafos aleatórios. 
 
 Neste trabalho, primeiro abordamos colorações próprias de arestas do grafo completo que evitam repetições coloridas de triângulos com métodos computacionais e algébricos (Capítulo \ref{cap:triangles}).
-Neste contexto, muitos dos problemas (ver Questões \ref{q:repeated-C4} e \ref{q:repeated-T}) se concentram em resultados assintóticos sobre o número mínimo de cores $f_k(n,H)$ para evitar repetições de $H$ no grafo $K_n$, enquanto nós exibimos soluções exatas de $f_2(n,K_3)$ que dependiam dos parâmetros.
+Neste contexto, muitos dos problemas (ver Questões \ref{q:repeated-C4} e \ref{q:repeated-T}) se concentram em resultados assintóticos sobre o número mínimo de cores $f_k(n,H)$ para evitar $k$ repetições de $H$ no grafo $K_n$, enquanto nós exibimos soluções exatas de $f_2(n,K_3)$ que dependiam dos parâmetros.
 
 
 Sobre o segundo problema investigado, enfatizamos que este trabalho fez uso importante dos resultados de Nenadov,
 Person, Škorić e Steger~\cite{NePeSkSt14}. 
-Eles reduziram o problema de estimar o limiar da propriedade anti-Ramsey do bipartido completo no grafo aleatório para uma análise determinística em grafos com densidades limitadas. 
+Auxiliados pelo trabalho deles, o problema de estimar o limiar da propriedade anti-Ramsey do bipartido completo no grafo aleatório se tornou em uma análise determinística de grafos com densidades limitadas. 
 Acreditamos que o uso deste procedimento possa ser replicado para mais classes de grafos. 
 No entanto, há uma dificuldade em transpor as informações algébricas de que a densidade do grafo é limitada para informações estruturais do grafo que permitam um método de coloração engenhoso.
 
@@ -1619,7 +1687,7 @@ que são soluções escritas como pares não-ordenados de inteiros, $\{a,b\}$, p
 da Proposição~\ref{lemma:inter_a} cobrindo os casos que denominamos como pequenos, i.e., quando $3 \leq \ell < 7$. 
 Tal informação, em vista dos conjuntos apresentados na prova do Lema~\ref{lema:config}, completa o cenário de grafos bipartidos completos com mais de seis vértices.
 %
-Além disso, se $\ell \ll r$, as intersecções possíveis são semelhantes ao que encontramos na prova do Lema~\ref{lema:config} e as provas sobre suas respectivas configurações são análogas.  
+Além disso, se $\ell \ll r$, as intersecções possíveis seguem os tipos A, B e C que encontramos na prova do Lema~\ref{lema:config} e as provas sobre suas respectivas configurações são análogas.  
 
 Primeiro, exibimos os conjuntos $\mathcal{S}_{3,r}$:
 \begin{equation*}%[label=\rmlabel]
