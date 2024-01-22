@@ -592,7 +592,7 @@ Recentemente, Kam{\v{c}}ev e Schacht  \cite{kamvcev2023canonical} trouxeram um r
 O principal resultado desta tese trata da propriedade anti-Ramsey de colorações próprias de arestas que contenham determinados subgrafos sem repetições de cores, a saber, colorações que evitem cópias rainbow do grafo bipartido completo.
 Em essência, lidamos com o problema de encontrar famílias de grafos cuja função limiar dependa ou não de sua 2-densidade máxima, e exibimos em que condições o grafo bipartido completo apresenta limiar dado por sua 2-densidade.
 
-Nossa principal ferramenta para provar o limiar para esta propriedade anti-Ramsey se baseia na técnica de 
+Nossa principal ferramenta para provar o limiar para esta propriedade anti-Ramsey se baseia numa técnica introduzida por 
 Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14}.
 Tal técnica consiste em reduzir o problema de grafos aleatórios para um problema determinístico em que analisamos como as cópias do grafo bipartido completo podem ocorrer em um grafo com densidade limitada, e este último grafo é que deve ser cuidadosamente colorido com relação às cópias rainbow de um bipartido completo. 
 Esta técnica também foi, com devidas adaptações, utilizada para provar o limiar de ciclos \cite{barros2021anti, NePeSkSt14} e grafos completos \cite{kohayakawa2019anti, NePeSkSt14}, porém em nossa demonstração conseguimos tratar grafos bipartidos completos que não são necessariamente grafos simétricos, nem regulares.  
@@ -678,6 +678,16 @@ $\cP$ no $G(n,p)$ se
 \]
 Os limites na definição acima de função limiar são chamados de $0$-\emph{afirmação} e $1$-\emph{afirmação}, respectivamente. 
 
+Mais que isso, uma função limiar é dita \emph{quase fina} para uma propriedade
+$\cP$ no $G(n,p)$ se existem constantes positivas $c,C$ tais que
+\[
+  \lim_{n\to\infty}\mathbb{P}\left(G(n,p) \in \cP\right)
+  =
+  \begin{cases}0&\text{se }p \leq c\hat p, \\
+    1&\text{se }p \geq C\hat p.
+  \end{cases}
+\]
+
 Uma vez que os limiares são determinados por ordem de magnitude, vamos nos referir aos limiares $\hat{p}$ como \emph{o limiar} da propriedade $\cP$.
 
 Um conjunto de grafos $\mathcal{A}$ é \textit{monótono} se para qualquer $H \in \mathcal{A}$ e $H \subseteq G$, tem-se que $G \in \mathcal{A}$. 
@@ -715,16 +725,17 @@ Dados $\ell,r\geq 2$ inteiros, o grafo bipartido completo $\K$ é um exemplo de 
 %% Nesta seção \footnote{Os resultados descritos nesta seção foram desenvolvidos em um projeto conjunto com Fábio Botler, Lucas Colucci, Guilherme Mota, Roberto Parente e Matheus Secco.}, vamos considerar grafos finitos e simples. 
 Os resultados descritos neste capítulo foram desenvolvidos em um projeto conjunto com Fábio Botler, Lucas Colucci, Guilherme Mota, Roberto Parente e Matheus Secco \cite{botler2022proper}.
 Vamos considerar grafos finitos e simples. 
-Recordamos que uma coloração de arestas é chamada de \emph{própria} se para cada par de arestas que compartilham um vértice em comum as cores são distintas. Um artigo recente de Conlon e Tyomkyn  \cite{conlontyomkyn} introduziu um novo conceito relacionado a colorações próprias, definido a seguir: 
+Recordamos que uma coloração de arestas é chamada de \emph{própria} se para cada par de arestas que compartilham um vértice em comum suas cores são distintas. Um artigo recente de Conlon e Tyomkyn  \cite{conlontyomkyn} introduziu um novo conceito relacionado a colorações próprias, definido a seguir: 
 
 \begin{defi}\label{def:fkn}
-            Para $k,n\geq 2$ e fixado um grafo $H$, chamamos de $f_k(n,H)$ o menor inteiro $C$ tal que existe uma coloração
+            Para $k,n\geq 2$ inteiros e fixado um grafo $H$, chamamos de $f_k(n,H)$ o menor inteiro $C$ tal que existe uma coloração
             própria de arestas de $K_n$ com $C$ cores sem conter $k$ cópias isomorfas em cores (\emph{repetições}) de $H$ disjuntas em vértices. 
 \end{defi}
 
+
   \begin{center}
 			\includegraphics[scale=0.25, keepaspectratio=true]{K6-repet-mark.png}
-			\captionof{figure}{Uma coloração própria do $K_{6}$ identificando triângulos repetidos.} 
+			\captionof{figure}{Uma coloração própria do $K_{6}$ com 5 cores identificando triângulos repetidos.} 
 			\label{fig:K6} 
 	\end{center}
 	
@@ -753,7 +764,7 @@ Nesta subseção, calculamos $f_2(n,K_3)$ para $n \in \{4,6,8,12\}$, o caso $n=1
 É evidente que $f_2(4,K_3) = 3$, dado que não existem pares de triângulos vértices-disjuntos em $K_4$, e com isso, busca-se simplesmente por qualquer coloração própria. 
 Os próximos dois resultados mostram que, para $n = 6$ e $n = 8$, exatamente $n + 1$ cores são necessárias.
 
-Chamamos dois triângulos vértices-disjuntos de \textit{similares} em uma coloração de um grafo se suas arestas recebem as mesmas três cores;  uma cor é dita ser \textit{cheia} se as arestas com tal cor formam um matching perfeito no grafo completo. 
+Chamamos dois triângulos vértices-disjuntos de \textit{similares} em uma coloração de um grafo se suas arestas recebem as mesmas três cores;  uma cor é dita ser \textit{cheia} se as arestas com tal cor formam um emparelhamento perfeito no grafo completo. 
 Com essas breves definições podemos provar os resultados nos casos pequenos.
 
 \begin{teorema}\label{teo:n6K3}
@@ -767,8 +778,8 @@ Com essas breves definições podemos provar os resultados nos casos pequenos.
    Ademais, a união de quaisquer dois emparelhamentos perfeitos induzem um ciclo de comprimento seis.
    Supomos sem perda de generalidade que o ciclo $123456$ está colorido alternando as cores $1$ e $2$. 
    Nós chamamos uma aresta de \emph{corda curta} se ela conecta dois vértices com distância $2$ neste ciclo (em particular, uma corda curta forma um triângulo com arestas de cores $1$ e $2$). 
-   É fácil ver que se temos três cordas curtas de mesma cor, então obtemos dois triângulos similares distintos. 
-   Além disso, duas cordas curtas das mesmas cores devem ser da forma $i(i+2)$ e $(i+1)(i+3)$ para algum $i$ (índices mod $6$), já que de outra maneira elas gerariam dois triângulos disjuntos similares.
+   É fácil ver que duas cordas curtas de mesma cor devem ser da forma $i(i+2)$ e $(i+1)(i+3)$ para algum $i$ (índices mod $6$), já que de outra maneira elas gerariam dois triângulos disjuntos similares.   
+   Dito isso, não é possível ter três cordas curtas de mesma cor, pois no $K_6$ com duas cordas curtas, por exemplo nas arestas 13 e 24, não permite repetir a cor noutra corda curta. 
     
     Agora, suponha que existe alguma corda curta colorida com uma cor cheia, digamos que, a aresta $13$ está colorida com a cor $3$. É direto checar que as arestas restantes da cor $3$ devem ser $25$ e $46$, que é uma contradição, uma vez que $123$ e $456$ seriam triângulos similares.  
     
@@ -791,7 +802,7 @@ Sem perda de generalidade, digamos que as cores $1$ e $2$ geram o ciclo $1234567
 
 Se uma corda curta, digamos, $82$, pertence a uma cor cheia (por simplicidade, digamos que seja na cor $3$), então é direto checar que as outras arestas de cor $3$ serão $15$, $36$ e $47$, caso contrário, existem dois triângulos disjuntos de cores $123$. 
 Agora considere a corda curta $46$ colorida, digamos, com a cor $4$. 
-Tanto a corda $35$ quanto a $57$ está colorida com uma nova cor, que seja a $5$. Suponhamos que $57$ seja colorida com $5$. 
+A corda curta $35$ ou a $57$ devem estar colorida com uma nova cor, que seja a $5$. Suponhamos que $57$ seja colorida com $5$. 
 Agora, vê-se que não há aresta incidente ao vértice $2$ colorida pela cor $4$ (caso contrário, existiriam dois triângulos disjuntos de cores $1$, $3$ e $4$). 
 Como temos até oito cores, concluímos que cada cor, exceto a $4$, deve aparecer em alguma aresta incidente ao vértice $2$. 
 Em particular, alguma aresta deve ser colorida com a cor $5$, e novamente é simples checar que isto é uma contradição, pois criaria dois triângulos disjuntos de cores ou $1$, $2$ e $5$ ou $2$, $3$ e $5$.
@@ -808,7 +819,7 @@ Neste caso, é simples verificar que a união de três cores cheias, digamos, $1
 Isto implica que as arestas de cor $4$ são, precisamente, as diagonais principais do cubo.
 
 As cores $5$, $6$, $7$, $8$ devem cobrir as diagonais das faces do cubo. Evidentemente, dentro da face, as duas diagonais devem ter cores diferentes (caso contrário a face oposta forma um triângulo similar).
-Além disso, se uma face tem diagonais de cores $5$ e $6$, a oposta  deve ter outas duas cores, i.e., $7$ e $8$, evitando criar um triângulo. 
+Além disso, se uma face tem diagonais de cores $5$ e $6$, a oposta  deve ter outras duas cores, i.e., $7$ e $8$, evitando criar um triângulo. 
 Mais que isso, duas faces adjacentes não podem ter o mesmo par de cores em suas diagonais, uma vez que isso geraria dois triângulos similares juntamente com as diagonais principais do cubo.
 
 As observações acima implicam cada um dos $\binom{4}{2}=6$ pares de cores $5,6,7,8$ aparece nas diagonais de, exatamente, uma das faces do cubo.
@@ -890,16 +901,20 @@ O código está disponível em   %
             \end{matrix}\right.
         \]
         que em $\ZZ_3$ implica em $y_i = a_i$, para cada componente $i$. Logo, $a = y$ contradizendo que os vértices da repetição  são disjuntos.
+
+        Portanto, $\chi$ não gera triângulos disjuntos repetidos em cores sendo uma coloração de $n-1$ cores de $K_n$.
     \end{proof}
     
     \section{Problemas em aberto}
 \label{subsec:repeated-prob}
 
-        O parâmetro $f_2(n, K_3)$ com $n$ par continua a ser não compreendido sobre a existência de mais algum padrão em $\{n-1,n,n+1\}$ com outras sequências numéricas (Tabela \ref{tab:valores}).
-        Variar o número de cópias de outros e também os grafos fixados forma um campo aberto a ser explorado.
-        Xu e Ge \cite{xu2022color} provaram o seguinte limite inferior: $f_2(n, H_t) = \Omega(n^{1+\frac{1}{2t-3}})$, onde $H_t$ é uma 1-subdivisão do grafo completo $K_t$. Eles questionam se existe um expoente $\beta$ tal que $f_2(n, H_t) = \Theta(n^\beta)$.
+        O parâmetro $f_2(n, K_3)$ com $n$ par permanece a ser não compreendido sobre a existência de mais algum padrão em $\{n-1,n,n+1\}$ com sequências numéricas não cobertas pelo Teorema \ref{teo:seq-f2}   -- a Tabela \ref{tab:valores} resume os números conhecidos.
+        Variar o número de repetições e também as famílias de grafos fornecem um campo aberto a ser explorado.
+        Por exemplo, Xu e Ge \cite{xu2022color} provaram o seguinte limite inferior: $f_2(n, H_t) = \Omega(n^{1+\frac{1}{2t-3}})$, onde $H_t$ é uma 1-subdivisão do grafo completo $K_t$. Eles questionam se existe um expoente $\beta$ tal que $f_2(n, H_t) = \Theta(n^\beta)$.
         
-        Janzer \cite{janzer2023rainbow} provou um resultado mais geral sobre repetições de ciclos pares, que em particular diz  $f_2(n, C_4) = \Omega(n)$, enquanto Conlon e Tyomkin \cite{conlontyomkyn} verificaram que $f_2(n, C_4) = O(n^{3/2})$. Resta-nos a seguinte pergunta:
+        Janzer \cite{janzer2023rainbow} provou um resultado mais geral sobre repetições de ciclos pares, que em particular nos diz que  $f_2(n, C_4) = \Omega(n)$, 
+        enquanto Conlon e Tyomkin \cite{conlontyomkyn} verificaram que $f_2(n, C_4) = O(n^{3/2})$. 
+        Resta-nos a seguinte pergunta:
         
         \begin{questao}\label{q:repeated-C4}
             Dado $n$ natural, $f_2(n, C_4) = \Theta(n)$?
@@ -934,7 +949,7 @@ A mudança do grafo base de coloração nos dá que
     \end{equation}
 %
 onde $\chi'(K^r_n)$ é o índice cromático do $r$-partido completo. 
-Logo, quando $r$ é uma constante, os resultados sobre os limitantes superiores de $f_k(n,H)$ são mantidos para $f_k^r(n,H)$ a menos de uma constante dependente de $r$.
+Logo, quando $r$ é uma constante fixada, os resultados sobre os limitantes superiores de $f_k(n,H)$ são mantidos para $f_k^r(n,H)$ a menos de uma constante dependente de $r$.
 Além disso, se o grafo $H$ contém uma clique $K_{r+1}$, então ${f_k^r(n, H) = \chi'(K^r_n)}$, pois $K^r_n$ não contém $K_{r+1}$ e assim, toda coloração própria de $K_n^r$ evita repetições de $H$.
 
 É direto que $f_k(n,H) = f_k^1(n,H)$ e também que $f_k^2(n, K_3)= n$, este último porque grafos bipartidos não contêm triângulos e a coloração própria de $E(K_{n,n})$ utiliza $n$ cores. 
@@ -958,7 +973,7 @@ A seguir, mostramos que $f_2^3(2, K_3) = f_2(6,K_3) - 1= 6$.
     Para uma coloração de arestas do tripartido completo $K_{2,2,2}$ utilizando 4 cores, 
     %chamemos as cores pelos elementos do conjunto $[4]$, 
     como tal grafo possui 12 arestas, cada classe de cor forma um emparelhamento perfeito e esta coloração é única, a menos de permutações de cores, para ser própria (Figura \ref{fig:K222-5c}). 
-    Note que os triângulos disjuntos contidos nesta coloração são repetidos, a saber, $K_{2,2,2}$ possui 8 triângulos e cada um deles possui uma repetição vértice-disjunta formando quatro pares distintos de triângulos repetidos: 123, 124, 134, 234. 
+    Note que os triângulos disjuntos contidos nesta coloração são repetidos, a saber, $K_{2,2,2}$ possui 8 triângulos e cada um deles possui uma repetição vértice-disjunta formando quatro pares distintos de triângulos repetidos: 135, 136, 145, 146. 
         
     Partindo desta coloração, se usássemos uma quinta cor há dois casos: esta poderia ser aplicada em duas arestas da mesma classe de cor ou em duas arestas de classes distintas. 
     No primeiro caso, existe um triângulo que não utiliza a cor substituída e continuaríamos com sua repetição vértice-disjunta.
@@ -973,12 +988,12 @@ A seguir, mostramos que $f_2^3(2, K_3) = f_2(6,K_3) - 1= 6$.
 \end{proof}
 
  \begin{center}
-			\includegraphics[scale=0.75, keepaspectratio=true]{K222-5c.pdf}
+			\includegraphics[scale=0.75, keepaspectratio=true]{images/K222-5c.pdf}
 			\captionof{figure}{A única coloração própria do $K_{2,2,2}$ com 4 cores a menos de permutações de cores.} 
 			\label{fig:K222-5c} 
 	\end{center}
   \begin{center}
-			\includegraphics[scale=0.75, keepaspectratio=true]{K222-6c.pdf}
+			\includegraphics[scale=0.75, keepaspectratio=true]{images/K222-6c.pdf}
 			\captionof{figure}{Coloração própria do $K_{2,2,2}$ com 6 cores sem triângulos repetidos.} 
 			\label{fig:K222-6c} 
 	\end{center}
@@ -997,7 +1012,8 @@ grafos aleatórios implica que essa propriedade admite uma função limiar \cite
 
 \section{Resultados existentes}
 
-No trabalho~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte resultado para grafos aleatórios: a propriedade anti-Ramsey $G(n,p)\rbarrow H$ vale assintoticamente quase certamente sempre que $p\gg n^{-1/m_2(H)}$ para todo grafo fixo~$H$. Em outras palavras, garante-se em termos da $2$-densidade máxima de um grafo $H$ um limitante superior para a função limiar $\hat{p}_H$, como está enunciado a seguir.
+No trabalho~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte resultado para grafos aleatórios: a propriedade anti-Ramsey $G(n,p)\rbarrow H$ vale assintoticamente quase certamente sempre que $p\geq Cn^{-1/m_2(H)}$ para todo grafo fixo~$H$ e alguma constante positiva $C$.
+Em outras palavras, garante-se em termos da $2$-densidade máxima de um grafo $H$ um limitante superior para a função limiar quase-fina $\hat{p}_H$, como está enunciado a seguir.
 
 \begin{teorema}[%Kohayakawa, Konstadinidis e Mota~
 \cite{KoKoMo12}]
@@ -1008,11 +1024,13 @@ No trabalho~\cite{KoKoMo12}, o orientador e colaboradores provaram o seguinte re
     
 Dado o Teorema \ref{teo:conditional} e sabendo que a $2$-densidade máxima tem um papel fundamental em Teoria de Ramsey, é natural perguntar se $n^{-1/m_2(H)}$ é função limiar para a propriedade $G(n,p)\rbarrow H$ para qualquer grafo $H$, o que exige provar o limitante inferior do limiar como $\hat{p}_H \geq n^{-1/m_2(H)}$.
 
-No entanto, em outro trabalho \cite{KoKoMo16+}, o mesmo grupo de pesquisadores obteve uma resposta negativa para essa pergunta, eles exibiram uma família infinita de grafos cuja função limiar é inferior a $n^{-1/m_2(H)}$, 
-e mais recentemente, o trabalho \cite{araujo2022anti} estendeu a família de grafos em que o limiar difere da 2-densidade.
-Porém a 2-densidade máxima se relaciona, de fato, à função limiar para alguns grafos $H$, como foi provado por Nenadov,
+No entanto, em outro trabalho \cite{KoKoMo16+}, o mesmo grupo de pesquisadores obteve uma resposta negativa para essa pergunta, eles exibiram uma família infinita de grafos cuja função limiar é inferior a $n^{-1/m_2(H)}$. 
+Posteriormente, o trabalho \cite{araujo2022anti} estendeu a família de grafos em que o limiar difere da 2-densidade, especificamente para grafos $B_k \oplus G$, onde $B_k$ é o grafo conhecido como \emph{book} que é formado por $k$ triângulos que compartilham uma aresta em comum, $G$ é um grafo tal que $1< m_2(G)< 2$, e a operação $\oplus$ é a de colar dois grafos com uma aresta.
+
+
+Por outro lado, a 2-densidade máxima se relaciona, de fato, à função limiar para alguns grafos $H$, como foi provado por Nenadov,
 Person, Škorić e Steger~\cite{NePeSkSt14}.
-Estes últimos autores desenvolveram um \emph{framework} geral de prova para limitantes inferiores de diversos problemas tipo Ramsey em grafos aleatórios.
+Estes últimos autores desenvolveram um \emph{framework} geral de prova para limitantes inferiores de diversos problemas tipo Ramsey em grafos aleatórios e com ele obtiveram resultados sobre ciclos e grafos completos.
 
 \begin{teorema}[%Nenadov, Person, Škorić e Steger~
 \cite{NePeSkSt14}]
@@ -1032,15 +1050,25 @@ O caso para o limiar do ciclo $C_4$ foi tratado por Mota em \cite{mota2017advanc
 [\cite{barros2021anti, kohayakawa2019anti, mota2017advances}]
 \label{teo:cyclecomplete} 
 Se $H$ é um ciclo ou um grafo completo de pelo menos $5$ vértices, 
-então $\hat{p}_{H} \geq n^{-1/m_2(H)}$. 
+então $\hat{p}_{H} \gg n^{-1/m_2(H)}$. 
 Além disso, $\hat{p}_{C_4} = n^{-3/4}$ 
 e $\hat{p}_{K_4} = n^{-7/15}$.
 \end{teorema}
 
     O framework mencionado anteriormente de Nenadov,
-Person, Škorić e Steger~\cite{NePeSkSt14} reduz o problemas de limitante inferior em grafos aleatórios para um problema determinístico em grafos com densidade máxima limitada. 
-A saber, a propriedade de anti-Ramsey para um grafo fixo 2-balanceado $F$ possui como $0$-afirmação o limiar $p_F \geq n^{-1/m_2(F)}$ se todo grafo $G$ com $m(G) \leq m_2(F)$ é tal que $G \not\xrightarrow[]{rb} F$.
-O resultado sobre ciclos do Teorema \ref{teo:cyclecomplete} é uma consequência do seguinte lema, sendo o próprio lema uma aplicação deste mesmo framework:
+Person, Škorić e Steger~\cite{NePeSkSt14} reduz problemas tipo Ramsey de limitante inferior em (hiper)grafos aleatórios para um problema determinístico em (hiper)grafos com densidade máxima limitada.
+Recentemente, Behague, Hancock, Hyde, Letzter e Morrison \cite{behague2024thresholds} transcreveram a prova do framework de \cite{NePeSkSt14} para grafos sob a propriedade de anti-Ramsey, este resultado é dado a seguir.
+
+%%A saber, a propriedade de anti-Ramsey para um grafo fixo 2-balanceado $F$ possui como $0$-afirmação o limiar $p_F \geq n^{-1/m_2(F)}$ se todo grafo $G$ com $m(G) \leq m_2(F)$ é tal que $G \not\xrightarrow[]{rb} F$.
+
+\begin{teorema}[\cite{behague2024thresholds}]\label{teo:limiar}
+    Seja $H$ um grafo estritamente 2-balanceado com pelo menos 5 arestas e $m_2(H) > 1$.
+    Se todo grafo $G$ com $m(G) < m_2(H)$ é tal que $G \not\xrightarrow[]{rb} H$, 
+    então $p_H \gg n^{-1/m_2(H)}$.
+\end{teorema}
+
+O limiar do Teorema \ref{teo:limiar} é quase-fino se trocarmos $<$ por $\leq$ na desigualdade de densidades.
+O resultado sobre ciclos do Teorema \ref{teo:cyclecomplete} é uma consequência do seguinte lema, sendo o próprio lema uma aplicação do framework de \cite{NePeSkSt14}:
     
 \begin{lema}[\cite{barros2021anti}]\label{lema:rbciclos}
          Sejam $\ell \geq 5$ um inteiro e $G$ um grafo tais que
@@ -1072,7 +1100,23 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
     Antes de dar a propriedade estrutural a ser preservada na indução, com argumentos usando a densidade limitada nos subgrafos de $G$, os autores analisam as possíveis configurações da vizinhança de $v$ quanto a formar cliques que se interceptam. 
     Dessas configurações, eles obtêm subcasos a tratar no passo indutivo que permite colorir $G$ evitando cópias rainbow de $K_\ell$.
     %% O parâmetro auxiliar $b(G)$ que contabiliza a proporção de arestas coloridas é relacionado a essas configurações e, com ele, a indução de $G_v$ para $G$ é construída notando que para diferentes valores em $b(G)$, cada $K_\ell$ do grafo será não-rainbow.
+
+O grupo de Behague, Hancock, Hyde, Letzter e Morrison \cite{behague2024thresholds} verificou com uma análise rápida sobre densidades e grau mínimo o seguinte resultado:
+
+ \begin{lema}[\cite{behague2024thresholds}]\label{lema:rbgrau}
+    Sejam $H$ um grafo estritamente 2-balanceado com $1< m_2(H) < \frac{\delta(H)(\delta(H)+1)}{2\delta(H)+1}$, e $G$ um grafo tal que $m(G) \leq m_2(H)$.
+    Então $G \not\xrightarrow[]{rb} H$.
+\end{lema}
+
+O mesmo grupo de autores apoiados no Lema \ref{lema:rbgrau} e no Teorema \ref{teo:limiar} obtiveram o limiar da propriedade anti-Ramsey para uma subfamília de grafos regulares como está enunciado abaixo.
+
+ \begin{corolario}[\cite{behague2024thresholds}]\label{cor:rbgrau}
+    Seja $H$ um grafo $d$-regular estritamente 2-balanceado com pelo
+menos $4d$ vértices. 
+    Então $p_H = n^{-1/m_2(H)}$.    
+ \end{corolario}
  
+
  
 \section{Limiar para grafos bipartidos completos}\label{sec:limiar}
 
@@ -1123,16 +1167,17 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
 
     \begin{teorema}\label{teo:mainrb} 
     Sejam $\ell,r \geq 3$ inteiros. 
-    Então $\hat{p}_{K_{\ell,r}}\geq n^{-(\ell+r-2)/(\ell r - 1)}$.
+    Então $\hat{p}_{K_{\ell,r}}\gg n^{-(\ell+r-2)/(\ell r - 1)}$.
     \end{teorema}
 
     %%yyyyy
-    Uma vez que $\K$ é um grafo estritamente 2-balanceado, tal como fora utilizado em ciclos e grafos completos, pode-se pela aplicação do mesmo framework de Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14} deduzir o Teorema \ref{teo:mainrb} a partir do seguinte resultado: %%que é provado na Seção ZZ.
+    Uma vez que $\K$ é um grafo estritamente 2-balanceado, tal como fora utilizado em ciclos e grafos completos, podemos pela aplicação do mesmo framework de Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14}, que foi estruturado para grafos no Teorema \ref{teo:limiar}, deduzir o Teorema \ref{teo:mainrb} a partir do seguinte resultado: %%que é provado na Seção ZZ.
     
     \begin{teorema}\label{lemma:main} 
         Sejam $\ell,r \geq 3$ inteiros e
-        $G$ um grafo. 
-        Se $m(G) < m_2(\K)$, então $G \not\rb \K$.
+        $G$ um grafo tais que
+        $m(G) < m_2(\K)$.
+        Então $G \not\rb \K$.
     \end{teorema}
 
     %%%yyyyy
@@ -1219,7 +1264,7 @@ Eles observaram que tal sequência, com argumentos de densidade, impõe certas c
          $X'$ tem $x$ vértices, $A'$ tem $a$ vértices, $B'$ tem $b$ vértices e $Y'$ tem $y$ vértices (ver Figura \ref{fig:interP1}).
 
 
-  \begin{figure}[htb] \centering \includegraphics[]{interP1.pdf}
+  \begin{figure}[htb] \centering \includegraphics[]{images/interP1.pdf}
    \caption{Interseção de arestas entre cópias de $\K$, $G[A,B]$ e $G[X,Y]$, usando arestas dentro da partição.}
    \label{fig:interP1}
  \end{figure}
@@ -1320,7 +1365,7 @@ Em outras palavras, o Fato \ref{fato:ciclos} afirma que cada bipartido $\K$ que 
        \end{enumerate}
   
   %%% multiple figures: https://tex.stackexchange.com/questions/271518/multiple-panel-figure-with-figures-side-by-side 
-  \begin{figure}[htb] \centering \includegraphics[width=0.94\textwidth]{configA.pdf}
+  \begin{figure}[htb] \centering \includegraphics[width=0.94\textwidth]{images/configA.pdf}
    \caption{Configuração do tipo $A$.}
    \label{fig:configA}
  \end{figure}
@@ -1338,12 +1383,12 @@ Em outras palavras, o Fato \ref{fato:ciclos} afirma que cada bipartido $\K$ que 
 
    %Configurações $(A_{jk})_{pq}$ e $(B_{sw})$ de um $\K$ contido em $H_i$, mas não em $H_{i-1}$.
   
- \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{configB.pdf}
+ \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/configB.pdf}
    \caption{Configuração do tipo $B$.}
    \label{fig:configB}
  \end{figure}
 
-   \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{configC.pdf}
+   \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/configC.pdf}
    \caption{Configuração do tipo $C$.}
    \label{fig:configC}
  \end{figure}
@@ -1557,7 +1602,7 @@ são menos presentes por conta da densidade elevada que possuem, e, aparecem no 
         Assim, temos arestas de mesma cor que são paralelas em uma cópia de $\K$ para não ser rainbow.
         A Figura \ref{fig:configAcor} ilustra a coloração para esta configuração.
 
- \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{tipoAcolor.pdf}
+ \begin{figure}[htb] \centering \includegraphics[width=0.95\textwidth]{images/tipoAcolor.pdf}
    \caption{Esquema de coloração para configurações do tipo $A$.}
    \label{fig:configAcor}
  \end{figure}
@@ -1577,7 +1622,7 @@ são menos presentes por conta da densidade elevada que possuem, e, aparecem no 
       Note que esse procedimento de coloração pode ser facilmente usado para configurações~\hyperlink{HconfigB}{$(B_{s,w})$} com $s>0$ e $w>2$, onde adaptamos para o bipartido formado $K_{\ell+s,r+w} =[X\cup Z_1, Y \cup Z_2]$ que colorimos as arestas paralelas entre $X$ e $Z_2$ e entre $Y$ e $Z_1$.
 
 
- \begin{figure}[htb] \centering \includegraphics[width=0.96\textwidth]{tipoBcolor.pdf}
+ \begin{figure}[htb] \centering \includegraphics[width=0.96\textwidth]{images/tipoBcolor.pdf}
    \caption{Esquema de coloração para configurações do tipo $B$.}
    \label{fig:configBcor}
  \end{figure}
@@ -1633,8 +1678,9 @@ que advém das intersecções $K_{1,2}$ e $K_{\ell-1,r-1}$ não podem formar out
         
      \end{proof}
  
-  Como discutido ao final da Seção \ref{sec:limiar}, a demonstração do Teorema \ref{lemma:main} junto ao framework de Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14} 
-  implicam o resultado sobre o limiar da propriedade anti-Ramsey para $G(n,p) \rbarrow \K$ ser de $n^{-1/m_2(\K)}$ (Teorema \ref{teo:mainrb}).
+  Como discutido ao final da Seção \ref{sec:limiar}, a demonstração do Teorema~\ref{lemma:main} junto ao %framework de Nenadov, Person, Škorić e Steger~\cite{NePeSkSt14} 
+  Teorema \ref{teo:limiar}
+  implicam no resultado sobre o limiar da propriedade anti-Ramsey para $G(n,p) \rbarrow \K$ ser de $n^{-1/m_2(\K)}$ (Teorema \ref{teo:mainrb}).
 
     
 \section{Problemas em aberto}
@@ -1655,6 +1701,8 @@ Assim, a partir do que estudamos e do que se sabe de ciclos e grafos completos, 
      Seja $k \geq 3$ inteiro, a propriedade $G(n,p)\rbarrow H$ tem função limiar em  $p(n) =  n^{-1/m_2(H)}$ quando $H$ é um grafo $k$-regular.
 \end{conjectura}
 
+A classe de grafos regulares da Conjectura \ref{conj:antiregulares} já foi parcialmente coberta pelo Corolário~\ref{cor:rbgrau} em um trabalho recente \cite{behague2024thresholds} e ainda pode ser explorada.
+
 É importante ressaltar que já há trabalhos  que investigam a propriedade anti-Ramsey de cliques quando o grafo a ser colorido segue outro modelo de distribuição probabilística \cite{aigner2022large, aigner2022small}, o que mostra que há mais variantes do problema com oportunidades de pesquisa.
 
 
@@ -1669,9 +1717,10 @@ Neste trabalho, primeiro abordamos colorações próprias de arestas do grafo co
 Neste contexto, muitos dos problemas (ver Questões \ref{q:repeated-C4} e \ref{q:repeated-T}) se concentram em resultados assintóticos sobre o número mínimo de cores $f_k(n,H)$ para evitar $k$ repetições de $H$ no grafo $K_n$, enquanto nós exibimos soluções exatas de $f_2(n,K_3)$ que dependiam dos parâmetros.
 
 
-Sobre o segundo problema investigado, enfatizamos que este trabalho fez uso importante dos resultados de Nenadov,
-Person, Škorić e Steger~\cite{NePeSkSt14}. 
-Auxiliados pelo trabalho deles, o problema de estimar o limiar da propriedade anti-Ramsey do bipartido completo no grafo aleatório se tornou em uma análise determinística de grafos com densidades limitadas. 
+Sobre o segundo problema investigado, enfatizamos que este trabalho fez uso importante dos resultados de %Nenadov, Person, Škorić e Steger
+~\cite{NePeSkSt14} 
+e \cite{behague2024thresholds}. 
+Auxiliados por estes trabalhos, o problema de estimar o limiar da propriedade anti-Ramsey do bipartido completo no grafo aleatório se tornou em uma análise determinística de grafos com densidades limitadas. 
 Acreditamos que o uso deste procedimento possa ser replicado para mais classes de grafos. 
 No entanto, há uma dificuldade em transpor as informações algébricas de que a densidade do grafo é limitada para informações estruturais do grafo que permitam um método de coloração engenhoso.
 
